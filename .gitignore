@@ -1,0 +1,14 @@
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Temporary scratch
+*.tmp
+_temp_*.html
+*.log
