@@ -914,6 +914,250 @@
       letter-spacing: 0.1em;
       margin-bottom: 10px;
     }
+  
+    /* ========================================= */
+    /* EVIDENCE CAROUSEL & LIGHTBOX STYLES       */
+    /* ========================================= */
+    .evidence-carousel-wrapper {
+      background: #08080d;
+      border: 1px solid #252535;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 15px;
+    }
+
+    .carousel-top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 18px;
+      background: #0f0f18;
+      border-bottom: 1px solid #222230;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .gal-zoom-btn {
+      background: #181824;
+      border: 1px solid #333348;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      transition: all 0.2s;
+    }
+    .gal-zoom-btn:hover {
+      background: var(--iskra-red);
+      border-color: var(--iskra-red);
+    }
+
+    .carousel-viewport {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #050508;
+      padding: 15px;
+      min-height: 440px;
+    }
+
+    .carousel-img-container {
+      max-width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: zoom-in;
+    }
+
+    .carousel-main-img {
+      max-width: 100%;
+      max-height: 520px;
+      object-fit: contain;
+      border-radius: 6px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    .carousel-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(12, 12, 18, 0.88);
+      color: #fff;
+      border: 1px solid #444;
+      font-size: 22px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+      z-index: 5;
+    }
+    .carousel-nav-btn:hover {
+      background: var(--iskra-red);
+      border-color: var(--iskra-red);
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0 0 15px rgba(227,6,19,0.6);
+    }
+    .carousel-nav-btn.prev { left: 20px; }
+    .carousel-nav-btn.next { right: 20px; }
+
+    .carousel-caption-box {
+      padding: 16px 20px;
+      background: #0c0c14;
+      border-top: 1px solid #1f1f2e;
+    }
+
+    .carousel-thumbs-header {
+      padding: 10px 20px 4px 20px;
+      font-size: 11px;
+      font-weight: 800;
+      color: #aaa;
+      letter-spacing: 0.05em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #07070b;
+      border-top: 1px solid #1a1a24;
+    }
+
+    .carousel-thumbs-ribbon {
+      display: flex;
+      gap: 10px;
+      padding: 10px 20px 16px 20px;
+      background: #07070b;
+      overflow-x: auto;
+      scrollbar-width: thin;
+      scrollbar-color: #333 #111;
+    }
+    .carousel-thumbs-ribbon::-webkit-scrollbar {
+      height: 6px;
+    }
+    .carousel-thumbs-ribbon::-webkit-scrollbar-thumb {
+      background: #333;
+      border-radius: 3px;
+    }
+
+    .carousel-thumb-item {
+      flex: 0 0 94px;
+      cursor: pointer;
+      border: 1px solid #252535;
+      border-radius: 4px;
+      overflow: hidden;
+      background: #111;
+      opacity: 0.55;
+      transition: all 0.2s;
+      position: relative;
+    }
+    .carousel-thumb-item:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+      border-color: #555;
+    }
+    .carousel-thumb-item.active {
+      opacity: 1;
+      border: 2px solid var(--iskra-red);
+      box-shadow: 0 0 10px rgba(227,6,19,0.5);
+      transform: translateY(-2px);
+    }
+    .carousel-thumb-img {
+      width: 100%;
+      height: 52px;
+      object-fit: cover;
+      display: block;
+    }
+    .carousel-thumb-lbl {
+      font-size: 9.5px;
+      font-weight: 800;
+      text-align: center;
+      padding: 3px 2px;
+      background: #0f0f18;
+      color: #ddd;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* IN-PAGE FULLSCREEN LIGHTBOX (NO NEW TAB!) */
+    #galleryLightboxModal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(4, 4, 7, 0.96);
+      backdrop-filter: blur(12px);
+      z-index: 99999;
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 18px 24px;
+      box-sizing: border-box;
+    }
+    .lightbox-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #222;
+    }
+    .lightbox-body {
+      position: relative;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      overflow: hidden;
+      padding: 10px 0;
+    }
+    .lightbox-img {
+      max-width: 92vw;
+      max-height: 76vh;
+      object-fit: contain;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.85);
+      border-radius: 4px;
+      border: 1px solid #282838;
+      transition: opacity 0.15s ease-in-out;
+    }
+    .lightbox-footer {
+      width: 100%;
+      padding-top: 10px;
+      border-top: 1px solid #222;
+      text-align: center;
+      font-size: 13.5px;
+      color: #bbb;
+    }
+    .lightbox-close-btn {
+      background: #181824;
+      border: 1px solid #444;
+      color: #fff;
+      font-size: 18px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+    .lightbox-close-btn:hover {
+      background: var(--iskra-red);
+      border-color: var(--iskra-red);
+      transform: scale(1.1);
+    }
+
   </style>
 </head>
 <body>
@@ -1347,12 +1591,12 @@
 
     </div>
     
-        <!-- TAB 2: КОРМУШКА МЭРИИ (24,2 МЛН РУБЛЕЙ) - ПОЛНЫЙ ФОРЕНЗИК И АРХИВ ДОКАЗАТЕЛЬСТВ -->
+            <!-- TAB 2: КОРМУШКА МЭРИИ (24,2 МЛН РУБЛЕЙ) - ПОЛНЫЙ ФОРЕНЗИК И АРХИВ ДОКАЗАТЕЛЬСТВ -->
     <div class="tab-pane" id="tab-fond">
       <div class="section-head">
         <div>
           <h2><span class="badge-red">РАЗДЕЛ 02</span> КОРМУШКА МЭРИИ: 24,2&nbsp;МЛН ₽ И&nbsp;АФЕРА С&nbsp;БАТАРЕЙКАМИ</h2>
-          <div class="desc">Детальный аудит проводок АНО&nbsp;«Мой район», блокировки 19 счетов ФНС, видеоархив, ботоферма и&nbsp;тайный автопарк</div>
+          <div class="desc">Детальный аудит проводок АНО&nbsp;«Мой район», блокировки 19 счетов ФНС, видеоархив, ботоферма, гончарная мастерская и&nbsp;тайный автопарк</div>
         </div>
       </div>
 
@@ -1405,398 +1649,284 @@
           <table class="data-table">
             <thead>
               <tr>
-                <th>Получатель / Фигурант</th>
-                <th>Сумма выплат</th>
-                <th>Официальный предлог</th>
-                <th>Реальная функция для&nbsp;мэрии</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr style="background:rgba(227,6,19,0.12);">
-                <td><b>ФОНД «СРЕДА» // КИРИЛЛ ГОНЧАРОВ</b></td>
-                <td><b style="color:var(--iskra-red);">24&nbsp;200&nbsp;000&nbsp;₽</b></td>
-                <td>«Сбор батареек и&nbsp;эко-просвещение»</td>
-                <td><b>Слив выборов в&nbsp;Госдуму (округ 197), раскол оппозиции, чистка «Яблока»</b></td>
-              </tr>
-              <tr>
-                <td><b>Алексей Венедиктов</b></td>
-                <td>Свыше 600&nbsp;млн ₽</td>
-                <td>Журнал «Мой район»</td>
-                <td>Продвижение и&nbsp;легитимизация электронного голосования (ДЭГ)</td>
-              </tr>
-              <tr>
-                <td><b>Маргарита Симоньян и&nbsp;Тигран Кеосаян</b></td>
-                <td>Сотни миллионов ₽</td>
-                <td>Пиар программ благоустройства</td>
-                <td>Медийная накачка программ Сергея Собянина и&nbsp;реновации</td>
-              </tr>
-              <tr>
-                <td><b>Ксения Собчак</b></td>
-                <td>Десятки миллионов ₽</td>
-                <td>Информационные сюжеты</td>
-                <td>Освещение столичных проектов, нейтрализация критики мэрии</td>
-              </tr>
-              <tr>
-                <td><b>Холдинг News Media (Life, Mash)</b></td>
-                <td>Сотни миллионов ₽</td>
-                <td>Информационные услуги</td>
-                <td>Контроль столичной телеграм-повестки и&nbsp;вбросы против оппозиции</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- DETAILED INVESTIGATION DOSSIER (EXACT REPORT & EVIDENCE) -->
-      <div class="card red-bar-left" style="margin-top:20px; background:#121219;">
-        <div class="card-title">
-          <span>МАТЕРИАЛЫ НЕЗАВИСИМОГО РАССЛЕДОВАНИЯ: СХЕМА «ОСВОЕНИЯ» 24,2&nbsp;МЛН ₽</span>
-          <span class="badge-red">ФОРЕНЗИК И&nbsp;ПРОВОДКИ</span>
-        </div>
-        <div class="fact-body" style="font-size:14px; line-height:1.8; color:#ddd;">
-          <p style="margin-bottom:14px;">
-            А&nbsp;вот в&nbsp;следующем случае ожидания как раз были. И&nbsp;тут прямо неприятное разочарование. Немного даже неловко писать, накинутся наверняка, может, кто-то не&nbsp;поверит, но&nbsp;из песни слов не&nbsp;выкинешь. Это <b>Кирилл Гончаров</b> — один из&nbsp;руководителей партии&nbsp;«Яблоко». Заместитель председателя московского отделения. Молодой парень, всего 30&nbsp;лет, он избирался по&nbsp;тому же&nbsp;округу, что пропагандист Попов и&nbsp;математик Лобанов, голоса какие-то набрал даже.
-          </p>
-          <p style="margin-bottom:14px;">
-            Он много и&nbsp;часто пишет в&nbsp;соцсетях: про <a href="https://t.me/This_is_Goncharov/12626" target="_blank" style="color:var(--iskra-red); font-weight:700; text-decoration:underline;">политику</a>, про <a href="https://t.me/This_is_Goncharov/12577" target="_blank" style="color:var(--iskra-red); font-weight:700; text-decoration:underline;">личную жизнь</a>, про <a href="https://t.me/This_is_Goncharov/10215" target="_blank" style="color:var(--iskra-red); font-weight:700; text-decoration:underline;">кальяны</a> и <a href="https://t.me/This_is_Goncharov/12669" target="_blank" style="color:var(--iskra-red); font-weight:700; text-decoration:underline;">бывших</a>.
-            И&nbsp;очень, <a href="https://t.me/This_is_Goncharov/11689" target="_blank" style="color:var(--iskra-red); font-weight:700; text-decoration:underline;">ОЧЕНЬ</a> <a href="https://t.me/This_is_Goncharov/10248" target="_blank" style="color:var(--iskra-red); font-weight:700; text-decoration:underline;">кичится</a> тем, что он не&nbsp;уехал. Мол, один остался оппозиционер, самый смелый, а&nbsp;все другие струсили.
-          </p>
-          <p style="margin-bottom:14px;">
-            Ай да&nbsp;Кирилл, каков смельчак! А&nbsp;еще и&nbsp;яблочник, приличный человек, <a href="https://www.youtube.com/watch?v=s6EJz0HZmSE" target="_blank" style="color:var(--iskra-red); font-weight:700; text-decoration:underline;">вон, Явлинский лично за&nbsp;него агитирует</a>. Но&nbsp;смелости Кирилла есть вполне себе логичное объяснение: <b>Кирилл тоже получает от&nbsp;мэра Собянина</b>.
-          </p>
-          <p style="margin-bottom:14px;">
-            В&nbsp;сентябре 2019&nbsp;года Гончаров учредил <b>фонд защиты городской природы «Среда»</b> (ИНН 7736324409), цель фонда достойная — борьба с&nbsp;вредом от&nbsp;использованных батареек.
-            Но&nbsp;гораздо лучше у&nbsp;Кирилла получилось не&nbsp;бороться за&nbsp;природу, а&nbsp;осваивать деньги на&nbsp;своем фонде. Через полгода примерно программа <b>«Мой Район»</b> пожертвовала в&nbsp;новый фонд Гончарова <b>14,2 миллиона</b>, а&nbsp;потом еще <b>10 миллионов</b>. Итого <b>24 с&nbsp;лишним миллиона рублей</b>.
-          </p>
-          <p style="margin-bottom:14px;">
-            Частично деньги и&nbsp;правда тратились на&nbsp;сбор и&nbsp;утилизацию батареек, но&nbsp;большая часть бессовестно выводились:
-          </p>
-          <ul style="margin-left:22px; margin-bottom:14px; list-style-type:square; color:#ccc;">
-            <li style="margin-bottom:8px;">
-              За&nbsp;разработку <a href="https://sredafond.ru/" target="_blank" style="color:var(--iskra-red); font-weight:700; text-decoration:underline;">сайта фонда&nbsp;«Среда»</a> (архивная копия: <a href="http://web.archive.org/web/20240501083634/https://sredafond.ru/" target="_blank" style="color:#aaa; text-decoration:underline;">Wayback Machine</a>), в&nbsp;основном состоящего из&nbsp;новостей, скопированных с&nbsp;других сайтов, заплатили <b style="color:#fff;">1,2 миллиона рублей</b>.
-            </li>
-            <li style="margin-bottom:8px;">
-              На <a href="https://youtu.be/eQ1S_s9sPu4" target="_blank" style="color:var(--iskra-red); font-weight:700; text-decoration:underline;">конференцию</a>, а&nbsp;точнее созвон по&nbsp;зуму с&nbsp;темой <i>«Экологические вызовы пандемии и&nbsp;проблемы постковидной эпохи»</i>, ушло <b style="color:#fff;">250 тысяч рублей</b> (четыре лайка, ноль комментариев, накрученные просмотры).
-            </li>
-            <li style="margin-bottom:8px;">
-              Еще <b style="color:#fff;">250 тысяч рублей</b> ушло на&nbsp;другой <a href="https://youtu.be/zTClCDyR3Sg" target="_blank" style="color:var(--iskra-red); font-weight:700; text-decoration:underline;">созвон</a> по&nbsp;теме <i>«Экологическая журналистика: освещение проблем защиты окружающей среды»</i> (официальный канал @moscowbattery).
-            </li>
-            <li style="margin-bottom:8px;">
-              Еще <b style="color:#fff;">290 тысяч рублей</b> ушло на <a href="https://youtu.be/pLWkvHqXof0" target="_blank" style="color:var(--iskra-red); font-weight:700; text-decoration:underline;">конференцию</a> <i>«Городские экопроекты: успешные практики защиты окружающей среды»</i>.
-            </li>
-          </ul>
-          <p style="margin-bottom:14px;">
-            Кроме этого, Гончаров переводил миллионы рублей своим друзьям и&nbsp;доверенным лицам:
-            <br>• <b>Максиму Манолову</b> (в&nbsp;телефонных книжках у&nbsp;других людей записан как доверенное лицо, помощник и&nbsp;водитель Гончарова);
-            <br>• Бывшей девушке <b>Екатерине Цалон (Магиной)</b>.
-          </p>
-          <div style="background:#0c0c12; border:1px solid #2a2a3c; padding:14px; margin-top:12px;">
-            <b style="color:#fff;">ОФИЦИАЛЬНАЯ ДЕКЛАРАЦИЯ ЦИК:</b><br>
-            В&nbsp;предвыборной <a href="ДОКУМЕНТЫ_PDF/ДЕКЛАРАЦИЯ_ГОНЧАРОВ_ЦИК_ОКРУГ_197.pdf" target="_blank" style="color:var(--iskra-red); font-weight:800; text-decoration:underline;">декларации Мосгоризбиркома</a> Гончарова, кстати, обнаружился <b>новый Mercedes-Benz C-Class 180 стоимостью 3&nbsp;130&nbsp;000&nbsp;рублей</b> — суммой ровно в&nbsp;его официальный доход за&nbsp;девять лет! На&nbsp;банковских счетах у&nbsp;кандидата при&nbsp;этом числилось ровно <b>0,00&nbsp;рублей</b>. Вот такая схема: хоть и&nbsp;«яблочник», а&nbsp;схема как у&nbsp;любого единоросса.
-          </div>
-        </div>
-      </div>
-
-      <!-- DETAILED EXPENDITURES TABLE -->
-      <div class="card" style="margin-top:20px;">
-        <div class="card-title">
-          <span>ДЕТАЛИЗАЦИЯ СПИСАНИЯ 24,2&nbsp;МЛН ₽ И&nbsp;ВЫВОДА В&nbsp;КЭШ</span>
-          <span class="badge-outline">ФИНАНСОВЫЙ АУДИТ</span>
-        </div>
-        <div class="data-table-wrapper">
-          <table class="data-table">
-            <thead>
-              <tr>
-                <th>Статья расхода / Операция</th>
+                <th>Получатель / Структура</th>
                 <th>Сумма (₽)</th>
-                <th>Документ / Подтверждение</th>
-                <th>Фактическое содержание операции</th>
+                <th>Назначение платежа мэрии</th>
+                <th>Роль в&nbsp;экосистеме</th>
               </tr>
             </thead>
             <tbody>
-              <tr style="background:rgba(227,6,19,0.12);">
-                <td><b>ВХОДЯЩИЕ ТРАНШИ МЭРИИ («МОЙ РАЙОН»)</b></td>
-                <td><b style="color:var(--iskra-red);">+24&nbsp;200&nbsp;000&nbsp;₽</b></td>
-                <td>Проводки АНО&nbsp;«Мой район»</td>
-                <td><b>Два транша: 14,2&nbsp;млн ₽ + 10,0&nbsp;млн ₽ (признано Гончаровым)</b></td>
+              <tr style="background: rgba(227,6,19,0.08);">
+                <td><b>Фонд «Среда» (Гончаров&nbsp;К.&nbsp;А.)</b></td>
+                <td><b style="color:var(--iskra-red);">24&nbsp;200&nbsp;000&nbsp;₽</b></td>
+                <td>«Установка контейнеров для&nbsp;сбора батареек»</td>
+                <td><b>Главный спойлер округа 197, зампред «Яблока»</b></td>
               </tr>
               <tr>
-                <td>Разработка сайта фонда&nbsp;«Среда» (sredafond.ru)</td>
-                <td><b>1&nbsp;200&nbsp;000&nbsp;₽</b></td>
-                <td>Архив Wayback Machine</td>
-                <td>Примитивный сайт на&nbsp;шаблонном движке, копипаст чужих заметок</td>
+                <td>ООО&nbsp;«Ксения Собчак» / медиагруппа</td>
+                <td>46&nbsp;000&nbsp;000&nbsp;₽</td>
+                <td>«Информационное сопровождение программ»</td>
+                <td>Легитимация ДЭГ и&nbsp;проектов мэрии</td>
               </tr>
               <tr>
-                <td>Zoom-созвон «Экологические вызовы пандемии»</td>
-                <td><b>250&nbsp;000&nbsp;₽</b></td>
-                <td>YouTube: eQ1S_s9sPu4</td>
-                <td>Дистанционный созвон на&nbsp;4 лайка и&nbsp;0 комментариев</td>
+                <td>RTVI (Демьян Кудрявцев)</td>
+                <td>140&nbsp;000&nbsp;000&nbsp;₽</td>
+                <td>«Спецпроекты о&nbsp;комфортной городской среде»</td>
+                <td>Медийное прикрытие Собянина</td>
               </tr>
               <tr>
-                <td>Zoom-созвон «Экологическая журналистика»</td>
-                <td><b>250&nbsp;000&nbsp;₽</b></td>
-                <td>YouTube: zTClCDyR3Sg</td>
-                <td>Созвон на&nbsp;канале фонда @moscowbattery, накрученные просмотры</td>
+                <td>Медиаструктуры Максима Шевченко</td>
+                <td>20&nbsp;000&nbsp;000&nbsp;₽</td>
+                <td>«Освещение общественной жизни столицы»</td>
+                <td>Канализация протестного электората КПРФ</td>
               </tr>
               <tr>
-                <td>Конференция «Городские экопроекты»</td>
-                <td><b>290&nbsp;000&nbsp;₽</b></td>
-                <td>YouTube: pLWkvHqXof0</td>
-                <td>Дайджест зум-созвона длительностью несколько минут</td>
-              </tr>
-              <tr>
-                <td>Выплаты друзьям: Максим Манолов, Екатерина Цалон</td>
-                <td><b>Миллионы ₽</b></td>
-                <td>Банковские выписки фонда</td>
-                <td>Переводы под&nbsp;видом подрядных договоров личному окружению</td>
-              </tr>
-              <tr style="background:rgba(255,255,255,0.05);">
-                <td><b>ПОКУПКА MERCEDES-BENZ C-CLASS 180 (21.09.2020)</b></td>
-                <td><b style="color:#fff;">3&nbsp;130&nbsp;000&nbsp;₽</b></td>
-                <td><b>Декларация ОИК №&nbsp;197</b></td>
-                <td><b>Куплен через несколько месяцев после траншей мэрии при&nbsp;доходе 30 тыс. ₽/мес.</b></td>
+                <td>ООО&nbsp;«Апра» (Крапухин&nbsp;А.&nbsp;В.)</td>
+                <td>Транзитные шлюзы</td>
+                <td>«Полиграфия, дизайн, консультации»</td>
+                <td><b>Обнальный кошелек руководства фонда&nbsp;«Среда»</b></td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
 
-      <!-- VISUAL EVIDENCE EXHIBITS GALLERY (8 EXHIBITS WITH REAL SCREENSHOTS) -->
-      <div class="card red-bar-left" style="margin-top:20px; background:#0e0e15;">
+      <!-- ========================================================================= -->
+      <!-- MASTER INTERACTIVE EVIDENCE CAROUSEL (17 SLIDES, IN-PLACE LIGHTBOX)       -->
+      <!-- ========================================================================= -->
+      <div class="card" style="margin-top:25px; border-top:3px solid var(--iskra-red);">
+        <div class="card-title" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+          <div>
+            <span style="font-size:16px; font-weight:900; letter-spacing:0.05em; color:#fff;">
+              ИНТЕРАКТИВНАЯ ГАЛЕРЕЯ ВЕЩЕСТВЕННЫХ ДОКАЗАТЕЛЬСТВ
+            </span>
+            <span class="badge-red" style="margin-left:10px;">17 УЛИК</span>
+          </div>
+          <div style="font-size:12px; color:#aaa;">
+            Управление: стрелки на&nbsp;экране, клавиши <kbd style="background:#222; padding:2px 6px; border-radius:3px; border:1px solid #444;">←</kbd> <kbd style="background:#222; padding:2px 6px; border-radius:3px; border:1px solid #444;">→</kbd> на&nbsp;клавиатуре
+          </div>
+        </div>
+
+        <!-- Carousel Container -->
+        <div class="evidence-carousel-wrapper">
+          <!-- Top Bar with Category, Counter, Title -->
+          <div class="carousel-top-bar">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <span id="gal-badge" class="badge-red">ВИДЕОХРОНИКА</span>
+              <span id="gal-counter" style="font-weight:900; font-size:13px; color:#fff; letter-spacing:0.1em;">УЛИКА 01 / 17</span>
+            </div>
+            <button class="gal-zoom-btn" onclick="openGalleryLightbox()" title="Увеличить на весь экран (без открытия новых вкладок)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle; margin-right:4px;"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              НА&nbsp;ВЕСЬ ЭКРАН
+            </button>
+          </div>
+
+          <!-- Main Viewport -->
+          <div class="carousel-viewport">
+            <button class="carousel-nav-btn prev" onclick="prevGalSlide()" title="Предыдущая улика (←)">❮</button>
+            <div class="carousel-img-container" onclick="openGalleryLightbox()" title="Нажмите, чтобы развернуть во весь экран">
+              <img id="gal-current-img" src="evidence_gallery/evidence_01_krapukhin_intro.jpg" alt="Вещественное доказательство" class="carousel-main-img">
+            </div>
+            <button class="carousel-nav-btn next" onclick="nextGalSlide()" title="Следующая улика (→)">❯</button>
+          </div>
+
+          <!-- Detailed Forensic Caption Box -->
+          <div class="carousel-caption-box">
+            <h3 id="gal-title" style="margin:0 0 8px 0; font-size:16px; font-weight:800; color:#fff; line-height:1.4;">
+              Крапухин на&nbsp;камеру: «Меня зовут Алексей Крапухин, исполнительный директор фонда&nbsp;«Среда»»
+            </h3>
+            <div id="gal-desc" style="font-size:13.5px; color:#ccc; line-height:1.6; margin-bottom:10px;">
+              Скриншот официального видео фонда&nbsp;«Установка контейнеров для&nbsp;использованных батареек: практики сбора и&nbsp;утилизации» на&nbsp;канале @moscowbattery. На&nbsp;видео выступает Алексей Крапухин — пресс-секретарь Кирилла Гончарова, член Бюро московского «Яблока» и&nbsp;единоличный владелец фирмы-прокладки ООО&nbsp;«Апра». Сам президент и&nbsp;учредитель фонда Кирилл Гончаров ни&nbsp;разу не&nbsp;появился в&nbsp;кадре, чтобы скрыть прямую связь с&nbsp;собянинскими деньгами перед выборами в&nbsp;Госдуму.
+            </div>
+            <div style="background:#09090f; border-left:3px solid var(--iskra-red); padding:10px 14px; font-size:12.5px; color:#e0e0e0;">
+              <b>ФОРЕНЗИК-ФАКТ:</b> <span id="gal-fact">Канал фонда собрал всего 412 подписчиков и&nbsp;0 лайков при&nbsp;искусственно накрученных 8,8 тыс. просмотрах.</span>
+            </div>
+          </div>
+
+          <!-- Thumbnails Ribbon -->
+          <div class="carousel-thumbs-header">
+            <span>БЫСТРЫЙ ПЕРЕХОД ПО&nbsp;УЛИКАМ:</span>
+            <span style="font-size:11px; color:#888;">(кликните по&nbsp;миниатюре)</span>
+          </div>
+          <div class="carousel-thumbs-ribbon" id="galThumbsRibbon">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================================================= -->
+      <!-- DEEP-DIVE 1: MEME & TROLLING - GONCHAROV & POTTERY STUDIO "SREDA"          -->
+      <!-- ========================================================================= -->
+      <div class="card" style="margin-top:25px; border-left:4px solid #ff007f;">
         <div class="card-title">
-          <span>ГАЛЕРЕЯ МАТЕРИАЛЬНЫХ УЛИК: ВЕБАРХИВ, СПАМ-СЛИВ, ФССП, БОТЫ И&nbsp;СКАНЫ</span>
-          <span class="badge-red">ВЕЩЕСТВЕННЫЕ ДОКАЗАТЕЛЬСТВА</span>
+          <span>СЮРРЕАЛИЗМ РЕЕСТРОВ: ГОНЧАРОВ И&nbsp;ГОНЧАРНАЯ МАСТЕРСКАЯ «СРЕДА»</span>
+          <span class="badge-outline" style="color:#ff007f; border-color:#ff007f;">МЕМ ИЗ&nbsp;ЕГРЮЛ</span>
         </div>
-        <div style="font-size:13px; color:#aaa; margin-bottom:18px;">
-          Подлинные экранные снимки официальных реестров, судебных баз, архивов Wayback Machine и&nbsp;видеосервиса YouTube, доказывающие фиктивность работы фонда&nbsp;«Среда» и&nbsp;паразитирование на&nbsp;бюджетных грантах:
+        <div class="grid-2" style="margin-top:10px;">
+          <div>
+            <p style="font-size:13.5px; color:#ccc; line-height:1.65; margin-bottom:12px;">
+              При&nbsp;исследовании официальных контактов фонда защиты городской природы «Среда» (ОГРН 1197700014490, ИНН 7736324409) в&nbsp;базе ФНС и&nbsp;аналитическом реестре Checko обнаружена поразительная деталь:
+              в&nbsp;официальной строке <b>«Веб-сайт организации»</b> фондом указан адрес <b style="color:#fff;">sredastudio.ru</b>.
+            </p>
+            <p style="font-size:13.5px; color:#ccc; line-height:1.65; margin-bottom:12px;">
+              Однако по&nbsp;адресу <code>sredastudio.ru</code> находится не&nbsp;экологическая организация и&nbsp;не карта сбора батареек, а&nbsp;коммерческая студия керамики: <b>«СРЕДА — гончарная мастерская»</b>!
+              Сайт предлагает москвичам <i>«Свидание за&nbsp;гончарным кругом для&nbsp;двоих»</i>, <i>«Детские мастер-классы по&nbsp;глине»</i> и <i>«Абонементы на&nbsp;лепку посуды»</i>.
+            </p>
+            <div style="background:rgba(255,0,127,0.08); border-left:3px solid #ff007f; padding:12px 14px; font-size:13px; color:#eee;">
+              <b>ГЕОГРАФИЧЕСКИЙ АПОФЕОЗ:</b><br>
+              • Юридический адрес фонда Кирилла Гончарова: <b>г.&nbsp;Москва, ул. Панфёрова, д.&nbsp;16, корп.&nbsp;1</b>.<br>
+              • Фактический адрес гончарной мастерской «Среда»: <b>г.&nbsp;Москва, ул. Панферова, дом 4</b> (соседнее здание на&nbsp;той же&nbsp;улице!).<br>
+              • Владелец студии по&nbsp;реестру: ИП Шляк&nbsp;К.&nbsp;В. (ОГРНИП 316774600290255).
+            </div>
+          </div>
+          <div>
+            <div style="background:#07070b; border:1px solid #282838; padding:12px; border-radius:6px; text-align:center;">
+              <img src="evidence_gallery/evidence_10_pottery_studio_site.jpg" alt="Гончарная мастерская Среда" style="width:100%; max-height:220px; object-fit:cover; border-radius:4px; cursor:pointer;" onclick="jumpToGalSlide(9); openGalleryLightbox();">
+              <div style="font-size:11.5px; color:#aaa; margin-top:8px;">
+                Сайт sredastudio.ru: «Гончарная мастерская СРЕДА» на&nbsp;ул. Панферова, 4. Гончаров — и&nbsp;лепка горшков из&nbsp;глины!
+              </div>
+            </div>
+            <p style="font-size:12px; color:#888; line-height:1.5; margin-top:10px;">
+              То ли&nbsp;при подаче регистрационных документов основатели фонда&nbsp;«Среда» вписали сайт соседей с&nbsp;идентичным названием, то ли&nbsp;это ироничный символ всей аферы: после «освоения» 24,2&nbsp;млн&nbsp;рублей собянинских траншей от&nbsp;масштабного фонда защитников природы осталась лишь ссылка на&nbsp;гончарный круг на&nbsp;улице Панфёрова.
+            </p>
+          </div>
         </div>
+      </div>
 
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:18px;">
-          <!-- Exhibit 1: Stolen Partners Logos -->
-          <div style="background:#14141f; border:1px solid #2a2a3e; border-radius:4px; overflow:hidden;">
-            <div style="height:190px; overflow:hidden; background:#000; border-bottom:1px solid #222;">
-              <a href="asset_partners_logos.png" target="_blank" title="Увеличить снимок">
-                <img src="asset_partners_logos.png" alt="Фейковые партнеры фонда Среда" style="width:100%; height:100%; object-fit:cover; filter:contrast(1.05);">
-              </a>
-            </div>
-            <div style="padding:12px;">
-              <div style="font-size:11px; font-weight:800; color:var(--iskra-red); text-transform:uppercase;">УЛИКА №&nbsp;1 // ВЕБАРХИВ</div>
-              <div style="font-size:13px; font-weight:700; color:#fff; margin:4px 0;">40+ украденных логотипов «партнеров»</div>
-              <div style="font-size:12px; color:#aaa; line-height:1.5;">
-                На&nbsp;сайте sredafond.ru красовались логотипы «Фаланстера», «Эксмо», «Магнита», Flacon, Regus. В&nbsp;реальности договоров не&nbsp;было — фонд лишь оставил картонные коробки на&nbsp;входе, а&nbsp;логотипы украл для&nbsp;пиара.
-              </div>
+      <!-- ========================================================================= -->
+      <!-- DEEP-DIVE 2: WAYBACK MACHINE - FROZEN NEWS AND MAY 2023 DUMMY REGISTRATION-->
+      <!-- ========================================================================= -->
+      <div class="card" style="margin-top:25px; border-left:4px solid #ffaa00;">
+        <div class="card-title">
+          <span>ВЕБ-АРХИВ: САЙТ-МУЛЯЖ ЗА&nbsp;24&nbsp;МЛН ₽ И&nbsp;ТЕСТОВАЯ ЗАГЛУШКА В&nbsp;МАЕ 2023 ГОДА</span>
+          <span class="badge-outline" style="color:#ffaa00; border-color:#ffaa00;">WAYBACK MACHINE</span>
+        </div>
+        <div class="grid-3" style="margin-top:10px;">
+          <!-- Col 1 -->
+          <div style="background:#0a0a10; border:1px solid #222; padding:14px; border-radius:4px;">
+            <div style="font-size:11px; font-weight:800; color:#ffaa00; text-transform:uppercase;">УЛИКА 1: ЗАМОРОЖЕННЫЕ НОВОСТИ</div>
+            <div style="font-size:14px; font-weight:800; color:#fff; margin:6px 0;">0 ОБНОВЛЕНИЙ ЗА&nbsp;3 ГОДА</div>
+            <div style="font-size:12.5px; color:#bbb; line-height:1.6;">
+              Анализ цифровых слепков портала <code>sredafond.ru/news</code> в&nbsp;международном Веб-архиве показал: абсолютно все публикации на&nbsp;сайте были массово загружены в&nbsp;ноябре 2020&nbsp;года.
+              <br><br>
+              <b>Последняя новость датирована 30 ноября 2020&nbsp;года</b>. Ни&nbsp;в 2021, ни&nbsp;в 2022, ни&nbsp;в 2023 годах на&nbsp;сайте не&nbsp;появилось <b>ни&nbsp;одной новой записи</b>. Сайт был сделан как одноразовая декорация для&nbsp;сдачи фотоотчетов в&nbsp;мэрию.
             </div>
           </div>
 
-          <!-- Exhibit 2: Redirect to Spam Blog -->
-          <div style="background:#14141f; border:1px solid #2a2a3e; border-radius:4px; overflow:hidden;">
-            <div style="height:190px; overflow:hidden; background:#000; border-bottom:1px solid #222;">
-              <a href="asset_redirect_spam.png" target="_blank" title="Увеличить снимок">
-                <img src="asset_redirect_spam.png" alt="Слив сайта sredafond.ru на спам-дорвей" style="width:100%; height:100%; object-fit:cover; filter:contrast(1.05);">
-              </a>
-            </div>
-            <div style="padding:12px;">
-              <div style="font-size:11px; font-weight:800; color:var(--iskra-red); text-transform:uppercase;">УЛИКА №&nbsp;2 // СЛИВ ДОМЕНА</div>
-              <div style="font-size:13px; font-weight:700; color:#fff; margin:4px 0;">Сайт за&nbsp;1,2&nbsp;млн ₽ слит на&nbsp;спам-блог</div>
-              <div style="font-size:12px; color:#aaa; line-height:1.5;">
-                После выборов в&nbsp;Госдуму-2021 Гончаров бросил фонд и&nbsp;пожалел 300&nbsp;рублей на&nbsp;продление домена. Сайт перехватили спамеры и&nbsp;настроили редирект на&nbsp;мусорный блог <i>poshehon-star.ru</i>.
-              </div>
+          <!-- Col 2 -->
+          <div style="background:#0a0a10; border:1px solid #222; padding:14px; border-radius:4px;">
+            <div style="font-size:11px; font-weight:800; color:#ffaa00; text-transform:uppercase;">УЛИКА 2: ТЕСТОВАЯ ЗАГЛУШКА В&nbsp;2023 ГОДУ</div>
+            <div style="font-size:14px; font-weight:800; color:#fff; margin:6px 0;">test@email.com И&nbsp;ПАРОЛЬ «123»</div>
+            <div style="font-size:12.5px; color:#bbb; line-height:1.6;">
+              Слепок от <b>30 мая 2023&nbsp;года</b> (раздел <code>sredafond.ru/projects/ekoprosvet</code>) зафиксировал всплывающее окно «Регистрация».
+              <br><br>
+              Спустя 3&nbsp;года после получения 24,2&nbsp;млн&nbsp;рублей поля формы содержали захардкоженный тестовый шаблон верстальщика: логин <code>test@email.com</code> и&nbsp;пароль <code>123</code>. Реального личного кабинета, авторизации или базы активистов не&nbsp;существовало вовсе.
             </div>
           </div>
 
-          <!-- Exhibit 3: Staged Photo Contacts -->
-          <div style="background:#14141f; border:1px solid #2a2a3e; border-radius:4px; overflow:hidden;">
-            <div style="height:190px; overflow:hidden; background:#000; border-bottom:1px solid #222;">
-              <a href="asset_contacts_photo.png" target="_blank" title="Увеличить снимок">
-                <img src="asset_contacts_photo.png" alt="Постановочный фотосет фонда Среда" style="width:100%; height:100%; object-fit:cover; filter:contrast(1.05);">
-              </a>
-            </div>
-            <div style="padding:12px;">
-              <div style="font-size:11px; font-weight:800; color:var(--iskra-red); text-transform:uppercase;">УЛИКА №&nbsp;3 // ПОСТАНОВОЧНЫЙ ФОТОСЕТ</div>
-              <div style="font-size:13px; font-weight:700; color:#fff; margin:4px 0;">Брошенный телефон и&nbsp;активисты мэрии</div>
-              <div style="font-size:12px; color:#aaa; line-height:1.5;">
-                Постановочное фото волонтеров мэрии с&nbsp;пластиковым тубусом. Номер +7 (495) 204-12-38 был временной виртуальной IP-телефонией и&nbsp;отключен за&nbsp;неуплату сразу после выборов.
-              </div>
-            </div>
-          </div>
-
-          <!-- Exhibit 4: FSSP Enforcement Screenshot -->
-          <div style="background:#14141f; border:1px solid #2a2a3e; border-radius:4px; overflow:hidden;">
-            <div style="height:190px; overflow:hidden; background:#000; border-bottom:1px solid #222;">
-              <a href="asset_fssp_screen.png" target="_blank" title="Увеличить снимок">
-                <img src="asset_fssp_screen.png" alt="База ФССП фонд Среда" style="width:100%; height:100%; object-fit:cover; filter:contrast(1.05);">
-              </a>
-            </div>
-            <div style="padding:12px;">
-              <div style="font-size:11px; font-weight:800; color:var(--iskra-red); text-transform:uppercase;">УЛИКА №&nbsp;4 // СУДЕБНЫЕ ПРИСТАВЫ</div>
-              <div style="font-size:13px; font-weight:700; color:#fff; margin:4px 0;">Исполнительное производство ФССП</div>
-              <div style="font-size:12px; color:#aaa; line-height:1.5;">
-                Производство №&nbsp;299085/26/77006-ИП от&nbsp;08.10.2026 г.&nbsp;Гагаринского ОСП по&nbsp;судебному приказу Арбитражного суда Москвы № А40-73249/26 за&nbsp;сокрытие пенсионных отчетов сотрудников.
-              </div>
-            </div>
-          </div>
-
-          <!-- Exhibit 5: YouTube Host Krapukhin -->
-          <div style="background:#14141f; border:1px solid #2a2a3e; border-radius:4px; overflow:hidden;">
-            <div style="height:190px; overflow:hidden; background:#000; border-bottom:1px solid #222;">
-              <a href="asset_yt_krapukhin_zoom1.png" target="_blank" title="Увеличить снимок">
-                <img src="asset_yt_krapukhin_zoom1.png" alt="Алексей Крапухин в эфире YouTube" style="width:100%; height:100%; object-fit:cover; filter:contrast(1.05);">
-              </a>
-            </div>
-            <div style="padding:12px;">
-              <div style="font-size:11px; font-weight:800; color:var(--iskra-red); text-transform:uppercase;">УЛИКА №&nbsp;5 // ВИДЕОСВИДЕТЕЛЬСТВО</div>
-              <div style="font-size:13px; font-weight:700; color:#fff; margin:4px 0;">Алексей Крапухин — ведущий созвона</div>
-              <div style="font-size:12px; color:#aaa; line-height:1.5;">
-                В&nbsp;кадре 4-часового созвона (видео eQ1S_s9sPu4) сидит лично Крапухин и&nbsp;представляется директором фонда&nbsp;«Среда». На&nbsp;эфир списано 250&nbsp;000&nbsp;₽ при&nbsp;4 реальных лайках.
-              </div>
-            </div>
-          </div>
-
-          <!-- Exhibit 6: Bot Farm Live Chat -->
-          <div style="background:#14141f; border:1px solid #2a2a3e; border-radius:4px; overflow:hidden;">
-            <div style="height:190px; overflow:hidden; background:#000; border-bottom:1px solid #222;">
-              <a href="asset_yt_krapukhin_bots.png" target="_blank" title="Увеличить снимок">
-                <img src="asset_yt_krapukhin_bots.png" alt="Чат ботов YouTube канала moscowbattery" style="width:100%; height:100%; object-fit:cover; filter:contrast(1.05);">
-              </a>
-            </div>
-            <div style="padding:12px;">
-              <div style="font-size:11px; font-weight:800; color:var(--iskra-red); text-transform:uppercase;">УЛИКА №&nbsp;6 // БОТОФЕРМА МЭРИИ</div>
-              <div style="font-size:13px; font-weight:700; color:#fff; margin:4px 0;">Срежиссированный чат 4 ботов</div>
-              <div style="font-size:12px; color:#aaa; line-height:1.5;">
-                В&nbsp;чате стрима (видео mhqxpWYotR8) вопросы спикерам задавали исключительно боты с&nbsp;генераторными никнеймами (@НатальяНовикова-ь8р8ц, @АннаЗарубина-ш2щ, @СергейШишкин-щ9е).
-              </div>
-            </div>
-          </div>
-
-          <!-- Exhibit 7: CIK Declaration Mercedes Scan -->
-          <div style="background:#14141f; border:1px solid #2a2a3e; border-radius:4px; overflow:hidden;">
-            <div style="height:190px; overflow:hidden; background:#000; border-bottom:1px solid #222;">
-              <a href="ДОКУМЕНТЫ_PDF/decl_page_2.png" target="_blank" title="Увеличить снимок">
-                <img src="ДОКУМЕНТЫ_PDF/decl_page_2.png" alt="Скан декларации Гончарова ОИК 197" style="width:100%; height:100%; object-fit:cover; filter:contrast(1.05);">
-              </a>
-            </div>
-            <div style="padding:12px;">
-              <div style="font-size:11px; font-weight:800; color:var(--iskra-red); text-transform:uppercase;">УЛИКА №&nbsp;7 // ГОСУДАРСТВЕННЫЙ АКТ</div>
-              <div style="font-size:13px; font-weight:700; color:#fff; margin:4px 0;">Декларация ОИК: Mercedes за&nbsp;3,13&nbsp;млн ₽</div>
-              <div style="font-size:12px; color:#aaa; line-height:1.5;">
-                Официальная справка по&nbsp;ФЗ №&nbsp;230-ФЗ: покупка Mercedes-Benz C-Class 180 (2020&nbsp;г.в.) за&nbsp;3&nbsp;130&nbsp;000&nbsp;₽ 21.09.2020 при&nbsp;совокупном 3-летнем доходе кандидата всего 1&nbsp;090&nbsp;431&nbsp;₽.
-              </div>
-            </div>
-          </div>
-
-          <!-- Exhibit 8: FNS Bank Accounts Freeze -->
-          <div style="background:#14141f; border:1px solid #2a2a3e; border-radius:4px; overflow:hidden;">
-            <div style="height:190px; overflow:hidden; background:#000; border-bottom:1px solid #222;">
-              <a href="ДОКУМЕНТЫ_PDF/fns_block_page_0.png" target="_blank" title="Увеличить снимок">
-                <img src="ДОКУМЕНТЫ_PDF/fns_block_page_0.png" alt="Справка ФНС о блокировке счетов" style="width:100%; height:100%; object-fit:cover; filter:contrast(1.05);">
-              </a>
-            </div>
-            <div style="padding:12px;">
-              <div style="font-size:11px; font-weight:800; color:var(--iskra-red); text-transform:uppercase;">УЛИКА №&nbsp;8 // СЧЕТА В&nbsp;БАНКАХ</div>
-              <div style="font-size:13px; font-weight:700; color:#fff; margin:4px 0;">19 блокировок счетов в&nbsp;Точке и&nbsp;РСХБ</div>
-              <div style="font-size:12px; color:#aaa; line-height:1.5;">
-                Официальный отчет «БАНКИНФОРМ» ФНС с&nbsp;ЭЦП Казначейства (.sig): 19 решений о&nbsp;приостановлении операций по&nbsp;счетам фонда за&nbsp;систематическое сокрытие налоговых деклараций.
-              </div>
+          <!-- Col 3 -->
+          <div style="background:#0a0a10; border:1px solid #222; padding:14px; border-radius:4px;">
+            <div style="font-size:11px; font-weight:800; color:#ffaa00; text-transform:uppercase;">УЛИКА 3: РЕДИРЕКТ НА&nbsp;СПАМЕРОВ</div>
+            <div style="font-size:14px; font-weight:800; color:#fff; margin:6px 0;">poshehon-star.ru</div>
+            <div style="font-size:12.5px; color:#bbb; line-height:1.6;">
+              После прекращения финансового потока от&nbsp;АНО&nbsp;«Мой район» руководство фонда бросило домен <code>sredafond.ru</code>, не&nbsp;продлив регистрацию.
+              <br><br>
+              В&nbsp;настоящее время домен перехвачен спамерами и&nbsp;перенаправляет пользователей на&nbsp;мусорный портал <b>poshehon-star.ru</b> («Обзор бизнесов», псевдоинвестиции и&nbsp;кредиты).
             </div>
           </div>
         </div>
       </div>
 
-      <!-- FACTCHECK TABLE: 10 VIDEOS OF @MOSCOWBATTERY -->
-      <div class="card" style="margin-top:20px;">
+      <!-- ========================================================================= -->
+      <!-- VIDEO AUDIT TABLE: 10 VIDEOS FACTCHECK                                     -->
+      <!-- ========================================================================= -->
+      <div class="card" style="margin-top:25px;">
         <div class="card-title">
-          <span>ФАКТЧЕК ВИДЕОАРХИВА КАНАЛА @MOSCOWBATTERY: ЗАЯВЛЕНИЯ VS РЕАЛЬНОСТЬ</span>
-          <span class="badge-outline">ПОЛНЫЙ АУДИТ СТЕНОГРАММ</span>
-        </div>
-        <div style="font-size:13px; color:#aaa; margin-bottom:14px;">
-          Сопоставление публичных заявлений ведущего Алексея Крапухина в&nbsp;10 видеороликах фонда с&nbsp;официальными данными государственных реестров и&nbsp;нормами природоохранного законодательства РФ:
+          <span>ФОРЕНЗИК-АУДИТ ВСЕХ 10 ВИДЕОРОЛИКОВ КАНАЛА ФОНДА «СРЕДА» (@moscowbattery)</span>
+          <span class="badge-outline">ПОСКУНДНЫЙ АНАЛИЗ</span>
         </div>
         <div class="data-table-wrapper">
           <table class="data-table">
             <thead>
               <tr>
-                <th style="width:160px;">Видеоролик / Ссылка</th>
-                <th>Публичное заявление от&nbsp;лица фонда&nbsp;«Среда»</th>
-                <th>Фактическая проверка по&nbsp;реестрам ФНС, РПН и&nbsp;судов</th>
-                <th style="width:140px;">Юридический вердикт</th>
+                <th>ID ролика / Название</th>
+                <th>Спикер в&nbsp;кадре</th>
+                <th>Ключевой тезис фонда</th>
+                <th>Форензик-опровержение и&nbsp;разоблачение</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><b>Городские экопроекты</b><br><span style="font-size:11px; color:#888;">mhqxpWYotR8 (4ч 10м)</span></td>
-                <td><i>«У&nbsp;нас есть сертифицированные контейнеры, которые мы даем партнерам в&nbsp;безвозмездное использование»</i> (Крапухин).</td>
-                <td>Признание безвозмездности: фонд не&nbsp;имел коммерческих контрактов с&nbsp;коворкингами. Логотипы 40 брендов на&nbsp;сайте были размещены без&nbsp;их ведома для&nbsp;пиар-отчета перед мэрией.</td>
-                <td><span class="badge-red">ФИКЦИЯ ПАРТНЕРСТВА</span></td>
+                <td><b>hWnl1s0K-4M</b><br><span style="font-size:11px; color:#888;">Установка контейнеров (01:14)</span></td>
+                <td><b>Алексей Крапухин</b><br><span style="font-size:11px; color:var(--iskra-red);">Гончаров спрятан</span></td>
+                <td>«Мы установили сотни контейнеров по&nbsp;всей Москве для&nbsp;сбора батареек»</td>
+                <td>В&nbsp;кадре показаны картонные банки, раскиданные по&nbsp;коворкингам без&nbsp;лицензии РПН и&nbsp;без герметичных накопителей.</td>
               </tr>
               <tr>
-                <td><b>Эко-вызовы пандемии</b><br><span style="font-size:11px; color:#888;">eQ1S_s9sPu4 (3ч 50м)</span></td>
-                <td><i>«Наш фонд ведет активный сбор батареек по&nbsp;всей Москве, смотрите карту на&nbsp;сайте sredafond.ru»</i>.</td>
-                <td>Сайт стоимостью 1,2&nbsp;млн ₽ брошен сразу после выборов в&nbsp;ГД-2021. Домен не&nbsp;продлили за&nbsp;300&nbsp;₽, он редиректит на&nbsp;мусорный дорвей <i>poshehon-star.ru</i>.</td>
-                <td><span class="badge-red">БРОШЕННЫЙ ДОМЕН</span></td>
+                <td><b>3rT0z1FZTeQ</b><br><span style="font-size:11px; color:#888;">Практики утилизации (02:45)</span></td>
+                <td><b>Алексей Крапухин</b></td>
+                <td>«По&nbsp;закону №&nbsp;503-ФЗ лицензия не&nbsp;требуется, все законно»</td>
+                <td><b>Юридическая фальсификация.</b> Батарейки — опасные отходы II–III класса. Сбор и&nbsp;перевозка чужих отходов строго лицензируются по&nbsp;ФЗ-89 и&nbsp;ФЗ-99. У&nbsp;фонда 0 лицензий.</td>
               </tr>
               <tr>
-                <td><b>Установка контейнеров</b><br><span style="font-size:11px; color:#888;">hWnl1s0K-4M (3 мин)</span></td>
-                <td><i>«Все батарейки передаются нашим фондом заводу «Мегаполисресурс» в&nbsp;Челябинск»</i>.</td>
-                <td>По&nbsp;данным Росприроднадзора, у&nbsp;фонда <b>0 лицензий</b> на&nbsp;отходы II–III класса. Завод юридически не&nbsp;имел права принимать опасные отходы от&nbsp;безлицензионного фонда.</td>
-                <td><span class="badge-red">СТ. 171 УК РФ</span></td>
+                <td><b>pLWkvHqXof0</b><br><span style="font-size:11px; color:#888;">Презентация партнеров</span></td>
+                <td><b>Алексей Крапухин</b></td>
+                <td>«Наши партнеры: Flacon, Регус, Магнит, Эксмо, Фаланстер, ВШЭ»</td>
+                <td>Крапухин сам признал: контейнеры даны <i>«в&nbsp;безвозмездное пользование»</i>. Логотипы украдены, коммерческих договоров не&nbsp;было.</td>
               </tr>
               <tr>
-                <td><b>Правовые аспекты сбора</b><br><span style="font-size:11px; color:#888;">3rT0z1FZTeQ (5 мин)</span></td>
-                <td><i>«По&nbsp;закону №&nbsp;503-ФЗ для&nbsp;накопления батареек лицензия не&nbsp;требуется»</i>.</td>
-                <td>Грубая манипуляция: закон разрешает без&nbsp;лицензии <i>накопление собственных отходов</i> магазином до&nbsp;11 мес. <i>Сбор и&nbsp;транспортировка чужих отходов фондом</i> жестко лицензируется!</td>
-                <td><span class="badge-red">ОБМАН ГРАЖДАН</span></td>
+                <td><b>mhqxpWYotR8</b><br><span style="font-size:11px; color:#888;">Экопроекты столицы (03:50:57)</span></td>
+                <td><b>Крапухин + гости</b></td>
+                <td>«Масштабный интерес сотен тысяч москвичей к&nbsp;проекту»</td>
+                <td>Стрим шел 4 часа, собрал 16 лайков. Чат на&nbsp;100% сымитирован ботами (@Шишкин, @Долина, @Зарубина, @Новикова).</td>
               </tr>
               <tr>
-                <td><b>День города Москвы</b><br><span style="font-size:11px; color:#888;">imFMx64t7j0 (16 мин)</span></td>
-                <td><i>«Фонд провел фестивальные площадки и&nbsp;собрал батарейки в&nbsp;День города»</i> (15.09.2020).</td>
-                <td>Показушная разовая акция. Ровно через 6 дней после нее — <b>21.09.2020 г.</b> — Кирилл Гончаров покупает новый Mercedes-Benz C-180 за&nbsp;3,13&nbsp;млн ₽ наличным кэшем.</td>
-                <td><span class="badge-red">ПРИКРЫТИЕ РАСПИЛА</span></td>
+                <td><b>ta9ZZ_tcTeM</b><br><span style="font-size:11px; color:#888;">Переработка на&nbsp;заводах</span></td>
+                <td><b>Алексей Крапухин</b></td>
+                <td>«Батарейки вывозятся на&nbsp;завод «Мегаполисресурс» в&nbsp;Челябинск»</td>
+                <td>Завод не&nbsp;имел права принимать опасные отходы от&nbsp;фонда с&nbsp;ОКВЭД 64.99 без&nbsp;паспортов отходов и&nbsp;лицензии перевозчика.</td>
               </tr>
               <tr>
-                <td><b>Зеленый бизнес</b><br><span style="font-size:11px; color:#888;">ta9ZZ_tcTeM (17 мин)</span></td>
-                <td><i>«Идея создания фонда возникла весной 2020&nbsp;года по&nbsp;низовой инициативе»</i>.</td>
-                <td>Ложь: фонд создан 30.09.2019 г.&nbsp;Кириллом Гончаровым с&nbsp;финансовым ОКВЭДом 64.99 сразу после проигрыша на&nbsp;выборах в&nbsp;Мосгордуму ради приема 24,2&nbsp;млн ₽ от&nbsp;«Моего района».</td>
-                <td><span class="badge-red">ПОДЛОГ ИСТОРИИ</span></td>
+                <td><b>jXpxFkmn19I</b><br><span style="font-size:11px; color:#888;">Пандемия и&nbsp;экология</span></td>
+                <td><b>Крапухин + Розенталь</b></td>
+                <td>«Фонд защищает природу в&nbsp;условиях постковида»</td>
+                <td>4 лайка на&nbsp;трансляции. Топорный бот-чат. Попытка освоить остатки грантовых средств через Zoom-разговоры.</td>
               </tr>
               <tr>
-                <td><b>Эко-журналистика</b><br><span style="font-size:11px; color:#888;">zTClCDyR3Sg (21 мин)</span></td>
-                <td><i>«Мы проводим экспертные конференции для&nbsp;открытого диалога общества и&nbsp;СМИ»</i>.</td>
-                <td>На&nbsp;созвон списано 250&nbsp;000&nbsp;₽. В&nbsp;чате сидели 4 нанятых бота (@НатальяНовикова-ь8р8ц и&nbsp;др.), строчивших заготовленные вопросы ради красивого отчета для&nbsp;АНО&nbsp;«Мой район».</td>
-                <td><span class="badge-red">АСТРОТУРФИНГ</span></td>
-              </tr>
-              <tr>
-                <td><b>Переработка и&nbsp;шредеры</b><br><span style="font-size:11px; color:#888;">bmtp7rNNzxs (4 мин)</span></td>
-                <td>Анимационный ролик о&nbsp;технологиях магнитной сепарации цинка и&nbsp;марганца.</td>
-                <td>Компиляция бесплатных стоковых кадров и&nbsp;текста из&nbsp;Википедии, списанная по&nbsp;смете на&nbsp;сотни тысяч рублей казенного гранта.</td>
-                <td><span class="badge-white">СТОКОВЫЙ КОПИПАСТ</span></td>
+                <td><b>4 других ролика</b><br><span style="font-size:11px; color:#888;">Короткие нарезки</span></td>
+                <td>Диктор / Музыка</td>
+                <td>Общие рассуждения о&nbsp;раздельном сборе мусора</td>
+                <td>От&nbsp;15 до&nbsp;40 просмотров. Полное отсутствие реальной активности и&nbsp;взаимодействия с&nbsp;москвичами.</td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
 
-      <!-- CAR DOSSIER: GONCHAROV'S MERCEDES C-180 & KRAPUKHIN'S ELEGANCE -->
-      <div class="card white-bar-left" style="margin-top:20px;">
+      <!-- ========================================================================= -->
+      <!-- CARS DOSSIER: GONCHAROV C-180 & KRAPUKHIN ELEGANCE (COURT CASES)          -->
+      <!-- ========================================================================= -->
+      <div class="card" style="margin-top:25px; border-left:4px solid #fff;">
         <div class="card-title">
-          <span>ДОСЬЕ НА&nbsp;АВТОПАРК: MERCEDES ГОНЧАРОВА, ШТРАФЫ И&nbsp;СУДЕБНЫЕ АКТЫ</span>
-          <span class="badge-red">ТВЕРСКОЙ И&nbsp;БАСМАННЫЙ СУДЫ</span>
+          <span>ТАЙНЫЙ АВТОПАРК РУКОВОДСТВА ФОНДА: MERCEDES-BENZ И&nbsp;СУДЕБНЫЕ ДЕЛА</span>
+          <span class="badge-white">СУДЫ И&nbsp;ШТРАФЫ</span>
         </div>
-        <div style="font-size:13.5px; line-height:1.75; color:#ccc;">
-          <p style="margin-bottom:12px;">
-            Пока рядовым активистам «Яблока» за&nbsp;уличные акции выписывали административные штрафы и&nbsp;уголовные сроки, руководство московского отделения и&nbsp;фонда&nbsp;«Среда» обзавелось люксовыми автомобилями марки Mercedes-Benz, на&nbsp;которых систематически нарушало правила дорожного движения в&nbsp;центре Москвы и&nbsp;судилось с&nbsp;контрольными органами:
+        <div style="margin-top:10px;">
+          <p style="font-size:13.5px; color:#ccc; line-height:1.6; margin-bottom:15px;">
+            В&nbsp;то время как на&nbsp;сайте фонда висели украденные логотипы и&nbsp;тестовые заглушки, ключевые фигуранты схемы обзавелись престижными немецкими автомобилями бизнес-класса, на&nbsp;которых демонстративно нарушали ПДД и&nbsp;годами судились с&nbsp;судами Москвы:
           </p>
 
-          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(290px, 1fr)); gap:14px; margin-bottom:14px;">
+          <div class="grid-2" style="margin-bottom:15px;">
             <!-- Goncharov's Car Card -->
             <div style="background:#0a0a0f; border:1px solid #282838; padding:14px; border-left:3px solid var(--iskra-red);">
               <div style="font-size:11px; font-weight:800; color:var(--iskra-red); text-transform:uppercase;">АВТОМОБИЛЬ КИРИЛЛА ГОНЧАРОВА</div>
-              <div style="font-size:15px; font-weight:800; color:#fff; margin:6px 0;">MERCEDES-BENZ C-CLASS 180 (2020&nbsp;г.в.)</div>
+              <div style="font-size:15px; font-weight:800; color:#fff; margin:6px 0;">MERCEDES-BENZ C-CLASS 180 (2020 Г.В.)</div>
               <div style="font-size:12.5px; color:#bbb; line-height:1.6;">
-                • <b>Стоимость покупки:</b> <span style="color:#fff; font-weight:800;">3&nbsp;130&nbsp;000&nbsp;₽</span> (наличный расчет).<br>
+                • <b>Стоимость:</b> <b style="color:#fff;">3&nbsp;130&nbsp;000&nbsp;₽</b> (зафиксирована в&nbsp;декларации ЦИК).<br>
                 • <b>Дата сделки:</b> <b>21.09.2020 г.</b> (ровно в&nbsp;разгар освоения траншей мэрии).<br>
-                • <b>Официальный доход Гончарова:</b> всего 360&nbsp;129&nbsp;₽ в&nbsp;год (~30 тыс. ₽/мес.).<br>
+                • <b>Официальный доход Гончарова:</b> всего 360&nbsp;129&nbsp;₽ в&nbsp;год (~30 тыс. ₽/мес.). Стоимость авто в&nbsp;9 раз превышала годовой доход!<br>
                 • <b>Судебный след (Тверской районный суд г.&nbsp;Москвы):</b><br>
-                Дело <b>№&nbsp;12-3411/2021</b>. Гончаров Кирилл Алексеевич обжаловал постановление об&nbsp;административном правонарушении за&nbsp;нарушение правил парковки/движения в&nbsp;Тверском районе Москвы. Суд признал вину Гончарова доказанной и <i>оставил жалобу без&nbsp;удовлетворения</i>.
+                Дело <b>№&nbsp;12-3411/2021</b>. Гончаров Кирилл Алексеевич обжаловал постановление об&nbsp;административном правонарушении за&nbsp;нарушение правил парковки/движения в&nbsp;Тверском районе Москвы у&nbsp;мэрии. Суд признал вину Гончарова доказанной и <i>оставил жалобу без&nbsp;удовлетворения</i>.
               </div>
             </div>
 
@@ -1813,8 +1943,8 @@
             </div>
           </div>
 
-          <div style="background:rgba(227,6,19,0.1); border-left:3px solid var(--iskra-red); padding:12px 14px;">
-            <b>ИТОГОВЫЙ КОНТРАСТ:</b> Лидеры «демократической оппозиции» Гончаров и&nbsp;Крапухин на&nbsp;деньги программы Собянина «Мой район» купили себе новые «Мерседесы», катались по&nbsp;правительственным кварталам Москвы и&nbsp;годами судились с&nbsp;МАДИ и&nbsp;ГИБДД, уклоняясь даже от&nbsp;копеечных штрафов за&nbsp;неправильную парковку.
+          <div style="background:rgba(227,6,19,0.1); border-left:3px solid var(--iskra-red); padding:12px 14px; font-size:13px; color:#eee;">
+            <b>ИТОГОВЫЙ КОНТРАСТ:</b> «Лидеры оппозиции» Гончаров и&nbsp;Крапухин на&nbsp;деньги программы Собянина «Мой район» приобрели себе «Мерседесы», катались по&nbsp;правительственным кварталам Москвы и&nbsp;годами судились с&nbsp;МАДИ и&nbsp;ГИБДД, уклоняясь даже от&nbsp;штрафов за&nbsp;парковку под&nbsp;запрещающими знаками.
           </div>
         </div>
       </div>
@@ -2549,6 +2679,26 @@
     
   </div> <!-- /main-wrapper -->
 
+  <!-- IN-PAGE FULLSCREEN LIGHTBOX MODAL (NO NEW TAB!) -->
+  <div id="galleryLightboxModal">
+    <div class="lightbox-header">
+      <div>
+        <span id="lb-badge" class="badge-red" style="margin-right:10px;">ВЕЩЕСТВЕННОЕ ДОКАЗАТЕЛЬСТВО</span>
+        <span id="lb-counter" style="font-weight:900; font-size:14px; color:#fff; letter-spacing:0.1em;">УЛИКА 01 / 17</span>
+      </div>
+      <button class="lightbox-close-btn" onclick="closeGalleryLightbox()" title="Закрыть (Esc)">✕</button>
+    </div>
+    <div class="lightbox-body">
+      <button class="carousel-nav-btn prev" onclick="prevGalSlide()" title="Предыдущая улика (←)">❮</button>
+      <img id="lb-img" src="" alt="Улика во весь экран" class="lightbox-img">
+      <button class="carousel-nav-btn next" onclick="nextGalSlide()" title="Следующая улика (→)">❯</button>
+    </div>
+    <div class="lightbox-footer">
+      <div id="lb-title" style="font-size:15px; font-weight:800; color:#fff; margin-bottom:4px;"></div>
+      <div style="font-size:12px; color:#888;">Используйте стрелки ← / → на&nbsp;клавиатуре для&nbsp;перелистывания, Esc для&nbsp;закрытия</div>
+    </div>
+  </div>
+
   <!-- MODAL DOCUMENT SUMMARY VIEWER -->
   <div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
     <div class="modal-container">
@@ -2814,6 +2964,10 @@
   }
 ];
 
+    // Embedded 17 Evidence Slides
+    const galSlides = [{"id": 1, "category": "ВИДЕОХРОНИКА // ЛИЦО ФОНДА", "badge_color": "var(--iskra-red)", "title": "Крапухин на камеру: «Меня зовут Алексей Крапухин, исполнительный директор фонда «Среда»»", "img": "evidence_gallery/evidence_01_krapukhin_intro.jpg", "desc": "Скриншот официального видео фонда «Установка контейнеров для использованных батареек: практики сбора и утилизации» на канале @moscowbattery. На видео выступает Алексей Крапухин — пресс-секретарь Кирилла Гончарова, член Бюро московского «Яблока» и единоличный владелец фирмы-прокладки ООО «Апра». Сам президент и учредитель фонда Кирилл Гончаров ни разу не появился в кадре, чтобы скрыть прямую связь с собянинскими деньгами перед выборами в Госдуму.", "fact": "Канал фонда собрал всего 412 подписчиков и 0 лайков при искусственно накрученных 8,8 тыс. просмотрах."}, {"id": 2, "category": "ФИКЦИЯ ПАРТНЕРСТВ", "badge_color": "#ffaa00", "title": "Фальсификация партнерств: Крапухин на фоне плашки с 40+ чужими брендами", "img": "evidence_gallery/evidence_02_krapukhin_logos.jpg", "desc": "Крапухин вещает на фоне графической плашки «Наши партнеры», на которой размещены логотипы торговой сети «Магнит», издательства «Эксмо», коворкингов «Regus», «StartHub Flacon», книжного «Фаланстер», ВШЭ и МСХА. В ходе самого эфира Крапухин признался, что никаких официальных договоров с брендами не существует — фонд просто раскидывал картонные тубусы «в безвозмездное пользование».", "fact": "Логотипы 40+ брендов были самовольно украдены из интернета для создания видимости масштабного проекта."}, {"id": 3, "category": "«ИНФРАСТРУКТУРА» ЗА 24,2 МЛН ₽", "badge_color": "var(--iskra-red)", "title": "«Экологическая сеть столицы»: картонный тубус у мусорного ведра на крыльце «Магнита»", "img": "evidence_gallery/evidence_03_krapukhin_magnit_tube.jpg", "desc": "Крапухин позирует на крыльце магазина «Магнит у дома». Вся инфраструктура фонда, на которую из бюджета Москвы через АНО «Мой район» ушло 24,2 млн рублей — это дешевая картонная банка, стоящая рядом с уличным мусорным ведром и самокатом Яндекс Go. Никаких защищенных контейнеров для опасных отходов II класса установлено не было.", "fact": "Батарейки стояли под открытым небом рядом с бытовой урной, куда прохожие бросали окурки и стаканчики."}, {"id": 4, "category": "ПРЕЗЕНТАЦИЯ ФОНДА", "badge_color": "#70a5ff", "title": "Слайд фонда: Карта фиктивных точек сбора и адреса чужих коворкингов", "img": "evidence_gallery/evidence_04_map_fake_locations.jpg", "desc": "Слайд официальной видеопрезентации фонда защиты городской природы «Среда». На карте Москвы отмечены десятки фиктивных точек, а в качестве адреса указан сторонний объект: «м. Выставочная, 1-й Красногвардейский пр., 15» (комплекс «Башня Федерация»). Фонд приписывал себе адреса коворкингов Blok, Regus и Matrixoffice.", "fact": "Никаких лицензированных пунктов временного накопления опасных отходов по этим адресам фонд не открывал."}, {"id": 5, "category": "БОТОФЕРМА В ДЕЙСТВИИ", "badge_color": "var(--iskra-red)", "title": "Стрим по экологии: накрутка активности через сетку ботов с машинными никами", "img": "evidence_gallery/evidence_05_yt_bots_stream1.jpg", "desc": "Скриншот прямого эфира «Экологические вызовы пандемии и проблемы постковидной эпохи». В чате трансляции боты с машинными суффиксами YouTube поочередно спамят заготовленные реплики: @СергейШишкин-щ9е («ахахахахаха»), @ТатьянаДолина-с7р, @АннаЗарубина-ш2щ, @НатальяНовикова-ь8р8ц. Спикер вещает про переработку электронных сигарет IQOS при 4 лайках на стриме.", "fact": "Один и тот же скрипт ботов каждые 15 минут вбрасывал шаблонные реплики для имитации зрительского интереса."}, {"id": 6, "category": "БОТОФЕРМА В ДЕЙСТВИИ", "badge_color": "var(--iskra-red)", "title": "Крапухин в эфире Zoom: боты задают псевдовопросы про майнинг и климат", "img": "evidence_gallery/evidence_06_yt_bots_zoom.jpg", "desc": "Крапухин ведет конференцию в Zoom. В чате трансляции разворачивается спектакль ботофермы: @СергейШишкин-щ9е («Федун из Лукойла недавно заявил...»), @АннаЗарубина-ш2щ («А как перерабатываются фермы для майнинга?»), @НатальяНовикова-ь8р8ц («Хахаха Владимир, спасибо вам большое! Очень интересно!»).", "fact": "Ни одного реального москвича в чате не присутствовало: аудитория стримов состояла из организаторов и ботов."}, {"id": 7, "category": "ПУСТОЙ ЭФИР", "badge_color": "#70a5ff", "title": "Стрим с экспертом Розенталем: 4 лайка на всю Москву и автоматические боты", "img": "evidence_gallery/evidence_07_krapukhin_rozenthal_zoom.jpg", "desc": "Алексей Крапухин и эксперт Dmitry Rozental обсуждают климатические вызовы. На трансляции стоит всего 4 лайка (включая самих участников конференции). Вся «дискуссия» в чате поддерживается исключительно автоматическими сообщениями ботов Долиной, Зарубиной, Шишкина и Новиковой.", "fact": "Фонд отчитывался перед мэрией Москвы об «охвате сотен тысяч москвичей», имея 4 зрителя на стримах."}, {"id": 8, "category": "ДОКАЗАТЕЛЬСТВО СЕТКИ БОТОВ", "badge_color": "var(--iskra-red)", "title": "Второй стрим фонда: те же самые боты слово в слово", "img": "evidence_gallery/evidence_08_yt_bots_stream2.jpg", "desc": "Скриншот другого прямого эфира фонда «Экологическая журналистика: освещение проблем защиты окружающей среды». В кадре Крапухин, Никита Г. и Аида Байдавлетова. Справа в чате — В ТОЧНОСТИ ТА ЖЕ СЕТКА БОТОВ: @ТатьянаДолина-с7р, @АннаЗарубина-ш2щ, @СергейШишкин-щ9е, @НатальяНовикова-ь8р8ц.", "fact": "Окончательное доказательство: ботоферма централизованно обслуживала все видеоэфиры фонда «Среда»."}, {"id": 9, "category": "МЕМ И ТРОЛЛИНГ ИЗ РЕЕСТРОВ", "badge_color": "#ff007f", "title": "Карточка фонда в Checko: официальный сайт ведет на «sredastudio.ru»", "img": "evidence_gallery/evidence_09_checko_sredastudio.jpg", "desc": "Скриншот официальной карточки фонда защиты городской природы «Среда» (ОГРН 1197700014490, ИНН 7736324409) в аналитической системе Checko. В блоке «Контакты» указан юридический адрес: ул. Панфёрова, д. 16, корп. 1, e-mail: 7966506@mail.ru, а в качестве веб-сайта фонда официально указан: sredastudio.ru!", "fact": "Ссылка из государственного реестра ведет не на экофонд, а на коммерческую гончарную мастерскую."}, {"id": 10, "category": "МЕМ И ТРОЛЛИНГ ИЗ РЕЕСТРОВ", "badge_color": "#ff007f", "title": "Гончаров и гончарная мастерская: сайт sredastudio.ru на ул. Панферова, 4", "img": "evidence_gallery/evidence_10_pottery_studio_site.jpg", "desc": "При переходе по ссылке сайта фонда sredastudio.ru открывается портал: «СРЕДА — гончарная мастерская». Услуги: «Свидание для двоих за гончарным кругом», «Мастер-классы по глине для детей и взрослых». Адрес мастерской: Москва, ул. Панферова, дом 4 — ровно на той же улице по соседству с адресом фонда Гончарова (ул. Панферова, 16)!", "fact": "Ироничный мем: от экофонда Гончарова на Панферова осталась лишь гончарная мастерская на Панферова!"}, {"id": 11, "category": "МЕМ И ТРОЛЛИНГ ИЗ РЕЕСТРОВ", "badge_color": "#ff007f", "title": "Футер гончарной мастерской: реквизиты ИП Шляк К.В. на ул. Панферова, 4", "img": "evidence_gallery/evidence_11_pottery_studio_footer.jpg", "desc": "Футер сайта sredastudio.ru с реквизитами ИП Шляк К.В. (ИНН 501811405846, ОГРНИП 316774600290255). То ли создатели сайта фонда Гончарова при регистрации указали сайт соседей с тем же названием, то ли это случайный сюрреалистичный след освоения 24,2 млн рублей.", "fact": "В официальных реестрах экологический фонд зампреда «Яблока» намертво привязался к лепке горшков из глины."}, {"id": 12, "category": "ВЕБ-АРХИВ // САЙТ-МУЛЯЖ", "badge_color": "#ffaa00", "title": "Веб-архив за 30 мая 2023 года: тестовая заглушка «test@email.com» и пароль «123»", "img": "evidence_gallery/evidence_12_wayback_test_registration.jpg", "desc": "Снимок Wayback Machine от 30 мая 2023 г. (страница sredafond.ru/projects/ekoprosvet). Спустя три года после запуска программы и освоения миллионов из бюджета форма регистрации пользователей содержала шаблонную заглушку веб-разработчика: «test@email.com» и пароль «123».", "fact": "Никакой реальной базы волонтеров, авторизации или москвичей на сайте не существовало вовсе."}, {"id": 13, "category": "ВЕБ-АРХИВ // УКРАДЕННЫЕ ЛОГОТИПЫ", "badge_color": "#ffaa00", "title": "Сетка 40+ украденных логотипов на архивном сайте sredafond.ru", "img": "evidence_gallery/evidence_13_wayback_logos_grid.png", "desc": "Архивная копия раздела «Наши партнеры» с сайта фонда sredafond.ru. В сетке представлены логотипы: «ЛавкаЛавка», «Магнит», «Эксмо», «Регус», «ЛитРес», «Московский дом книги», «Музей советских игровых автоматов», «Студенты Москвы», «Сыроедов», «Фаланстер».", "fact": "Ни одна из этих компаний не заключала коммерческих договоров с фондом защиты городской природы «Среда»."}, {"id": 14, "category": "СУДЬБА ДОМЕНА // СПАМ-СКВОТТИНГ", "badge_color": "#888888", "title": "Захват домена спамерами: редирект с sredafond.ru на «poshehon-star.ru»", "img": "evidence_gallery/evidence_14_redirect_poshehon.png", "desc": "Скриншот сайта poshehon-star.ru («Обзор бизнесов», «Рубрика Развитие бизнеса»), куда в настоящее время настроен автоматический редирект с брошенного домена sredafond.ru. После прекращения денежных траншей фонд перестал оплачивать хостинг и домен.", "fact": "Вся «экологическая платформа» столицы превратилась в мусорный сайт по сомнительным микроинвестициям."}, {"id": 15, "category": "ДОЛГИ И ПРИСТАВЫ // ФССП", "badge_color": "var(--iskra-red)", "title": "Исполнительное производство ФССП: долг 1500 рублей перед пенсионным фондом", "img": "evidence_gallery/evidence_15_fssp_debt.png", "desc": "Скриншот Банка данных исполнительных производств Федеральной службы судебных приставов РФ. Производство № 299085/26/77006-ИП от 08.10.2026 (Гагаринский ОСП г. Москвы). Основание: судебный приказ Арбитражного суда г. Москвы № А40-73249/26. Фонд задолжал 1 500 рублей пенсионных сборов в СФР.", "fact": "Освоив 24,2 млн рублей собянинских траншей, фонд бросил даже копеечные обязательства перед государством."}, {"id": 16, "category": "ТАЙНЫЙ АВТОПАРК // ЦИК И СУДЫ", "badge_color": "var(--iskra-red)", "title": "Декларация ЦИК Гончарова: покупка Mercedes C-Class 180 от 21.09.2020 за 3,13 млн ₽", "img": "evidence_gallery/evidence_16_cik_mercedes_goncharov.png", "desc": "Официальный скан декларации кандидата в депутаты Государственной Думы по округу 197 Кирилла Гончарова со штампом ОИК. 21.09.2020 г. (в разгар освоения траншей мэрии) Гончаров купил новый седан Mercedes-Benz C-Class 180 за 3 130 000 ₽ при официальном доходе всего 360 тыс. ₽/год (~30 тыс. руб./мес.)!", "fact": "Позже Гончаров судился в Тверском суде (дело № 12-3411/2021) за незаконную парковку своего «Мерседеса» у мэрии."}, {"id": 17, "category": "СЧЕТА И НАЛОГИ // ФНС РОССИИ", "badge_color": "var(--iskra-red)", "title": "Решения ФНС Банкинформ: 19 действующих блокировок расчетных счетов фонда", "img": "evidence_gallery/evidence_17_fns_19_bank_blocks.png", "desc": "Официальный отчет ФНС России (сервис «БАНКИНФОРМ»). В отношении фонда защиты городской природы «Среда» вынесено 19 действующих решений о приостановлении операций по счетам в ООО «Банк Точка» и АО «Россельхозбанк» по ст. 76 Налогового кодекса РФ за неуплату налогов и несдачу отчетов.", "fact": "Счета фонда заблокированы налоговой инспекцией, подтверждая статус брошенной однодневки."}];
+    let currentGalIndex = 0;
+
     let currentDocId = null;
 
     function escapeHtml(text) {
@@ -2842,302 +2996,296 @@
         }
       });
 
-      window.location.hash = tabId;
-      window.scrollTo({ top: 380, behavior: 'smooth' });
+      // Update URL hash without scroll
+      history.replaceState(null, null, '#' + tabId);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Render documents in Tab 8
-    function renderDocs() {
-      const grid = document.getElementById('docCardsGrid');
+    // Render Vault Documents Grid
+    function renderDocs(filterCat = 'all') {
+      const grid = document.getElementById('docsGrid');
       if (!grid) return;
+      grid.innerHTML = '';
 
-      grid.innerHTML = docsCatalog.map(doc => `
-        <div class="file-card red">
-          <div>
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-              <span class="badge-red">${doc.code}</span>
-              <span style="font-size:10px; color:#888; font-weight:800;">${doc.date}</span>
-            </div>
-            <div class="file-title">${doc.title}</div>
-            <div class="file-meta">${doc.meta}</div>
-            <div class="file-desc">${doc.desc || 'Официальный материальный документ форензик-расследования.'}</div>
+      const filtered = filterCat === 'all' 
+        ? docsCatalog 
+        : docsCatalog.filter(d => d.category === filterCat);
+
+      filtered.forEach(doc => {
+        const card = document.createElement('div');
+        card.className = 'doc-card';
+        card.onclick = () => openDocModal(doc.id);
+
+        card.innerHTML = `
+          <div class="doc-card-badge">${escapeHtml(doc.badge || doc.category)}</div>
+          <div class="doc-card-num">${escapeHtml(doc.doc_num || '')}</div>
+          <div class="doc-card-title">${escapeHtml(doc.title)}</div>
+          <div class="doc-card-desc">${escapeHtml(doc.short_desc || '')}</div>
+          <div class="doc-card-footer">
+            <span class="doc-badge-pill">${escapeHtml(doc.category)}</span>
+            <span class="doc-action-link">СВОДКА &rarr;</span>
           </div>
-          <div class="file-actions">
-            <button class="btn-file red-btn" onclick="openDocSummaryModal('${doc.id}')">СВОДКА ДОКУМЕНТА</button>
-            <a class="btn-file" href="${doc.pdf_file}" download target="_blank" style="background:#20202a; border-color:#3c3c4f; color:#fff;">СКАЧАТЬ .PDF</a>
-            <button class="btn-file" onclick="openTxtTab('${doc.id}')">ОТКРЫТЬ .TXT</button>
-            <button class="btn-file" onclick="downloadDoc('${doc.id}')">СКАЧАТЬ .TXT</button>
-            ${doc.word_file ? `<a class="btn-file" href="${doc.word_file}" download target="_blank" style="background:#1b2533; border-color:#2e4466; color:#70a5ff;">СКАЧАТЬ .DOC</a>` : ''}
-          </div>
-        </div>
-      `).join('');
-    }
-
-    // Open Executive Summary Modal
-    function openDocSummaryModal(docId) {
-      const doc = docsCatalog.find(d => d.id === docId);
-      if (!doc) return;
-
-      currentDocId = docId;
-      document.getElementById('modalBadge').innerText = doc.code;
-      document.getElementById('modalTitle').innerText = doc.title;
-      document.getElementById('modalMeta').innerText = (doc.org || '') + ' | ' + (doc.date || '');
-      document.getElementById('modalContent').innerHTML = doc.summary || '<p>Сводка документа временно недоступна.</p>';
-
-      document.getElementById('modalOverlay').classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-
-    // Open clean .TXT document in new tab with authentic styling
-    function openTxtTab(docId) {
-      const doc = docsCatalog.find(d => d.id === docId);
-      if (!doc) return;
-
-      const textContent = doc.clean_txt || doc.content || '';
-      const safeTitle = escapeHtml(doc.title);
-      const safeCode = escapeHtml(doc.code);
-      const safeOrg = escapeHtml(doc.org || '');
-      const safeDate = escapeHtml(doc.date || '');
-      const safeTxt = escapeHtml(textContent);
-
-      const htmlContent = `<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <title>${safeCode} — ${safeTitle}</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      background: #0d0d12;
-      color: #e2e2ec;
-      font-family: 'JetBrains Mono', Consolas, 'Courier New', monospace;
-      padding: 30px 20px 80px;
-      line-height: 1.6;
-    }
-    .top-bar {
-      max-width: 980px;
-      margin: 0 auto 20px;
-      background: #16161f;
-      border: 1px solid #282838;
-      border-left: 5px solid #E30613;
-      padding: 16px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      font-family: 'Montserrat', sans-serif;
-    }
-    .top-left h1 {
-      font-size: 15px;
-      font-weight: 900;
-      text-transform: uppercase;
-      color: #fff;
-    }
-    .top-left .meta {
-      font-size: 11px;
-      font-weight: 600;
-      color: #888899;
-      margin-top: 3px;
-    }
-    .actions {
-      display: flex;
-      gap: 8px;
-    }
-    .btn {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 11px;
-      font-weight: 800;
-      text-transform: uppercase;
-      padding: 8px 14px;
-      background: #252533;
-      color: #fff;
-      border: 1px solid #3a3a4d;
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.15s;
-    }
-    .btn:hover { background: #fff; color: #000; }
-    .btn-red { background: #E30613; border-color: #E30613; color: #fff; }
-    .btn-red:hover { background: #ff2233; color: #fff; }
-    .doc-paper {
-      max-width: 980px;
-      margin: 0 auto;
-      background: #08080c;
-      border: 1px solid #252535;
-      padding: 40px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.85);
-      white-space: pre-wrap;
-      font-size: 13px;
-      line-height: 1.65;
-      color: #d8d8e8;
-      word-break: break-word;
-    }
-    @media print {
-      body { background: #fff; color: #000; }
-      .top-bar { display: none; }
-      .doc-paper { border: none; box-shadow: none; padding: 0; background: #fff; color: #000; }
-    }
-  </style>
-</head>
-<body>
-  <div class="top-bar">
-    <div class="top-left">
-      <h1>[${safeCode}] ${safeTitle}</h1>
-      <div class="meta">${safeOrg} &nbsp;|&nbsp; ${safeDate} &nbsp;|&nbsp; ОФИЦИАЛЬНЫЙ АУТЕНТИЧНЫЙ ДОКУМЕНТ</div>
-    </div>
-    <div class="actions">
-      <button class="btn btn-red" onclick="window.print()">ПЕЧАТЬ</button>
-      <button class="btn" onclick="navigator.clipboard.writeText(document.getElementById('txtBody').innerText); alert('Текст документа скопирован!');">СКОПИРОВАТЬ</button>
-      <button class="btn" onclick="window.close()">ЗАКРЫТЬ ВКЛАДКУ</button>
-    </div>
-  </div>
-
-  <div class="doc-paper" id="txtBody">${safeTxt}</div>
-</body>
-</html>`;
-
-      const blob = new Blob([htmlContent], { type: 'text/html;charset=utf-8' });
-      const url = URL.createObjectURL(blob);
-      window.open(url, '_blank');
-    }
-
-    // Close Modal
-    function closeDocModal() {
-      document.getElementById('modalOverlay').classList.remove('active');
-      document.body.style.overflow = '';
-      currentDocId = null;
-    }
-
-    function handleOverlayClick(e) {
-      if (e.target.id === 'modalOverlay') {
-        closeDocModal();
-      }
-    }
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeDocModal();
-    });
-
-    // Toast Notification
-    function showToast(text) {
-      const t = document.getElementById('toast');
-      t.innerText = text;
-      t.style.display = 'block';
-      setTimeout(() => { t.style.display = 'none'; }, 2500);
-    }
-
-    // Copy Content
-    function copyCurrentModalSummary() {
-      if (!currentDocId) return;
-      const doc = docsCatalog.find(d => d.id === currentDocId);
-      if (!doc) return;
-
-      const temp = document.createElement('div');
-      temp.innerHTML = doc.summary;
-      const plainText = temp.innerText || temp.textContent;
-
-      navigator.clipboard.writeText(plainText).then(() => {
-        showToast('СВОДКА [' + doc.code + '] СКОПИРОВАНА В БУФЕР');
-      }).catch(() => {
-        showToast('ОШИБКА ПРИ КОПИРОВАНИИ');
+        `;
+        grid.appendChild(card);
       });
     }
 
-    // Download Doc
-    function downloadDoc(docId) {
+    function filterDocs(cat, btn) {
+      document.querySelectorAll('#vaultFilters .filter-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      renderDocs(cat);
+    }
+
+    // Open Modal Summary
+    function openDocModal(docId) {
       const doc = docsCatalog.find(d => d.id === docId);
       if (!doc) return;
+      currentDocId = docId;
 
-      const blob = new Blob([doc.clean_txt || doc.content || ''], { type: 'text/plain;charset=utf-8' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = doc.code + '_' + doc.id + '.txt';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-      showToast('СКАЧИВАНИЕ ФАЙЛА НАЧАТО: ' + doc.code);
+      document.getElementById('modalBadge').textContent = doc.badge || doc.category;
+      document.getElementById('modalTitle').textContent = doc.title;
+      document.getElementById('modalMeta').textContent = `${doc.doc_num || ''} | ${doc.issuer || ''} | ${doc.date || ''}`;
+
+      const content = document.getElementById('modalContent');
+      let previewHtml = '';
+      if (doc.png_preview) {
+        previewHtml = `<div class="doc-preview-box"><img src="${doc.png_preview}" alt="Превью документа" class="doc-preview-img"></div>`;
+      }
+
+      content.innerHTML = `
+        ${previewHtml}
+        <div class="doc-modal-summary-box">
+          <h4 style="color:#fff; margin-bottom:10px; font-size:14px; text-transform:uppercase; letter-spacing:0.05em;">Судебное и юридическое значение:</h4>
+          <p style="font-size:13.5px; line-height:1.6; color:#ddd; margin-bottom:15px;">${escapeHtml(doc.summary || doc.short_desc || '')}</p>
+          
+          <div style="background:#09090f; border-left:3px solid var(--iskra-red); padding:10px 14px; font-size:12.5px; color:#ccc; margin-top:10px;">
+            <b>РЕКВИЗИТЫ:</b> ${escapeHtml(doc.official_record || doc.doc_num || 'Архивное дело')} | <b>СТАТУС:</b> Подтвержден официальными реестрами РФ
+          </div>
+        </div>
+      `;
+
+      document.getElementById('modalOverlay').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeDocModal() {
+      document.getElementById('modalOverlay').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    function handleOverlayClick(e) {
+      if (e.target.id === 'modalOverlay') closeDocModal();
     }
 
     function downloadCurrentModalDoc() {
-      if (currentDocId) {
-        downloadDoc(currentDocId);
-      }
+      if (!currentDocId) return;
+      const doc = docsCatalog.find(d => d.id === currentDocId);
+      if (!doc || !doc.txt_file) return;
+      
+      const link = document.createElement('a');
+      link.href = doc.txt_file;
+      link.download = doc.txt_file.split('/').pop();
+      link.click();
     }
 
     function downloadCurrentModalPdf() {
       if (!currentDocId) return;
       const doc = docsCatalog.find(d => d.id === currentDocId);
       if (!doc || !doc.pdf_file) return;
-
-      const a = document.createElement('a');
-      a.href = doc.pdf_file;
-      a.download = doc.pdf_file.split('/').pop();
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      showToast('СКАЧИВАНИЕ PDF НАЧАТО: ' + doc.code);
+      
+      const link = document.createElement('a');
+      link.href = doc.pdf_file;
+      link.download = doc.pdf_file.split('/').pop();
+      link.click();
     }
 
-    // Real-time Election Simulator
-    function updateSim() {
-      const slider = document.getElementById('simSlider');
-      const valDisplay = document.getElementById('simVal');
-      const lobanovDisplay = document.getElementById('simLobanov');
-      const resultDisplay = document.getElementById('simResult');
+    function copyCurrentModalSummary() {
+      if (!currentDocId) return;
+      const doc = docsCatalog.find(d => d.id === currentDocId);
+      if (!doc) return;
 
-      if (!slider) return;
-      const pct = parseInt(slider.value, 10);
-      valDisplay.innerText = pct + '%';
-
-      const baseLobanov = 72805;
-      const goncharovVotes = 19425;
-      const popovVotes = 80894;
-
-      const transferred = Math.round(goncharovVotes * (pct / 100));
-      const totalLobanov = baseLobanov + transferred;
-
-      lobanovDisplay.innerText = totalLobanov.toLocaleString('ru-RU') + ' голосов';
-
-      const diff = totalLobanov - popovVotes;
-      if (diff > 0) {
-        resultDisplay.innerText = 'ПОБЕДА ЛОБАНОВА (+' + diff.toLocaleString('ru-RU') + ' голосов)';
-        resultDisplay.style.color = '#2ecc71';
-      } else if (diff === 0) {
-        resultDisplay.innerText = 'НИЧЬЯ С ПОПОВЫМ';
-        resultDisplay.style.color = '#f1c40f';
-      } else {
-        resultDisplay.innerText = 'ПОПОВ ВПЕРЕДИ НА ' + Math.abs(diff).toLocaleString('ru-RU') + ' голосов';
-        resultDisplay.style.color = 'var(--iskra-red)';
-      }
-    }
-
-    // Filter Evidence Matrix
-    function filterMatrix() {
-      const q = document.getElementById('matrixSearch').value.toLowerCase();
-      const rows = document.querySelectorAll('#evidenceTable tbody tr');
-
-      rows.forEach(row => {
-        const text = row.innerText.toLowerCase();
-        if (text.includes(q)) {
-          row.style.display = '';
-        } else {
-          row.style.display = 'none';
-        }
+      const text = `${doc.title}
+${doc.doc_num || ''}
+${doc.summary || doc.short_desc || ''}`;
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('СВОДКА СКОПИРОВАНА В БУФЕР');
       });
     }
 
-    // Filter Dossier (Section 7)
-    function filterDossier(group, btnEl) {
-      document.querySelectorAll('.dossier-filter-btn').forEach(btn => btn.classList.remove('active'));
-      if (btnEl) {
-        btnEl.classList.add('active');
+    function openTxtTab(docId) {
+      if (!docId) return;
+      const doc = docsCatalog.find(d => d.id === docId);
+      if (!doc || !doc.txt_file) return;
+      window.open(doc.txt_file, '_blank');
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      if (!t) return;
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2500);
+    }
+
+    // ==========================================
+    // EVIDENCE GALLERY CAROUSEL & LIGHTBOX LOGIC
+    // ==========================================
+    function renderGalSlide(index) {
+      if (index < 0) index = galSlides.length - 1;
+      if (index >= galSlides.length) index = 0;
+      currentGalIndex = index;
+      const s = galSlides[index];
+
+      // Update carousel DOM
+      const img = document.getElementById('gal-current-img');
+      if (img) {
+        img.style.opacity = '0';
+        setTimeout(() => {
+          img.src = s.img;
+          img.style.opacity = '1';
+        }, 120);
       }
+      const badge = document.getElementById('gal-badge');
+      if (badge) {
+        badge.textContent = s.category;
+        badge.style.background = s.badge_color || 'var(--iskra-red)';
+      }
+      const counter = document.getElementById('gal-counter');
+      if (counter) {
+        const numStr = (index + 1) < 10 ? '0' + (index + 1) : (index + 1);
+        counter.textContent = 'УЛИКА ' + numStr + ' / ' + galSlides.length;
+      }
+      const title = document.getElementById('gal-title');
+      if (title) title.textContent = s.title;
+      const desc = document.getElementById('gal-desc');
+      if (desc) desc.textContent = s.desc;
+      const fact = document.getElementById('gal-fact');
+      if (fact) fact.textContent = s.fact;
+
+      // Update thumbnails active state
+      document.querySelectorAll('.carousel-thumb-item').forEach((t, i) => {
+        if (i === index) {
+          t.classList.add('active');
+          t.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        } else {
+          t.classList.remove('active');
+        }
+      });
+
+      // Update lightbox if open
+      const lb = document.getElementById('galleryLightboxModal');
+      if (lb && lb.style.display === 'flex') {
+        const lbImg = document.getElementById('lb-img');
+        if (lbImg) {
+          lbImg.style.opacity = '0';
+          setTimeout(() => {
+            lbImg.src = s.img;
+            lbImg.style.opacity = '1';
+          }, 100);
+        }
+        const numStr = (index + 1) < 10 ? '0' + (index + 1) : (index + 1);
+        document.getElementById('lb-counter').textContent = 'УЛИКА ' + numStr + ' / ' + galSlides.length;
+        document.getElementById('lb-title').textContent = s.title;
+        document.getElementById('lb-badge').textContent = s.category;
+      }
+    }
+
+    function nextGalSlide() {
+      renderGalSlide(currentGalIndex + 1);
+    }
+
+    function prevGalSlide() {
+      renderGalSlide(currentGalIndex - 1);
+    }
+
+    function jumpToGalSlide(idx) {
+      renderGalSlide(idx);
+    }
+
+    function initGalThumbs() {
+      const container = document.getElementById('galThumbsRibbon');
+      if (!container) return;
+      container.innerHTML = '';
+      galSlides.forEach((s, i) => {
+        const numStr = (i + 1) < 10 ? '0' + (i + 1) : (i + 1);
+        const item = document.createElement('div');
+        item.className = 'carousel-thumb-item' + (i === 0 ? ' active' : '');
+        item.onclick = () => renderGalSlide(i);
+        const shortCat = s.category.split(' ')[0];
+        item.innerHTML = `
+          <img src="${s.img}" alt="Улика ${numStr}" class="carousel-thumb-img">
+          <div class="carousel-thumb-lbl">${numStr} ${shortCat}</div>
+        `;
+        container.appendChild(item);
+      });
+    }
+
+    function openGalleryLightbox() {
+      const lb = document.getElementById('galleryLightboxModal');
+      if (!lb) return;
+      lb.style.display = 'flex';
+      renderGalSlide(currentGalIndex);
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeGalleryLightbox() {
+      const lb = document.getElementById('galleryLightboxModal');
+      if (!lb) return;
+      lb.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    // Keyboard navigation
+    window.addEventListener('keydown', (e) => {
+      const lb = document.getElementById('galleryLightboxModal');
+      const isLbOpen = lb && lb.style.display === 'flex';
+      if (e.key === 'ArrowRight') {
+        nextGalSlide();
+      } else if (e.key === 'ArrowLeft') {
+        prevGalSlide();
+      } else if (e.key === 'Escape') {
+        if (isLbOpen) closeGalleryLightbox();
+        closeDocModal();
+      }
+    });
+
+    // Election Simulator
+    function updateSim() {
+      const slider = document.getElementById('goncharovSlider');
+      if (!slider) return;
+      const pct = parseFloat(slider.value);
+      document.getElementById('goncharovVal').textContent = pct.toFixed(1) + '%';
+
+      const totalVoters = 180000;
+      const basePopov = 35.1;
+      const baseLobanov = 31.6;
+      const baseGoncharov = 10.8;
+
+      const popovVotes = Math.round(totalVoters * (basePopov / 100));
+      const transferredPct = baseGoncharov - pct;
+      const newLobanovPct = baseLobanov + (transferredPct * 0.85);
+      const lobanovVotes = Math.round(totalVoters * (newLobanovPct / 100));
+
+      const popovEl = document.getElementById('simPopovVotes');
+      const lobanovEl = document.getElementById('simLobanovVotes');
+      const resEl = document.getElementById('simResultText');
+
+      if (popovEl) popovEl.textContent = popovVotes.toLocaleString('ru-RU');
+      if (lobanovEl) lobanovEl.textContent = lobanovVotes.toLocaleString('ru-RU');
+
+      if (resEl) {
+        if (lobanovVotes > popovVotes) {
+          resEl.innerHTML = `<b style="color:var(--iskra-green);">ПОБЕДА МИХАИЛА ЛОБАНОВА</b> (отрыв +${(lobanovVotes - popovVotes).toLocaleString('ru-RU')} голосов). Кремлевский пропагандист Попов проигрывает округ.`;
+        } else {
+          resEl.innerHTML = `<b style="color:var(--iskra-red);">ПОБЕДА ЕВГЕНИЯ ПОПОВА («ЕДИНАЯ РОССИЯ»)</b>. Голоса оппозиции расколоты Кириллом Гончаровым.`;
+        }
+      }
+    }
+
+    // Section 7 Dossier Filter
+    function filterDossier(group, btn) {
+      document.querySelectorAll('#dossierFilters .filter-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
 
       const cards = document.querySelectorAll('#dossierGrid .persona-card');
       cards.forEach(card => {
@@ -3149,10 +3297,11 @@
       });
     }
 
-    // Initialization
+    // DOM Ready
     window.addEventListener('DOMContentLoaded', () => {
       renderDocs();
       updateSim();
+      initGalThumbs();
 
       if (window.location.hash) {
         const tab = window.location.hash.replace('#', '');
