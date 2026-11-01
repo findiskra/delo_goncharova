@@ -1,0 +1,17 @@
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python cache & scratch scripts
+__pycache__/
+*.py[cod]
+*$py.class
+*.py
+
+# Chrome web page dumps & raw archives (keep evidence_gallery instead)
+скриншоты/
+*_files/
+*.tmp
+_temp_*.html
+*.log
