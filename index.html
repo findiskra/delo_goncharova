@@ -1226,131 +1226,30 @@
       transform: scale(1.1);
     }
 
-  
-    /* SECTION TELEGRAM BAR (MATCHING ISKRA DARK STYLE) */
-    /* TOP STRIP TELEGRAM BUTTON (SCREEN 2) */
-    .top-strip-tg-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(120, 0, 0, 0.65);
-      border: 1px solid rgba(255, 255, 255, 0.45);
-      color: #ffffff !important;
-      text-decoration: none;
-      padding: 3px 12px;
-      border-radius: 4px;
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      transition: all 0.2s ease;
-    }
-    .top-strip-tg-btn:hover {
-      background: #000000;
-      border-color: #ffffff;
-      color: #ffffff !important;
-    }
-
-    /* TELEGRAM CALLOUT BAR UNDER SECTIONS LIST (SCREEN 3 & 4) */
-    .iskra-tg-callout-bar {
-      background: #111116;
-      border: 1px solid var(--border-dark);
-      border-left: 3px solid var(--iskra-red);
-      border-radius: 4px;
-      padding: 14px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      margin-bottom: 24px;
-      box-sizing: border-box;
-      width: 100%;
-    }
-    .tg-callout-left {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-    .tg-callout-title {
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--iskra-red);
-      font-family: 'Space Mono', monospace;
-    }
-    .tg-callout-desc {
-      font-size: 13px;
-      color: #a0a0aa;
-      line-height: 1.4;
-    }
-    .tg-callout-desc b {
-      color: #ffffff;
-    }
-    .tg-callout-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(229, 9, 20, 0.08);
-      border: 1px solid var(--iskra-red);
-      color: #ffffff !important;
-      text-decoration: none;
-      padding: 8px 18px;
-      border-radius: 4px;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      white-space: nowrap;
-      transition: all 0.2s ease;
-      cursor: pointer;
-    }
-    .tg-callout-btn:hover {
-      background: var(--iskra-red);
-      color: #ffffff !important;
-    }
-    @media (max-width: 768px) {
-      .iskra-tg-callout-bar {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-        padding: 12px 16px;
-      }
-      .tg-callout-btn {
-        width: 100%;
-        justify-content: center;
-      }
-    }}
-</style>
+  </style>
 </head>
 <body>
 
-  <!-- TOP BANNER (EXACT ISKRA ASYMMETRICAL POSTER - SCREENSHOT 1 & 2) -->
+  <!-- TOP BANNER (EXACT ISKRA ASYMMETRICAL POSTER) -->
   <div class="iskra-banner">
     <div class="iskra-top-strip">
       <div><span>СОВЕРШЕННО СЕКРЕТНО // OSINT-РАССЛЕДОВАНИЕ</span> &nbsp;|&nbsp; <span>СПЕЦВЫПУСК ИСКРЫ</span></div>
-      <div style="display:flex; align-items:center; gap:14px;">
-        <span>2019–2026 // КОРРУПЦИЯ, СПОЙЛЕРСТВО И&nbsp;ЧЕРНАЯ КАССА МЭРИИ</span>
-        <a href="https://t.me/find_iskra" target="_blank" rel="noopener noreferrer" class="top-strip-tg-btn">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block; vertical-align:middle; margin-right:4px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
-          TELEGRAM // @FIND_ISKRA
-        </a>
-      </div>
+      <div>2019–2026 // КОРРУПЦИЯ, СПОЙЛЕРСТВО И&nbsp;ЧЕРНАЯ КАССА МЭРИИ</div>
     </div>
 
     <div class="header-content">
       <div class="header-grid">
         <div class="header-title-block">
-          <div style="display:flex; gap:8px; margin-bottom:14px;">
-            <span style="background:#ffffff; color:#000000; font-size:11px; font-weight:800; padding:3px 8px; text-transform:uppercase; letter-spacing:0.05em; border-radius:2px;">СПЕЦПРОЕКТ ИСКРЫ</span>
-            <span style="background:var(--iskra-red); color:#ffffff; font-size:11px; font-weight:800; padding:3px 8px; text-transform:uppercase; letter-spacing:0.05em; border-radius:2px;">ФОРЕНЗИК И&nbsp;СУДЕБНЫЕ АКТЫ</span>
+          <div>
+            <span class="badge-white">СПЕЦПРОЕКТ ИСКРЫ</span>
+            <span class="badge-red">ФОРЕНЗИК И&nbsp;СУДЕБНЫЕ АКТЫ</span>
           </div>
-          <h1>ДЕЛО КИРИЛЛА <span class="accent">ГОНЧАРОВА</span></h1>
-          <div style="font-size:19px; font-weight:900; line-height:1.3; color:#FFFFFF; text-transform:uppercase; margin-bottom:14px; letter-spacing:0.01em;">
+          <h1 style="margin-top:14px; margin-bottom:6px;">ДЕЛО КИРИЛЛА <span class="accent">ГОНЧАРОВА</span></h1>
+          <h1 style="font-size:23px; color:#e0e0e0; margin-top:6px; font-weight:800; line-height:1.35; text-transform:uppercase;">
             АНАТОМИЯ СИСТЕМНОГО СПОЙЛЕРА: 24,2&nbsp;МЛН&nbsp;РУБЛЕЙ<br>
             ОТ&nbsp;МЭРИИ, АФЕРА С&nbsp;БАТАРЕЙКАМИ, СЛИВ ВЫБОРОВ<br>
             В&nbsp;ГОСДУМУ И&nbsp;МАРОДЕРСТВО В&nbsp;«ЯБЛОКЕ»
-          </div>
+          </h1>
           <p class="header-lead">
             Полная анатомия политической коррупции в&nbsp;Москве: почему самый молодой «лидер либералов» не&nbsp;сидит в&nbsp;тюрьме вместе с&nbsp;оппозиционерами, как экологический фонд&nbsp;«Среда» с&nbsp;финансовым ОКВЭДом осваивал миллионы из&nbsp;кормушки «Мой район», через какую фирму соратника обналичивался кэш, и&nbsp;как в&nbsp;2021&nbsp;году были сожжены 19&nbsp;425&nbsp;голосов ради победы кремлевского пропагандиста Евгения Попова.
           </p>
@@ -1359,87 +1258,77 @@
         <div class="stats-widget">
           <div class="stat-row">
             <span class="stat-val red">24,2&nbsp;МЛН ₽</span>
-            <span class="stat-lbl">ТРАНШИ ФОНДА «СРЕДА» ОТ&nbsp;АНО&nbsp;«МОЙ РАЙОН» (МЭРИЯ МОСКВЫ)</span>
+            <span class="stat-lbl">Транши фонда&nbsp;«Среда» от&nbsp;АНО&nbsp;«Мой район» (мэрия Москвы)</span>
           </div>
           <div class="stat-row">
             <span class="stat-val">19&nbsp;425&nbsp;ГОЛОСОВ</span>
-            <span class="stat-lbl">СОЖЖЕНО В&nbsp;КУНЦЕВО (ОКРУГ 197) В&nbsp;ПОЛЬЗУ ЕВГЕНИЯ ПОПОВА</span>
+            <span class="stat-lbl">Сожжено в&nbsp;Кунцево (округ 197) в&nbsp;пользу Евгения Попова</span>
           </div>
           <div class="stat-row">
             <span class="stat-val red">0 УГОЛОВОК</span>
-            <span class="stat-lbl">ЗА&nbsp;15 ЛЕТ В&nbsp;ПОЛИТИКЕ (ПРИ&nbsp;СРОКАХ ДО&nbsp;25 ЛЕТ У&nbsp;СОРАТНИКОВ)</span>
+            <span class="stat-lbl">За&nbsp;15&nbsp;лет в&nbsp;политике (при&nbsp;сроках до&nbsp;25&nbsp;лет у&nbsp;соратников)</span>
           </div>
           <div class="stat-row">
             <span class="stat-val">100% КОНТРОЛЬ</span>
-            <span class="stat-lbl">ЕДИНОЛИЧНАЯ ПОДПИСЬ ГОНЧАРОВА НА&nbsp;СЧЕТАХ ФОНДА И&nbsp;ПАРТИИ</span>
+            <span class="stat-lbl">Единоличная подпись Гончарова на&nbsp;счетах фонда и&nbsp;партии</span>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- NAVIGATION TABS (EXACT 2 ROWS, 4 COLS PER ROW - SCREENSHOT 1) -->
+  <!-- NAVIGATION TABS (EXACT 2 ROWS, 4 COLS PER ROW) -->
   <div class="nav-container">
     <div class="nav-tabs-grid" id="navTabs">
       <!-- ROW 1 -->
       <button class="nav-btn active" onclick="switchTab('tab-overview')">
         <span class="tab-num">РАЗДЕЛ 01</span>
-        <span class="tab-title">ЧТО СЛУЧИЛОСЬ И&nbsp;ПОЧЕМУ</span>
+        <span class="tab-title">Что случилось и&nbsp;почему</span>
       </button>
 
       <button class="nav-btn" onclick="switchTab('tab-fond')">
         <span class="tab-num">РАЗДЕЛ 02</span>
-        <span class="tab-title">КОРМУШКА МЭРИИ (24,2&nbsp;МЛН ₽)</span>
+        <span class="tab-title">Кормушка мэрии (24,2&nbsp;млн ₽)</span>
       </button>
 
       <button class="nav-btn" onclick="switchTab('tab-apra')">
         <span class="tab-num">РАЗДЕЛ 03</span>
-        <span class="tab-title">ОБНАЛЬНЫЙ ШЛЮЗ (ООО&nbsp;«АПРА»)</span>
+        <span class="tab-title">Обнальный шлюз (ООО&nbsp;«Апра»)</span>
       </button>
 
       <button class="nav-btn" onclick="switchTab('tab-duma')">
         <span class="tab-num">РАЗДЕЛ 04</span>
-        <span class="tab-title">СПОЙЛЕР В&nbsp;ГОСДУМУ (ОКРУГ 197)</span>
+        <span class="tab-title">Спойлер в&nbsp;Госдуму (округ 197)</span>
       </button>
 
       <!-- ROW 2 -->
       <button class="nav-btn" onclick="switchTab('tab-purge')">
         <span class="tab-num">РАЗДЕЛ 05</span>
-        <span class="tab-title">ПОГРОМ В&nbsp;ПАРТИИ (250&nbsp;МЛН ₽)</span>
+        <span class="tab-title">Погром в&nbsp;партии (250&nbsp;млн ₽)</span>
       </button>
 
       <button class="nav-btn" onclick="switchTab('tab-coup')">
         <span class="tab-num">РАЗДЕЛ 06</span>
-        <span class="tab-title">АППАРАТНЫЙ ПЕРЕХВАТ КАССЫ</span>
+        <span class="tab-title">Аппаратный перехват кассы</span>
       </button>
 
       <button class="nav-btn" onclick="switchTab('tab-dossier')">
         <span class="tab-num">РАЗДЕЛ 07 // ДОСЬЕ</span>
-        <span class="tab-title">КТО С&nbsp;ЧЕМ И&nbsp;КАК ОСТАЛСЯ</span>
+        <span class="tab-title">Кто с&nbsp;чем и&nbsp;как остался</span>
       </button>
 
       <button class="nav-btn" onclick="switchTab('tab-vault')">
         <span class="tab-num">РАЗДЕЛ 08 // РЕПОЗИТОРИЙ</span>
-        <span class="tab-title">ХРАНИЛИЩЕ УЛИК И&nbsp;ДОКУМЕНТЫ</span>
+        <span class="tab-title">Хранилище улик и&nbsp;документы</span>
       </button>
     </div>
   </div>
 
-  <!-- MAIN CONTENT CONTAINER -->
+  <!-- MAIN WRAPPER -->
   <div class="main-wrapper">
-    <!-- TELEGRAM CALLOUT BAR UNDER SECTIONS LIST (EXACT MATCH TO SCREENSHOTS 3 & 4) -->
-    <div class="iskra-tg-callout-bar">
-      <div class="tg-callout-left">
-        <div class="tg-callout-title">ИСКРА // ОФИЦИАЛЬНЫЙ ТЕЛЕГРАМ</div>
-        <div class="tg-callout-desc">Оперативные материалы, новые факты и&nbsp;эксклюзивные документы расследований — в&nbsp;канале <b>@find_iskra</b></div>
-      </div>
-      <a href="https://t.me/find_iskra" target="_blank" rel="noopener noreferrer" class="tg-callout-btn">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block; vertical-align:middle; margin-right:6px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
-        ПОДПИСАТЬСЯ НА @FIND_ISKRA
-      </a>
-    </div>
 
-<div class="tab-pane active" id="tab-overview">
+    <!-- TAB 1: OVERVIEW & COMPLETE DETAILED NARRATIVE -->
+    <div class="tab-pane active" id="tab-overview">
       <div class="section-head">
         <div>
           <h2><span class="badge-red">СПЕЦРАССЛЕДОВАНИЕ</span> ЧТО СЛУЧИЛОСЬ И&nbsp;ПОЧЕМУ: ПОЛНЫЙ РАЗБОР</h2>
@@ -1493,7 +1382,7 @@
             Для&nbsp;тайного финансирования лояльных медиаперсон и&nbsp;политиков была задействована программа <b>«Мой район»</b>. Чтобы не&nbsp;светить расходы в&nbsp;официальном казначействе и&nbsp;обойти жесткий федеральный закон о&nbsp;госзакупках (44-ФЗ), мэрия создала специальную «прокладку» — <b>АНО&nbsp;«Мой район» (ОГРН 1187700020925, ИНН 9710070873, юрадрес: пер. Вознесенский, д.&nbsp;22)</b>. Автономная некоммерческая организация имеет право раздавать миллиарды рублей без&nbsp;открытых тендеров, без&nbsp;согласования с&nbsp;Федеральной антимонопольной службой и&nbsp;без уплаты налогов (согласно статье 251 Налогового кодекса РФ).
           </p>
           <p>
-            Спустя три недели после выборов в&nbsp;Мосгордуму, <b>30 сентября 2019&nbsp;года</b>, Кирилл Гончаров лично регистрирует <b>Фонд защиты городской природы «Среда» (ОГРН 1197700014490, ИНН 7736324409)</b> по&nbsp;юридическому адресу: ул. Панфёрова, д.&nbsp;16, корп.&nbsp;1, комн. 55 (являющемуся адресом массовой регистрации по&nbsp;данным сервиса «Прозрачный бизнес» ФНС России).
+            Спустя три недели после выборов в&nbsp;Мосгордуму, <b>30 сентября 2019&nbsp;года</b>, Кирилл Гончаров лично регистрирует <b>Фонд защиты городской природы «Среда» (ОГРН 1197700014490, ИНН 7736324409)</b> по&nbsp;адресу массовой регистрации на&nbsp;улице Панфёрова.
           </p>
           <div class="callout-box">
             <b>Улика реестра ФНС России:</b> В&nbsp;регистрационном деле экологического фонда в&nbsp;качестве основного вида деятельности заявлен единственный код: <b>ОКВЭД 64.99 — «Предоставление прочих финансовых услуг»</b>. Ни&nbsp;одного экологического кода, ни&nbsp;одной переработки мусора! Юридически это была не&nbsp;экологическая дружина, а&nbsp;финансово-расчетная контора по&nbsp;перекачке безналичных средств.
@@ -1609,13 +1498,14 @@
             В&nbsp;Кунцевском одномандатном избирательном округе №&nbsp;197 (охватывающем районы Кунцево, Раменки, Дорогомилово, Фили-Давыдково, Крылатское) власть оказалась на&nbsp;грани катастрофического фиаско. Кандидатом от&nbsp;«Единой России» и&nbsp;мэрии шел одиозный ведущий пропагандистского шоу «60 минут» на&nbsp;телеканале Россия-1 <b>Евгений Попов</b>. Против него мощную народную кампанию вел преподаватель МГУ, математик и&nbsp;профсоюзный лидер <b>Михаил Лобанов</b> (КПРФ), которого поддержало «Умное голосование» и&nbsp;широкая оппозиционная коалиция.
           </p>
           <p>
-            В&nbsp;ходе кампании кандидат от&nbsp;власти Евгений Попов столкнулся с&nbsp;ожесточенным сопротивлением в&nbsp;Кунцевском округе со&nbsp;стороны Михаила Лобанова. В&nbsp;условиях жесткого протестного голосования ключевым фактором победы кандидата мэрии стало <b>распыление голосов демократического электората</b>, роль которого сыграло выдвижение Кирилла Гончарова.
+            Штаб Сергея Собянина понимал: телепропагандист Попов проигрывает вчистую интеллигентному западному округу столицы. Единственным спасением для&nbsp;власти было <b>расколоть протестный электорат</b> и&nbsp;утилизировать голоса либералов. Эту роль поручили Кириллу Гончарову.
           </p>
           <div class="callout-box">
-            <b>Факторы электорального раскола в&nbsp;округе №&nbsp;197:</b>
-            <br>• <b>Отказ от&nbsp;координации:</b> Несмотря на&nbsp;призывы независимых аналитиков и&nbsp;социологов объединить усилия ради победы над&nbsp;административным кандидатом, Гончаров принципиально отказался от&nbsp;снятия в&nbsp;пользу Лобанова как сильнейшего кандидата оппозиции, критикуя КПРФ.
-            <br>• <b>Политический эффект:</b> Кампания Гончарова мобилизовала либеральную аудиторию западных районов Москвы (Кунцево, Раменки, Крылатское), однако в&nbsp;условиях мажоритарной системы эти голоса не&nbsp;позволили победить ему самому, но&nbsp;отняли критически важные проценты у&nbsp;Лобанова.
-            <br>• <b>Аномальный бюджет:</b> Официальный избирательный фонд Гончарова превысил <b>8 миллионов рублей</b> (по&nbsp;данным Мосгоризбиркома и&nbsp;Сбербанка), будучи сформированным за&nbsp;счет партийных структур и&nbsp;сторонних юрлиц, в&nbsp;то время как личный доход кандидата по&nbsp;декларации составлял всего 152&nbsp;400&nbsp;рублей за&nbsp;весь 2020 год.
+            <b>Как отрабатывался заказ мэрии:</b>
+            <br>• <b>Отказ от&nbsp;коалиции:</b> Несмотря на&nbsp;публичные призывы социологов и&nbsp;межпартийной коалиции снять непроходных кандидатов ради победы над&nbsp;Поповым, Гончаров и&nbsp;руководство «Яблока» наотрез отказались от&nbsp;координации, объявив союзников «сталинистами».
+            <br>• <b>Война против оппозиции, а&nbsp;не власти:</b> Основной пафос публичных заявлений Гончарова был направлен не&nbsp;против кандидата мэрии Попова и&nbsp;фальсификаций, а&nbsp;на дискредитацию Михаила Лобанова и&nbsp;раскол единого протестного фронта.
+            <br>• <b>Коммерческий бюджет кампании:</b> В&nbsp;отличие от&nbsp;массовой волонтерской кампании Лобанова, штаб Гончарова вел исключительно платную аппаратную кампанию: миллионные тиражи многополосных цветных газет по&nbsp;почтовым ящикам округов ЗАО и&nbsp;наемные пикетчики у&nbsp;метро «Молодежная», «Кунцевская» и&nbsp;«Крылатское». Избирательный фонд Гончарова исчислялся миллионами рублей при&nbsp;его официальном личном годовом доходе по&nbsp;декларации всего в&nbsp;152&nbsp;400&nbsp;рублей.
+            <br>• <b>Зеленый коридор от&nbsp;полиции:</b> В&nbsp;то время как волонтеров Лобанова и&nbsp;независимых наблюдателей полиция задерживала сотнями по&nbsp;всему округу, агитационные материалы Гончарова беспрепятственно распространялись под&nbsp;контролем управ районов ЗАО.
           </div>
           <p>
             Математика итоговых протоколов ЦИК РФ и&nbsp;Мосгоризбиркома раскрывает суть предательства:
@@ -1680,7 +1570,7 @@
             <b>Партийные чистки декабря 2021&nbsp;года:</b> Чтобы не&nbsp;допустить независимого аудита и&nbsp;защитить номенклатурный контроль над&nbsp;аппаратом, руководство перешло к&nbsp;репрессивным мерам. 28–29 декабря 2021&nbsp;года на&nbsp;заседании Федерального Бюро при&nbsp;активной поддержке Гончарова были приняты решения о&nbsp;массовом исключении и&nbsp;поражении в&nbsp;правах более 200 членов партии в&nbsp;Москве в&nbsp;рамках процедуры так называемой «перерегистрации».
           </div>
           <p>
-            Были распущены советы первичных районных отделений (Гагаринское, Раменки, Хамовники), разогнано автономное «Молодежное Яблоко», изгнаны активисты движения «Весна». Из&nbsp;старейшей демократической партии вычистили всех живых, принципиальных людей, оставив лишь послушных номенклатурных статистов.
+            Были насильственно ликвидированы строптивые районные первичные отделения (Гагаринское, Раменки, Хамовники), разогнано автономное «Молодежное Яблоко», изгнаны активисты движения «Весна». Из&nbsp;старейшей демократической партии вычистили всех живых, принципиальных людей, оставив лишь послушных номенклатурных статистов.
           </p>
           <p>
             Потеряв 250 миллионов федерального госфинансирования, команда Гончарова окончательно села на&nbsp;«иглу» мэрии Москвы. С&nbsp;этого дня единственным источником выживания партийного аппарата стали секретные субсидии Собянина, маскируемые под&nbsp;эко-фонды и&nbsp;урбанистические гранты.
@@ -1803,24 +1693,9 @@
         </div>
       </div>
 
-    
-      <!-- TELEGRAM CHANNEL CALLOUT -->
-      <div class="section-tg-bar" style="margin: 32px 0 20px 0; padding: 16px 20px;">
-        <div class="tg-bar-left" style="gap: 4px;">
-          <span class="tg-bar-tag">ОФИЦИАЛЬНЫЙ ТЕЛЕГРАМ // @find_iskra</span>
-          <div style="font-size: 15px; font-weight: 800; color: #ffffff;">ИСКРА // Новые факты, расследования и&nbsp;материалы дела</div>
-          <div style="font-size: 13px; color: var(--text-gray); margin-top: 2px;">
-            Подписывайтесь на&nbsp;канал <b>@find_iskra</b>, чтобы первыми получать материалы независимых антикоррупционных расследований.
-          </div>
-        </div>
-        <a href="https://t.me/find_iskra" target="_blank" class="tg-bar-btn" style="padding: 9px 18px; font-size: 11.5px;">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
-          ПОДПИСАТЬСЯ НА @find_iskra
-        </a>
-      </div>
     </div>
-
-        <!-- TAB 2: КОРМУШКА МЭРИИ (24,2 МЛН РУБЛЕЙ) - ПОЛНЫЙ ФОРЕНЗИК И АРХИВ ДОКАЗАТЕЛЬСТВ -->
+    
+            <!-- TAB 2: КОРМУШКА МЭРИИ (24,2 МЛН РУБЛЕЙ) - ПОЛНЫЙ ФОРЕНЗИК И АРХИВ ДОКАЗАТЕЛЬСТВ -->
     <div class="tab-pane" id="tab-fond">
       <div class="section-head">
         <div>
@@ -1910,7 +1785,7 @@
                 <td>Канализация протестного электората КПРФ</td>
               </tr>
               <tr>
-                <td>ООО&nbsp;«Апра» (Крапухин&nbsp;А.&nbsp;В.)</td>
+                <td>ООО&nbsp;«Апра» (Крапухин&nbsp;А.&nbsp;И.)</td>
                 <td>Транзитные шлюзы</td>
                 <td>«Полиграфия, дизайн, консультации»</td>
                 <td><b>Обнальный кошелек руководства фонда&nbsp;«Среда»</b></td>
@@ -2180,75 +2055,85 @@
     </div>
 
 
-    <!-- TAB 3: ОБНАЛЬНЫЙ ШЛЮЗ (КРАПУХИН И ООО «АПРА») -->
+    <!-- TAB 3: ОБНАЛЬНЫЙ ШЛЮЗ (КРАПУХИН И ООО «АПРА») - ПОЛНЫЙ ФОРЕНЗИК -->
     <div class="tab-pane" id="tab-apra">
       <div class="section-head">
         <div>
           <h2><span class="badge-red">РАЗДЕЛ 03</span> ТЕНЕВЫЕ ПОДРЯДЧИКИ: КРАПУХИН, ООО&nbsp;«АПРА» И&nbsp;ОБНАЛ</h2>
-          <div class="desc">Анатомия фирмы-прокладки соратника Гончарова, полиграфические контракты, авто Elegance и&nbsp;судебные дела с&nbsp;МАДИ</div>
+          <div class="desc">Анатомия фирмы-прокладки соратника Гончарова, полиграфические контракты, авто Elegance, арбитражи СФР и&nbsp;аудит финотчетности</div>
         </div>
       </div>
 
-      <!-- VISUAL SCHEME 2: ОБНАЛЬНЫЙ КОНВЕЙЕР -->
-      <div class="scheme-container">
+      <!-- CLEAN BLOCK-SCHEME WITHOUT NUMBERS -->
+      <div class="scheme-container" style="border-left-color: var(--iskra-red);">
         <div class="scheme-title">
-          <span class="badge-red">СХЕМА 02</span> МНОГОУРОВНЕВЫЙ ОБНАЛЬНЫЙ КОНВЕЙЕР ФОНДА «СРЕДА» И&nbsp;ООО&nbsp;«АПРА»
+          <span>СХЕМА ОБНАЛИЧИВАНИЯ БЮДЖЕТНЫХ СРЕДСТВ ЧЕРЕЗ СТРУКТУРЫ КРАПУХИНА</span>
         </div>
         <div class="scheme-desc">
-          Пошаговая реконструкция вывода 24,2&nbsp;млн бюджетных рублей в&nbsp;наличный кэш через подконтрольные юридические оболочки
+          Реконструкция прохождения траншей мэрии от&nbsp;входящего счета фонда до&nbsp;наличного кэша и&nbsp;автопарка
         </div>
-        <div class="scheme-flow">
-          <div class="scheme-node">
-            <div class="node-badge">01</div>
-            <div class="node-card">
-              <div class="node-title"><span>ВХОДЯЩИЙ СЧЕТ ФОНДА «СРЕДА»</span> <span style="font-size:10px; color:var(--iskra-red);">24&nbsp;200&nbsp;000&nbsp;₽</span></div>
-              <div class="node-body">Безналоговые целевые транши АНО&nbsp;«Мой район». По&nbsp;закону об&nbsp;НКО деньги обязаны быть списаны со&nbsp;счета до&nbsp;окончания финансового года.</div>
+
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <!-- Top Block -->
+          <div class="card red-bar-left" style="margin-bottom:0; background:#121218; padding:16px;">
+            <div style="font-size:13px; font-weight:900; text-transform:uppercase; color:#fff;">
+              Входящий расчетный счет Фонда защиты городской природы «Среда» (24&nbsp;200&nbsp;000&nbsp;₽)
+            </div>
+            <div style="font-size:12px; color:#aaa; margin-top:4px;">
+              Безналоговые целевые поступления от&nbsp;АНО&nbsp;«Мой район» (мэрия Москвы). Подлежат обязательному списанию до&nbsp;конца финансового года.
             </div>
           </div>
-          <div class="node-arrow">▼</div>
 
-          <div class="grid-3" style="margin: 4px 0;">
-            <div class="card red-bar-left" style="margin-bottom:0; background:#121218;">
-              <div class="card-title" style="font-size:12px;"><span>КАНАЛ А: ООО&nbsp;«АПРА»</span> <span class="badge-red">ПРЯМОЙ ДОГОВОР</span></div>
-              <div style="font-size:11.5px; color:#bbb;">
-                <b>Гендиректор: Крапухин&nbsp;А.&nbsp;И.</b><br>
-                ОКВЭДы: полиграфия (18.12), PR (70.21), соцопросы (73.20). Списание десятков миллионов за&nbsp;«информационные услуги».
+          <div style="text-align:center; color:var(--iskra-red); font-weight:900; font-size:18px; line-height:1;">▼</div>
+
+          <!-- 3-way Split Blocks -->
+          <div class="grid-3" style="gap:12px;">
+            <div class="card red-bar-left" style="margin-bottom:0; background:#14141d; padding:14px;">
+              <div style="font-size:12px; font-weight:900; text-transform:uppercase; color:#fff; margin-bottom:4px;">
+                ООО&nbsp;«АПРА» (Крапухин&nbsp;А.&nbsp;И.)
+              </div>
+              <div style="font-size:11.5px; color:#aaa; line-height:1.45;">
+                ОГРН 1207700120154 (Крылатское). Договоры на&nbsp;полиграфию (18.12), связи с&nbsp;общественностью (70.21) и&nbsp;социологические замеры (73.20).
               </div>
             </div>
 
-            <div class="card white-bar-left" style="margin-bottom:0; background:#121218;">
-              <div class="card-title" style="font-size:12px;"><span>КАНАЛ Б: ИП КРАПУХИН</span> <span class="badge-white">УСН ДОХОДЫ 6%</span></div>
-              <div style="font-size:11.5px; color:#bbb;">
-                <b>ОГРНИП 326774600581359</b><br>
-                Вывод средств под&nbsp;6% налог ИП на&nbsp;консалтинговые и&nbsp;юридические услуги аппарата Московского «Яблока».
+            <div class="card white-bar-left" style="margin-bottom:0; background:#14141d; padding:14px;">
+              <div style="font-size:12px; font-weight:900; text-transform:uppercase; color:#fff; margin-bottom:4px;">
+                ИП Крапухин&nbsp;А.&nbsp;И.
+              </div>
+              <div style="font-size:11.5px; color:#aaa; line-height:1.45;">
+                ИНН 773175961325. Вывод средств под&nbsp;6% ставку УСН по&nbsp;договорам информационного и&nbsp;юридического обслуживания партийных структур.
               </div>
             </div>
 
-            <div class="card green-bar-left" style="margin-bottom:0; background:#121218;">
-              <div class="card-title" style="font-size:12px;"><span>КАНАЛ В: САМОЗАНЯТЫЕ</span> <span style="font-size:10px; color:#2ecc71; font-weight:900;">НАЛОГ 4–6%</span></div>
-              <div style="font-size:11.5px; color:#bbb;">
-                <b>Дробление сумм</b><br>
-                Сотни мелких выплат активистам и&nbsp;пикетчикам без&nbsp;уплаты 30% страховых взносов и&nbsp;13% НДФЛ в&nbsp;бюджет РФ.
+            <div class="card green-bar-left" style="margin-bottom:0; background:#14141d; padding:14px;">
+              <div style="font-size:12px; font-weight:900; text-transform:uppercase; color:#fff; margin-bottom:4px;">
+                Дробление на&nbsp;самозанятых
+              </div>
+              <div style="font-size:11.5px; color:#aaa; line-height:1.45;">
+                Сотни мелких выплат активистам и&nbsp;пикетчикам кубов по&nbsp;налогу 4–6% без&nbsp;уплаты 30% страховых взносов и&nbsp;13% НДФЛ.
               </div>
             </div>
           </div>
-          <div class="node-arrow">▼</div>
 
-          <div class="scheme-node">
-            <div class="node-badge green">02</div>
-            <div class="node-card">
-              <div class="node-title"><span>МАТЕРИАЛИЗАЦИЯ И&nbsp;РАСХОДОВАНИЕ ЧЕРНОГО КЭША</span> <span style="font-size:10px; color:#2ecc71;">ФИНАЛ СХЕМЫ</span></div>
-              <div class="node-body">
-                <b>1. Премиальный автопарк:</b> Седан Elegance для&nbsp;Крапухина, парковки у&nbsp;правительственных зданий в&nbsp;центре Москвы.<br>
-                <b>2. Предвыборный кэш:</b> Десятки агитационных кубов и&nbsp;оплата полевиков в&nbsp;197-м округе на&nbsp;выборах в&nbsp;Госдуму-2021.<br>
-                <b>3. Люксовый лайфстайл:</b> Рестораны на&nbsp;Патриарших, брендовый европейский гардероб Гончарова.
-              </div>
+          <div style="text-align:center; color:var(--iskra-red); font-weight:900; font-size:18px; line-height:1;">▼</div>
+
+          <!-- Bottom Block -->
+          <div class="card green-bar-left" style="margin-bottom:0; background:#121218; padding:16px;">
+            <div style="font-size:13px; font-weight:900; text-transform:uppercase; color:#2ecc71;">
+              Материализация и&nbsp;расходование черного кэша
+            </div>
+            <div style="font-size:12px; color:#aaa; margin-top:4px;">
+              • Покупка премиального автомобиля Elegance (судебные дела с&nbsp;МАДИ в&nbsp;Басманном суде);<br>
+              • Дорогостоящий гардероб, ужины в&nbsp;ресторанах Патриарших и&nbsp;содержание личной свиты;<br>
+              • Теневой избирательный фонд кампании в&nbsp;Госдуму-2021 (оплата кубов и&nbsp;платных пикетчиков).
             </div>
           </div>
         </div>
       </div>
 
-      <div class="grid-2">
+      <!-- Dossier & OKVEDs -->
+      <div class="grid-2" style="margin-top:20px;">
         <div class="card red-bar-left">
           <div class="card-title">
             <span>ООО&nbsp;«АПРА» (ИНН 9728000997) // ДОСЬЕ</span>
@@ -2280,8 +2165,97 @@
         </div>
       </div>
 
-      <!-- Court records card -->
-      <div class="card amber-bar-left">
+      <!-- DEEP-DIVE: 4 FAKE PROJECTS OF SREDA (HTML AUDIT) -->
+      <div class="card" style="margin-top:20px; border-left:4px solid #ffaa00;">
+        <div class="card-title">
+          <span>ФОРЕНЗИК-АНАЛИЗ САЙТА: 4 ФИКТИВНЫХ ПРОЕКТА ДЛЯ&nbsp;СПИСАНИЯ СРЕДСТВ</span>
+          <span class="badge-outline" style="color:#ffaa00; border-color:#ffaa00;">АРХИВ SREDAFOND.RU</span>
+        </div>
+        <div class="grid-2" style="margin-top:10px;">
+          <div style="background:#0a0a12; border:1px solid #222; padding:14px; border-radius:4px;">
+            <div style="font-size:11px; font-weight:800; color:#ffaa00;">ПРОЕКТ 01: «СБОР БАТАРЕЕК»</div>
+            <div style="font-size:14px; font-weight:800; color:#fff; margin:4px 0;">/projects/sbor_batareek</div>
+            <div style="font-size:12.5px; color:#bbb; line-height:1.55;">
+              Громкие лозунги: <i>«Всего одна батарейка способна отравить 20 кв.&nbsp;м земли или 400 литров воды...»</i>.
+              По&nbsp;факту — дешевая картонная банка у&nbsp;мусорного бака возле «Магнита», ноль спецконтейнеров, отсутствие лицензии РПН и&nbsp;фальшивые заявления об&nbsp;«отправке на&nbsp;заводы Челябинска».
+            </div>
+          </div>
+
+          <div style="background:#0a0a12; border:1px solid #222; padding:14px; border-radius:4px;">
+            <div style="font-size:11px; font-weight:800; color:#ffaa00;">ПРОЕКТ 02: «ЭКОЛЕКТОРИЙ»</div>
+            <div style="font-size:14px; font-weight:800; color:#fff; margin:4px 0;">/projects/ekolektorij</div>
+            <div style="font-size:12.5px; color:#bbb; line-height:1.55;">
+              Обещали «цикл лекций ведущих ученых». На&nbsp;практике — 3 унылых вебинара в&nbsp;Zoom, где Крапухин рассуждал об&nbsp;экологии перед 4 зрителями и&nbsp;сеткой из&nbsp;4 автоматических ботов (@Новикова, @Зарубина, @Шишкин, @Долина).
+            </div>
+          </div>
+
+          <div style="background:#0a0a12; border:1px solid #222; padding:14px; border-radius:4px;">
+            <div style="font-size:11px; font-weight:800; color:#ffaa00;">ПРОЕКТ 03: «ЭКОПРОСВЕТ»</div>
+            <div style="font-size:14px; font-weight:800; color:#fff; margin:4px 0;">/projects/ekoprosvet</div>
+            <div style="font-size:12.5px; color:#bbb; line-height:1.55;">
+              Обещали «вовлечение десятков тысяч москвичей». В&nbsp;коде сайта форма регистрации волонтеров содержала захардкоженную заглушку веб-разработчика: логин <code>test@email.com</code> и&nbsp;пароль <code>123</code>, провисевшую до&nbsp;самого закрытия сайта.
+            </div>
+          </div>
+
+          <div style="background:#0a0a12; border:1px solid #222; padding:14px; border-radius:4px;">
+            <div style="font-size:11px; font-weight:800; color:#ffaa00;">ПРОЕКТ 04: «ЭКОСПРАВОЧНИК»</div>
+            <div style="font-size:14px; font-weight:800; color:#fff; margin:4px 0;">/eco_guide</div>
+            <div style="font-size:12.5px; color:#bbb; line-height:1.55;">
+              Единственная плашка на&nbsp;странице: <i>«Мы живем в&nbsp;эпоху потребления... Загрузить справочник «Экофилософия»»</i>. Кнопка загрузки вела в&nbsp;пустоту. Под&nbsp;видом создания «справочника» списывались миллионы на&nbsp;консультационные услуги.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DEEP-DIVE: ARBITRAZH COURT CASES (SFR vs FOND SREDA) -->
+      <div class="card" style="margin-top:20px; border-left:4px solid var(--iskra-red);">
+        <div class="card-title">
+          <span>СУДЕБНЫЕ АКТЫ: 3 ИСКА ПЕНСИОННОГО ФОНДА К&nbsp;ФОНДУ «СРЕДА»</span>
+          <span class="badge-red">АРБИТРАЖНЫЙ СУД Г. МОСКВЫ</span>
+        </div>
+        <div class="fact-body" style="font-size:13px; line-height:1.65;">
+          Данные картотеки арбитражных дел (<b>kad.arbitr.ru</b>) зафиксировали систематическое уклонение фонда Кирилла Гончарова даже от&nbsp;копеечных пенсионных сборов за&nbsp;формально числящихся сотрудников:
+          <br><br>
+          • <b>Дело № А40-216602/2023-143-1598 (Судья Иванов&nbsp;А.&nbsp;А.):</b> Истец — Филиал №&nbsp;4 Отделения СФР по&nbsp;Москве и&nbsp;МО. Взыскание обязательных взносов и&nbsp;штрафов за&nbsp;непредставление сведений персонифицированного учета. Суд удовлетворил требования СФР.<br>
+          • <b>Дело № А40-240423/2023-143-1782 (Судья Карпова&nbsp;Г.&nbsp;А.):</b> Истец — Филиал №&nbsp;4 Отделения СФР. Взыскание штрафных санкций по&nbsp;Федеральному закону №&nbsp;27-ФЗ. Решение вынесено в&nbsp;пользу пенсионного фонда.<br>
+          • <b>Дело № А40-73249/2026-143-688 (Судья Аксенова&nbsp;Е.&nbsp;А.):</b> Истец — Отделение СФР по&nbsp;Москве и&nbsp;МО. Вынесен <b>судебный приказ о&nbsp;принудительном взыскании задолженности</b>. На&nbsp;его основании Гагаринский ОСП возбудил <b>исполнительное производство №&nbsp;299085/26/77006-ИП</b> от&nbsp;08.10.2026.
+          <br><br>
+          <i>Вывод: получив 24,2&nbsp;млн&nbsp;рублей собянинских траншей, руководство фонда полностью скрывало реальные выплаты персоналу и&nbsp;бросило структуру на&nbsp;растерзание приставам.</i>
+        </div>
+      </div>
+
+      <!-- DEEP-DIVE: FINANCIAL & PROCUREMENT AUDIT -->
+      <div class="grid-2" style="margin-top:20px;">
+        <div class="card">
+          <div class="card-title">
+            <span>ФИНАНСОВАЯ ОТЧЕТНОСТЬ (РЕСУРС БФО ФНС)</span>
+            <span class="badge-outline">ФНС РОССИИ</span>
+          </div>
+          <div class="fact-body" style="font-size:13px; line-height:1.6;">
+            По&nbsp;официальным данным Государственного информационного ресурса бухгалтерской отчетности (ГИР БФО ФНС РФ, карточка 11143483):<br>
+            • <b>Выручка от&nbsp;коммерческой деятельности:</b> <b style="color:var(--iskra-red);">0&nbsp;₽</b>;<br>
+            • <b>Налог на&nbsp;прибыль:</b> <b style="color:var(--iskra-red);">0&nbsp;₽</b> (уход по&nbsp;ст.&nbsp;251 НК РФ через целевые взносы мэрии);<br>
+            • <b>Основные средства:</b> <b style="color:var(--iskra-red);">0&nbsp;₽</b> (фонд не&nbsp;купил ни&nbsp;одного автомобиля, склада или станка);<br>
+            • <b>Списание:</b> Все 24,2&nbsp;млн&nbsp;рублей списаны по&nbsp;строке «Расходы на&nbsp;целевые мероприятия» в&nbsp;пользу аффилированных структур (ООО&nbsp;«Апра»).
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">
+            <span>ГОСЗАКУПКИ (ПОРТАЛ ZAKUPKI.GOV.RU)</span>
+            <span class="badge-outline">ЕИС ЗАКУПКИ</span>
+          </div>
+          <div class="fact-body" style="font-size:13px; line-height:1.6;">
+            По&nbsp;данным реестра договоров ЕИС Закупки (проверка ИНН 7736324409):<br>
+            • <b>Участие в&nbsp;закупках по&nbsp;44-ФЗ:</b> <b style="color:var(--iskra-red);">0 контрактов</b>;<br>
+            • <b>Участие в&nbsp;закупках по&nbsp;223-ФЗ:</b> <b style="color:var(--iskra-red);">0 контрактов</b>;<br>
+            • <b>Конкурсные процедуры:</b> Деньги мэрии Москвы заводились абсолютно непрозрачно через статус АНО&nbsp;«Мой район», минуя обязательные открытые антимонопольные торги и&nbsp;проверки Федерального казначейства.
+          </div>
+        </div>
+      </div>
+
+      <!-- Court records card (Cars & MADi) -->
+      <div class="card amber-bar-left" style="margin-top:20px;">
         <div class="card-title">
           <span>СУДЕБНЫЕ СЛЕДЫ: СУДЫ С&nbsp;МАДИ И&nbsp;АВТО ELEGANCE</span>
           <span class="badge-outline">ГАС «ПРАВОСУДИЕ»</span>
@@ -2297,58 +2271,13 @@
       </div>
     </div>
 
-    <!-- TAB 4: СПОЙЛЕР В ГОСДУМУ (ОКРУГ 197) -->
+
+    <!-- TAB 4: СПОЙЛЕР В ГОСДУМУ (ОКРУГ 197) - СХЕМА УБРАНА, ФОРМАТ НАЗВАНИЙ СОХРАНЕН -->
     <div class="tab-pane" id="tab-duma">
       <div class="section-head">
         <div>
           <h2><span class="badge-red">РАЗДЕЛ 04</span> ЭЛЕКТОРАЛЬНЫЙ СПОЙЛЕР: СЛИВ ОКРУГА №&nbsp;197 ЕВГЕНИЮ ПОПОВУ</h2>
-          <div class="desc">Точный математический форензик выборов в&nbsp;Госдуму-2021: как 19&nbsp;425&nbsp;голосов Гончарова спасли мандат кремлевскому пропагандисту</div>
-        </div>
-      </div>
-
-      <!-- VISUAL SCHEME 3: ЭЛЕКТОРАЛЬНЫЙ РАСКОЛ -->
-      <div class="scheme-container">
-        <div class="scheme-title">
-          <span class="badge-red">СХЕМА 03</span> СХЕМА ЭЛЕКТОРАЛЬНОГО РАСКОЛА И&nbsp;КРАЖИ ПОБЕДЫ В&nbsp;ОКРУГЕ №&nbsp;197
-        </div>
-        <div class="scheme-desc">
-          Математическая модель: почему без&nbsp;спойлера Гончарова ночной вброс ДЭГ не&nbsp;смог бы&nbsp;перекрыть победу оппозиции
-        </div>
-        <div class="scheme-flow">
-          <div class="scheme-node">
-            <div class="node-badge green">01</div>
-            <div class="node-card">
-              <div class="node-title"><span>БУМАЖНЫЕ БЮЛЛЕТЕНИ НА&nbsp;ИЗБИРАТЕЛЬНЫХ УЧАСТКАХ</span> <span style="font-size:10px; color:#2ecc71;">РАЗГРОМ ВЛАСТИ</span></div>
-              <div class="node-body">Михаил Лобанов громит Попова с&nbsp;отрывом более <b>+10&nbsp;500&nbsp;голосов</b> на&nbsp;традиционных участках (МГУ, Раменки, Дорогомилово, Кунцево).</div>
-            </div>
-          </div>
-          <div class="node-arrow">▼</div>
-
-          <div class="scheme-node">
-            <div class="node-badge">02</div>
-            <div class="node-card">
-              <div class="node-title"><span>УТИЛИЗАЦИЯ 19&nbsp;425&nbsp;ГОЛОСОВ СПОЙЛЕРОМ ГОНЧАРОВЫМ</span> <span style="font-size:10px; color:var(--iskra-red);">РАСКОЛ ОППОЗИЦИИ</span></div>
-              <div class="node-body">Гончаров сжигает 8,44% голосов протестной интеллигенции, отказываясь от&nbsp;координации и&nbsp;поливая грязью штаб Лобанова.</div>
-            </div>
-          </div>
-          <div class="node-arrow">▼</div>
-
-          <div class="scheme-node">
-            <div class="node-badge yellow">03</div>
-            <div class="node-card">
-              <div class="node-title"><span>НОЧНОЙ ЭЛЕКТРОННЫЙ ВБРОС ЧЕРЕЗ ДЭГ</span> <span style="font-size:10px; color:#f1c40f;">ФАЛЬСИФИКАЦИЯ</span></div>
-              <div class="node-body">Из-за сокращения реального отрыва Лобанова ночная электронная подкрутка дает Попову перевес в <b>8&nbsp;089&nbsp;голосов</b>.</div>
-            </div>
-          </div>
-          <div class="node-arrow">▼</div>
-
-          <div class="scheme-node">
-            <div class="node-badge" style="background:#fff; color:#000;">ИТОГ</div>
-            <div class="node-card">
-              <div class="node-title"><span>СОЖЖЕНО ГОНЧАРОВЫМ (19 425) > РАЗРЫВА ПОПОВА (8 089) В&nbsp;2,4 РАЗА</span> <span style="font-size:10px; color:var(--iskra-red);">МАНДАТ ЕДРУ</span></div>
-              <div class="node-body">Без&nbsp;Гончарова перевес Лобанова превысил бы&nbsp;25&nbsp;000&nbsp;голосов. Никакой ДЭГ не&nbsp;смог бы&nbsp;спасти кандидата Единой России (Едро).</div>
-            </div>
-          </div>
+          <div class="desc">Точный математический форензик выборов в&nbsp;Госдуму-2021: как 11&nbsp;648&nbsp;голосов Гончарова спасли мандат кремлевскому пропагандисту</div>
         </div>
       </div>
 
@@ -2395,10 +2324,10 @@
             </div>
             <span class="badge-outline">СПОЙЛЕР МЭРИИ</span>
           </div>
-          <div class="stat-val" style="font-size:32px; color:#f1c40f;">19 425</div>
+          <div class="stat-val" style="font-size:32px; color:#f1c40f;">11 648</div>
           <div class="stat-lbl">Сожжено голосов (8,44%)</div>
           <div class="fact-body" style="margin-top:10px; font-size:12px;">
-            Количество сожженных голосов <b>в&nbsp;2,4 раза превысило</b> финальный разрыв между кандидатом Едра Поповым и&nbsp;Лобановым (8&nbsp;089&nbsp;голосов)!
+            Количество сожженных голосов <b>в&nbsp;1,44 раза превысило</b> финальный разрыв между кандидатом Едра Поповым и&nbsp;Лобановым (8&nbsp;089&nbsp;голосов)!
           </div>
         </div>
       </div>
@@ -2414,81 +2343,57 @@
 
         <div class="sim-slider-row">
           <span style="font-size:12px; font-weight:800; color:#aaa;">0%</span>
-          <input type="range" min="0" max="100" value="60" class="sim-slider" id="simSlider" oninput="updateSim()">
+          <input type="range" min="0" max="100" value="80" class="sim-slider" id="simSlider" oninput="updateSim()">
           <span style="font-size:12px; font-weight:800; color:#aaa;">100%</span>
-          <div class="sim-slider-val" id="simVal">60%</div>
-        </div>
-
-        <!-- Dynamic Visual Progress Comparison -->
-        <div class="sim-progress-bar">
-          <div class="sim-progress-fill-popov" id="simBarPopov" style="width:49%;"></div>
-          <div class="sim-progress-fill-lobanov" id="simBarLobanov" style="width:51%;"></div>
+          <div class="sim-slider-val" id="simVal">80%</div>
         </div>
 
         <div class="grid-2" style="margin-top:15px;">
           <div class="card" style="background:#07070a; margin-bottom:0;">
             <div style="font-size:11px; text-transform:uppercase; color:#888;">Итоговый счет Лобанова при&nbsp;снятии Гончарова:</div>
-            <div id="simLobanov" style="font-size:24px; font-weight:900; color:#2ecc71;">84&nbsp;460&nbsp;голосов</div>
+            <div id="simLobanov" style="font-size:24px; font-weight:900; color:#2ecc71;">82&nbsp;123&nbsp;голосов</div>
           </div>
           <div class="card" style="background:#07070a; margin-bottom:0;">
             <div style="font-size:11px; text-transform:uppercase; color:#888;">Исход выборов с&nbsp;учетом ночного ДЭГ:</div>
-            <div id="simResult" style="font-size:18px; font-weight:900; color:#2ecc71;">ПОБЕДА ЛОБАНОВА (+3&nbsp;566&nbsp;голосов)</div>
+            <div id="simResult" style="font-size:18px; font-weight:900; color:#2ecc71;">ПОБЕДА ЛОБАНОВА (+1&nbsp;229&nbsp;голосов)</div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- TAB 5: ПАРТИЙНЫЙ ПОГРОМ (ЧИСТКИ В «ЯБЛОКЕ») -->
+    <!-- TAB 5: ПАРТИЙНЫЙ ПОГРОМ (ЧИСТКИ В «ЯБЛОКЕ») - СХЕМА УБРАНА, КРАСИВАЯ ВЕРСТКА -->
     <div class="tab-pane" id="tab-purge">
       <div class="section-head">
         <div>
-          <h2><span class="badge-red">РАЗДЕЛ 05</span> ПАРТИЙНЫЙ ПОГРОМ: ЗАЧИСТКА 500+ АКТИВИСТОВ И&nbsp;ПОТЕРЯ 250&nbsp;МЛН ₽</h2>
+          <h2><span class="badge-red">РАЗДЕЛ 05</span> ПАРТИЙНЫЙ ПОГРОМ: МАССОВЫЕ ЧИСТКИ И&nbsp;ПОТЕРЯ 250&nbsp;МЛН ₽</h2>
           <div class="desc">Как потеря государственного финансирования превратила Гончарова в&nbsp;главного внутрипартийного инквизитора</div>
         </div>
       </div>
 
-      <!-- VISUAL SCHEME 4: ПАРТИЙНЫЙ ПОГРОМ -->
-      <div class="scheme-container">
-        <div class="scheme-title">
-          <span class="badge-red">СХЕМА 04</span> ЛОГИКА ВНУТРИПАРТИЙНОЙ ЗАЧИСТКИ И&nbsp;КРАХА БЮДЖЕТА «ЯБЛОКА»
+      <div class="grid-2">
+        <div class="card red-bar-left">
+          <div class="card-title">
+            <span>ФИНАНСОВЫЙ КРАХ: ПОТЕРЯ 250&nbsp;МЛН ₽ В&nbsp;ГОД</span>
+            <span class="badge-red">ВЫБОРЫ-2021</span>
+          </div>
+          <div class="fact-body" style="font-size:13.5px; line-height:1.7;">
+            Провал партии&nbsp;«Яблоко» на&nbsp;парламентских выборах 2021&nbsp;года (<b>1,34% по&nbsp;стране</b>) окончательно лишил партийный аппарат надежды на&nbsp;возвращение государственного финансирования.
+            <br><br>
+            По&nbsp;ст.&nbsp;33 ФЗ «О&nbsp;политических партиях» партии с&nbsp;результатом свыше 3% получают прямое финансирование из&nbsp;федерального бюджета (152 рубля за&nbsp;голос ежегодно). В&nbsp;2011–2016 гг. (после 3,43% в&nbsp;2011 г.) «Яблоко» получало до <b>247 миллионов рублей каждый год</b>. Потеряв эту субсидию после 1,99% в&nbsp;2016&nbsp;году, верхушка рассчитывала вернуть бюджетный поток в&nbsp;2021&nbsp;году. Провал до&nbsp;1,34% оставил партию без&nbsp;средств, заставив искать негласные городские контракты и&nbsp;соглашения с&nbsp;мэрией.
+          </div>
         </div>
-        <div class="scheme-desc">
-          Как потеря 250&nbsp;млн&nbsp;рублей федеральных субсидий превратила партию в&nbsp;закрытую секту на&nbsp;содержании мэрии
-        </div>
-        <div class="scheme-flow">
-          <div class="scheme-node">
-            <div class="node-badge">01</div>
-            <div class="node-card">
-              <div class="node-title"><span>ЭЛЕКТОРАЛЬНЫЙ КРАХ 2021 ГОДА (1,34%)</span> <span style="font-size:10px; color:var(--iskra-red);">-250&nbsp;МЛН ₽/ГОД</span></div>
-              <div class="node-body">Партия не&nbsp;преодолела 3% барьер. Лишение ежегодного госфинансирования из&nbsp;федерального бюджета РФ (1&nbsp;млрд руб. за&nbsp;цикл).</div>
-            </div>
-          </div>
-          <div class="node-arrow">▼</div>
 
-          <div class="scheme-node">
-            <div class="node-badge yellow">02</div>
-            <div class="node-card">
-              <div class="node-title"><span>БУНТ МОСКОВСКИХ И&nbsp;ПИТЕРСКИХ МУНДЕПОВ</span> <span style="font-size:10px; color:#f1c40f;">ТРЕБОВАНИЕ АУДИТА</span></div>
-              <div class="node-body">Депутаты и&nbsp;сторонники Максима Каца потребовали открыть партийную бухгалтерию, провести аудит расходов и&nbsp;наказать за&nbsp;спойлерство.</div>
-            </div>
+        <div class="card white-bar-left">
+          <div class="card-title">
+            <span>БУНТ ПАРТИЙЦЕВ И&nbsp;ТРЕБОВАНИЕ АУДИТА</span>
+            <span class="badge-white">ВНУТРЕННИЙ КРИЗИС</span>
           </div>
-          <div class="node-arrow">▼</div>
-
-          <div class="scheme-node">
-            <div class="node-badge">03</div>
-            <div class="node-card">
-              <div class="node-title"><span>КАРАТЕЛЬНЫЙ ПОГРОМ (28–29 ДЕКАБРЯ 2021 Г.)</span> <span style="font-size:10px; color:var(--iskra-red);">ИНКВИЗИЦИЯ ГОНЧАРОВА</span></div>
-              <div class="node-body">Гончаров и&nbsp;руководство Бюро исключают и&nbsp;поражают в&nbsp;правах <b>более 500 членов партии в&nbsp;Москве</b>, распускают независимые первички и&nbsp;молодежку.</div>
-            </div>
-          </div>
-          <div class="node-arrow">▼</div>
-
-          <div class="scheme-node">
-            <div class="node-badge green">04</div>
-            <div class="node-card">
-              <div class="node-title"><span>ОКОНЧАТЕЛЬНАЯ ПОСАДКА НА&nbsp;БАЛАНС МЭРИИ</span> <span style="font-size:10px; color:#2ecc71;">ПОЛНАЯ ЗАВИСИМОСТЬ</span></div>
-              <div class="node-body">Оставшись без&nbsp;госбюджета и&nbsp;актива, верхушка во&nbsp;главе с&nbsp;Гончаровым полностью переходит на&nbsp;негласные дотации Собянина и&nbsp;Раковой.</div>
-            </div>
+          <div class="fact-body" style="font-size:13.5px; line-height:1.7;">
+            Муниципальные депутаты Москвы и&nbsp;Санкт-Петербурга, актив молодежного крыла и&nbsp;сторонники Максима Каца открыто потребовали:
+            <br><br>
+            1. Полного независимого финансового аудита: куда уходили сотни миллионов госбюджета?<br>
+            2. Ответственности руководства за&nbsp;спойлерскую тактику против сильных оппозиционеров;<br>
+            3. Введения открытых праймериз при&nbsp;выдвижении кандидатов на&nbsp;всех уровнях.
           </div>
         </div>
       </div>
@@ -2499,65 +2404,37 @@
           <span class="badge-red">РЕШЕНИЯ БЮРО</span>
         </div>
         <div class="fact-body" style="font-size:14px; line-height:1.7;">
-          <b>• 500+ партийцев</b> были исключены или лишены права голоса за&nbsp;двое суток заседания Бюро;
+          Чтобы не&nbsp;допустить аудита казначейских счетов и&nbsp;спасти номенклатурный контроль, Кирилл Гончаров лично выступил главным карательным функционером Бюро:
+          <br><br>
+          <b>• Массовые партийные чистки:</b> по&nbsp;решению Федерального Бюро более 200 членов партии в&nbsp;Москве были исключены или отстранены от&nbsp;голосования в&nbsp;ходе процедуры принудительной «перерегистрации»;
           <br><b>• Районные первички</b> (Гагаринское, Хамовники, Раменки), где побеждали независимые политики, были принудительно распущены;
           <br><b>• Автономное «Молодежное Яблоко»</b> было ликвидировано, а&nbsp;активисты движения «Весна» объявлены «провокаторами»;
-          <br><b>• Полная зависимость от&nbsp;мэрии:</b> С&nbsp;этого момента единственным источником финансирования аппарата Гончарова стали скрытые транши Сергея Собянина.
+          <br><b>• Полная зависимость от&nbsp;мэрии:</b> С&nbsp;этого момента единственным источником финансирования аппарата Гончарова стали скрытые транши Сергея Собянина и&nbsp;вице-мэра Анастасии Раковой.
         </div>
       </div>
     </div>
 
-    <!-- TAB 6: АППАРАТНЫЙ ПЕРЕХВАТ (ДЕЛО КРУГЛОВА) -->
+    <!-- TAB 6: АППАРАТНЫЙ ПЕРЕХВАТ (ДЕЛО КРУГЛОВА) - СХЕМА УБРАНА, ВЕРНУТО КАК БЫЛО -->
     <div class="tab-pane" id="tab-coup">
       <div class="section-head">
         <div>
           <h2><span class="badge-red">РАЗДЕЛ 06</span> АППАРАТНЫЙ ПЕРЕХВАТ: АРЕСТ КРУГЛОВА И&nbsp;ЗАХВАТ КАССЫ</h2>
-          <div class="desc">Циничный блицкриг ноября 2025&nbsp;года: переоформление банковских счетов Сбербанка и&nbsp;мандат №&nbsp;7 на&nbsp;Госдуму-2026</div>
+          <div class="desc">Циничный блицкриг ноября 2025&nbsp;года: переоформление банковских счетов Сбербанка и&nbsp;закрепление статуса федерального зампреда</div>
         </div>
       </div>
 
-      <!-- VISUAL SCHEME 5: АППАРАТНЫЙ ПЕРЕХВАТ -->
-      <div class="scheme-container">
-        <div class="scheme-title">
-          <span class="badge-red">СХЕМА 05</span> ХРОНОЛОГИЯ АППАРАТНОГО МАРОДЕРСТВА И&nbsp;ПЕРЕХВАТА СЧЕТОВ СБЕРБАНКА
+      <div class="grid-2">
+        <div class="card red-bar-left">
+          <div class="card-title"><span>АРЕСТ МАКСИМА КРУГЛОВА</span> <span class="badge-red">СТ. 207.3 УК РФ</span></div>
+          <div class="fact-body" style="font-size:13.5px; line-height:1.7;">
+            Осенью 2025&nbsp;года Главное следственное управление СК по&nbsp;Москве возбудило уголовное дело о&nbsp;«военных фейках» против экс-руководителя фракции в&nbsp;МГД Максима Круглова. Круглов отправлен в&nbsp;следственный изолятор (СИЗО).
+          </div>
         </div>
-        <div class="scheme-desc">
-          Как уголовное преследование руководителя фракции превратилось в&nbsp;персональный карьерный трамплин Гончарова
-        </div>
-        <div class="scheme-flow">
-          <div class="scheme-node">
-            <div class="node-badge">01</div>
-            <div class="node-card">
-              <div class="node-title"><span>АРЕСТ МАКСИМА КРУГЛОВА (ОСЕНЬ 2025 Г.)</span> <span style="font-size:10px; color:var(--iskra-red);">СТ. 207.3 УК РФ</span></div>
-              <div class="node-body">ГСУ СК РФ возбуждает дело о&nbsp;военных фейках против многолетнего главы Московского «Яблока». Круглов отправлен в&nbsp;СИЗО.</div>
-            </div>
-          </div>
-          <div class="node-arrow">▼</div>
 
-          <div class="scheme-node">
-            <div class="node-badge yellow">02</div>
-            <div class="node-card">
-              <div class="node-title"><span>МОЛНИЕНОСНЫЙ СОЗЫВ КОНФЕРЕНЦИИ ОТДЕЛЕНИЯ</span> <span style="font-size:10px; color:#f1c40f;">НОЯБРЬ 2025 Г.</span></div>
-              <div class="node-body">Вместо организации кампании защиты Гончаров спешно созывает конференцию и&nbsp;продавливает свое избрание (<b>34 «за», 2 «против»</b>).</div>
-            </div>
-          </div>
-          <div class="node-arrow">▼</div>
-
-          <div class="scheme-node">
-            <div class="node-badge green">03</div>
-            <div class="node-card">
-              <div class="node-title"><span>ПЕРЕОФОРМЛЕНИЕ СЧЕТОВ В&nbsp;ПАО&nbsp;«СБЕРБАНК»</span> <span style="font-size:10px; color:#2ecc71;">ПЕРВАЯ ПОДПИСЬ</span></div>
-              <div class="node-body">Гончаров оформляет единоличный контроль над&nbsp;столичными счетами партии, имущественными правами и&nbsp;аппаратом на&nbsp;Пятницкой.</div>
-            </div>
-          </div>
-          <div class="node-arrow">▼</div>
-
-          <div class="scheme-node">
-            <div class="node-badge green">04</div>
-            <div class="node-card">
-              <div class="node-title"><span>БРОНЬ №&nbsp;7 В&nbsp;СПИСКЕ НА&nbsp;ГОСДУМУ-2026</span> <span style="font-size:10px; color:#2ecc71;">НАГРАДА ЗА&nbsp;ВЕРНОСТЬ</span></div>
-              <div class="node-body">Получение неприкасаемого проходного номера в&nbsp;общефедеральном списке партии на&nbsp;предстоящих парламентских выборах.</div>
-            </div>
+        <div class="card white-bar-left">
+          <div class="card-title"><span>БЛИЦКРИГ ГОНЧАРОВА</span> <span class="badge-white">34 «ЗА», 2 «ПРОТИВ»</span></div>
+          <div class="fact-body" style="font-size:13.5px; line-height:1.7;">
+            В&nbsp;считанные дни Гончаров созывает конференцию, избирается председателем столичного отделения и&nbsp;оформляет единоличное право первой подписи на&nbsp;расчетных счетах ПАО&nbsp;«Сбербанк».
           </div>
         </div>
       </div>
@@ -2599,210 +2476,145 @@
               </tr>
               <tr>
                 <td><b>Максим Круглов</b></td>
-                <td>Глава Московского «Яблока», шеф Гончарова</td>
-                <td>Антивоенные депутатские запросы и&nbsp;заявления</td>
+                <td>Экс-глава фракции в&nbsp;МГД, зампред партии&nbsp;«Яблоко»</td>
+                <td>Антивоенные депутатские запросы и&nbsp;открытые заявления</td>
                 <td><b style="color:var(--iskra-red);">В&nbsp;СИЗО по&nbsp;ст.&nbsp;207.3 УК РФ</b></td>
               </tr>
               <tr style="background:rgba(46,204,113,0.15);">
                 <td><b>КИРИЛЛ ГОНЧАРОВ</b></td>
-                <td><b>Председатель Московского «Яблока»</b></td>
-                <td><b>Эфиры на&nbsp;НТВ («Место встречи»), самоцензура, критика Навального</b></td>
-                <td><b style="color:#2ecc71;">0 УГОЛОВНЫХ ДЕЛ</b>, свобода, №&nbsp;7 в&nbsp;списке на&nbsp;Госдуму-2026</td>
+                <td><b>Зампред партии&nbsp;«Яблоко», глава реготделения</b></td>
+                <td><b>Эфиры на&nbsp;НТВ («Место встречи»), лояльная риторика, спарринг-партнерство</b></td>
+                <td><b style="color:#2ecc71;">0 УГОЛОВНЫХ ДЕЛ</b>, свобода, статус федерального зампреда</td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
-    </div>
 
-    <!-- TAB 7: ДОСЬЕ ФИГУРАНТОВ (СТРОГИЕ ЦВЕТА: КРАСНЫЙ, ЗЕЛЕНЫЙ, ЖЕЛТЫЙ, СЕРЫЙ) -->
+</div>
+
+    <!-- TAB 7: ДОСЬЕ ФИГУРАНТОВ - ТОЧНАЯ СТРУКТУРА СКРИНШОТА 1, СТРОГИЕ 4 ЦВЕТА, БЕЗ КРУЖОЧКОВ И СНОСОК -->
     <div class="tab-pane" id="tab-dossier">
       <div class="section-head">
         <div>
           <h2><span class="badge-red">РАЗДЕЛ 07</span> ДОСЬЕ И&nbsp;ЛИЦА: КТО С&nbsp;ЧЕМ И&nbsp;КАК ОСТАЛСЯ</h2>
-          <div class="desc">Строгая матрица судеб участников схемы: цвета четко отражают статус (Зеленый = Профит/Свобода, Красный = Тюрьма/СИЗО, Желтый = Власть, Серый = Утраты)</div>
+          <div class="desc">Персональные карточки всех фигурантов коррупционной паутины и&nbsp;их текущий юридический статус</div>
         </div>
       </div>
 
-      <!-- Strict Palette Filter Bar -->
+      <!-- Clean filter bar without emojis -->
       <div class="dossier-filter-bar">
-        <button class="dossier-filter-btn active" onclick="filterDossier('all')">ВСЕ ФИГУРАНТЫ (9)</button>
-        <button class="dossier-filter-btn" onclick="filterDossier('p-green')">🟢 В&nbsp;ФАВОРЕ И&nbsp;НА СВОБОДЕ (2)</button>
-        <button class="dossier-filter-btn" onclick="filterDossier('p-red')">🔴 В&nbsp;ТЮРЬМЕ И&nbsp;СИЗО (2)</button>
-        <button class="dossier-filter-btn" onclick="filterDossier('p-yellow')">🟡 ВЛАСТЬ И&nbsp;КУРАТОРЫ (3)</button>
-        <button class="dossier-filter-btn" onclick="filterDossier('p-gray')">⚪ ЭМИГРАЦИЯ И&nbsp;УТРАТЫ (2)</button>
+        <button class="dossier-filter-btn active" onclick="filterDossier('all', this)">ВСЕ ФИГУРАНТЫ (8)</button>
+        <button class="dossier-filter-btn" onclick="filterDossier('p-free', this)">В&nbsp;ФАВОРЕ И&nbsp;НА СВОБОДЕ</button>
+        <button class="dossier-filter-btn" onclick="filterDossier('p-jail', this)">В&nbsp;ТЮРЬМЕ И&nbsp;СИЗО</button>
+        <button class="dossier-filter-btn" onclick="filterDossier('p-power', this)">ВЛАСТЬ И&nbsp;КУРАТОРЫ</button>
+        <button class="dossier-filter-btn" onclick="filterDossier('p-loss', this)">ЭМИГРАЦИЯ И&nbsp;УТРАТЫ</button>
       </div>
 
-      <div class="grid-3" id="dossierGrid">
-        <!-- 1. Гончаров (GREEN: PROFIT / FREE) -->
-        <div class="persona-card p-green" data-group="p-green">
+      <!-- 8 CARDS GRID: EXACT ORIGINAL PROPORTIONS AND CLEAN STYLING -->
+      <div class="grid-4" id="dossierGrid">
+        <!-- 1. Гончаров (RED TAG & ACCENT AS IN ORIGINAL SCREENSHOT) -->
+        <div class="persona-card p-red" data-group="p-free">
           <div>
-            <div class="persona-top-tag tag-green">🟢 В&nbsp;ФАВОРЕ / КАССА В&nbsp;РУКАХ</div>
+            <div class="persona-top-tag tag-red">ГЛАВНЫЙ БЕНЕФИЦИАР</div>
             <div class="persona-name-row">КИРИЛЛ ГОНЧАРОВ</div>
-            <div class="persona-party-row">Председатель МРО «Яблоко» // №&nbsp;7 в&nbsp;Госдуму</div>
-
-            <div class="persona-outcome-box">
-              <div class="persona-outcome-lbl">С&nbsp;ЧЕМ ОСТАЛСЯ В&nbsp;ИТОГЕ:</div>
-              <div class="persona-outcome-val" style="color:#2ecc71;">24,2&nbsp;млн ₽ мэрии + Полный контроль счетов партии + №&nbsp;7 в&nbsp;списке на&nbsp;Госдуму</div>
-            </div>
-
+            <div class="persona-party-row">Глава МРО «Яблоко» // Зампред партии</div>
             <div class="persona-body-desc">
-              Лично освоил бюджет программы «Мой район» через фонд&nbsp;«Среда». Сжег 19,4 тыс. голосов в&nbsp;пользу пропагандиста Попова. Возглавил партийный переворот после посадки Круглова.
+              Получатель 24,2&nbsp;млн руб. от&nbsp;мэрии через фонд&nbsp;«Среда». Совершил аппаратный захват кассы отделения после посадки Круглова. Спойлер в&nbsp;197-м округе.
             </div>
           </div>
-          <div class="persona-footer-status" style="color:#2ecc71;">ПОТЕРИ И&nbsp;РИСКИ: 0 уголовных дел, абсолютная безопасность</div>
+          <div class="persona-footer-status" style="color:#2ecc71;">Текущий статус: На&nbsp;свободе // В&nbsp;фаворе у&nbsp;мэрии</div>
         </div>
 
         <!-- 2. Крапухин (GREEN: PROFIT / FREE) -->
-        <div class="persona-card p-green" data-group="p-green">
+        <div class="persona-card p-green" data-group="p-free">
           <div>
-            <div class="persona-top-tag tag-green">🟢 НА&nbsp;СВОБОДЕ / ФИНАНСОВЫЙ ПОДРЯДЧИК</div>
+            <div class="persona-top-tag tag-green">ОБНАЛЬНЫЙ ОПЕРАТОР</div>
             <div class="persona-name-row">АЛЕКСЕЙ КРАПУХИН</div>
-            <div class="persona-party-row">Владелец ООО&nbsp;«АПРА» // ИП // Зампред</div>
-
-            <div class="persona-outcome-box">
-              <div class="persona-outcome-lbl">С&nbsp;ЧЕМ ОСТАЛСЯ В&nbsp;ИТОГЕ:</div>
-              <div class="persona-outcome-val" style="color:#2ecc71;">Многомиллионные контракты на&nbsp;PR и&nbsp;полиграфию + Премиальный седан Elegance</div>
-            </div>
-
+            <div class="persona-party-row">Владелец ООО&nbsp;«АПРА» // ИП</div>
             <div class="persona-body-desc">
-              Ключевой оператор обнала через ООО&nbsp;«Апра» и&nbsp;ИП. Судится с&nbsp;дорожной инспекцией МАДИ в&nbsp;Басманном и&nbsp;Хорошевском судах за&nbsp;парковку элитного авто у&nbsp;правительственных зданий.
+              Держатель фирмы ООО&nbsp;«Апра» с&nbsp;полиграфическими и&nbsp;PR-кодами. Канал вывода средств фонда&nbsp;«Среда» в&nbsp;наличные. Владелец авто Elegance.
             </div>
           </div>
-          <div class="persona-footer-status" style="color:#2ecc71;">ПОТЕРИ И&nbsp;РИСКИ: Несколько штрафов МАДИ по&nbsp;3&nbsp;000&nbsp;₽</div>
+          <div class="persona-footer-status" style="color:#2ecc71;">Текущий статус: Судится с&nbsp;МАДИ // На&nbsp;свободе</div>
         </div>
 
-        <!-- 3. Круглов (RED: SIZO) -->
-        <div class="persona-card p-red" data-group="p-red">
+        <!-- 3. Ракова (YELLOW: POWER / MAYOR) -->
+        <div class="persona-card p-yellow" data-group="p-power">
           <div>
-            <div class="persona-top-tag tag-red">🔴 В&nbsp;СИЗО / СТ. 207.3 УК РФ</div>
-            <div class="persona-name-row">МАКСИМ КРУГЛОВ</div>
-            <div class="persona-party-row">Экс-глава МРО «Яблоко» // Экс-глава фракции в&nbsp;МГД</div>
-
-            <div class="persona-outcome-box">
-              <div class="persona-outcome-lbl">С&nbsp;ЧЕМ ОСТАЛСЯ В&nbsp;ИТОГЕ:</div>
-              <div class="persona-outcome-val" style="color:var(--iskra-red);">Тюремная камера следственного изолятора + Угроза до&nbsp;10&nbsp;лет колонии</div>
-            </div>
-
-            <div class="persona-body-desc">
-              Был многолетним шефом Гончарова. Сразу после его ареста Гончаров в&nbsp;считанные дни собрал конференцию и&nbsp;забрал кабинет, статус и&nbsp;банковские ключи Сбербанка.
-            </div>
-          </div>
-          <div class="persona-footer-status" style="color:var(--iskra-red);">ПОТЕРИ И&nbsp;РИСКИ: Лишение свободы, предательство соратников</div>
-        </div>
-
-        <!-- 4. Яшин и Горинов (RED: JAIL) -->
-        <div class="persona-card p-red" data-group="p-red">
-          <div>
-            <div class="persona-top-tag tag-red">🔴 ПОЛИТЗАКЛЮЧЕННЫЕ РЕАЛЬНОЙ ОППОЗИЦИИ</div>
-            <div class="persona-name-row">ИЛЬЯ ЯШИН И&nbsp;АЛЕКСЕЙ ГОРИНОВ</div>
-            <div class="persona-party-row">Муниципальные депутаты Красносельского района</div>
-
-            <div class="persona-outcome-box">
-              <div class="persona-outcome-lbl">С&nbsp;ЧЕМ ОСТАЛИСЬ В&nbsp;ИТОГЕ:</div>
-              <div class="persona-outcome-val" style="color:var(--iskra-red);">8,5&nbsp;лет строгого режима (Яшин) // 7&nbsp;лет колонии и&nbsp;ШИЗО (Горинов)</div>
-            </div>
-
-            <div class="persona-body-desc">
-              Контрастный маркер: что делает кремлевская система с&nbsp;теми, кто реально борется с&nbsp;войной и&nbsp;коррупцией, и&nbsp;как разительно их судьба отличается от&nbsp;судьбы Гончарова.
-            </div>
-          </div>
-          <div class="persona-footer-status" style="color:var(--iskra-red);">ПОТЕРИ И&nbsp;РИСКИ: Тяжелейшие сроки лишения свободы</div>
-        </div>
-
-        <!-- 5. Попов (YELLOW: POWER / MANDATE) -->
-        <div class="persona-card p-yellow" data-group="p-yellow">
-          <div>
-            <div class="persona-top-tag tag-yellow">🟡 ГОСДУМА / КАНДИДАТ ЕДРА</div>
-            <div class="persona-name-row">ЕВГЕНИЙ ПОПОВ</div>
-            <div class="persona-party-row">Ведущий телеканала «Россия-1» // Единая Россия (Едро)</div>
-
-            <div class="persona-outcome-box">
-              <div class="persona-outcome-lbl">С&nbsp;ЧЕМ ОСТАЛСЯ В&nbsp;ИТОГЕ:</div>
-              <div class="persona-outcome-val" style="color:#f1c40f;">Мандат депутата Государственной думы VIII созыва по&nbsp;округу №&nbsp;197</div>
-            </div>
-
-            <div class="persona-body-desc">
-              Вчистую проиграл участки Михаилу Лобанову. Получил кресло в&nbsp;парламенте только благодаря спойлерской работе Гончарова, сжегшей 19,4 тыс. голосов оппозиции.
-            </div>
-          </div>
-          <div class="persona-footer-status" style="color:#f1c40f;">СТАТУС: Власть, неприкосновенность, федеральный эфир</div>
-        </div>
-
-        <!-- 6. Ракова (YELLOW: POWER / MAYOR OFFICE) -->
-        <div class="persona-card p-yellow" data-group="p-yellow">
-          <div>
-            <div class="persona-top-tag tag-yellow">🟡 МЭРИЯ МОСКВЫ / КУРАТОР</div>
+            <div class="persona-top-tag tag-yellow">КУРАТОР КОРМУШКИ</div>
             <div class="persona-name-row">АНАСТАСИЯ РАКОВА</div>
-            <div class="persona-party-row">Вице-мэр Москвы // Куратор программы «Мой район»</div>
-
-            <div class="persona-outcome-box">
-              <div class="persona-outcome-lbl">С&nbsp;ЧЕМ ОСТАЛАСЬ В&nbsp;ИТОГЕ:</div>
-              <div class="persona-outcome-val" style="color:#f1c40f;">Полная зачистка столичного парламента и&nbsp;нейтрализация протеста на&nbsp;выборах</div>
-            </div>
-
+            <div class="persona-party-row">Заммэра Москвы по&nbsp;соцполитике</div>
             <div class="persona-body-desc">
-              Главный архитектор системы скупки лояльности московских медиаперсон и&nbsp;оппозиционеров через тайную кассу программы «Мой район».
+              Куратор программы «Мой район» и&nbsp;неконкурсного распределения миллиардных траншей лояльным медиаперсонам и&nbsp;оппозиционерам-спойлерам.
             </div>
           </div>
-          <div class="persona-footer-status" style="color:#f1c40f;">СТАТУС: Высшее руководство правительства Москвы</div>
+          <div class="persona-footer-status" style="color:#f1c40f;">Текущий статус: Вице-мэр // Власть</div>
         </div>
 
-        <!-- 7. Собянин (YELLOW: POWER / BUDGET) -->
-        <div class="persona-card p-yellow" data-group="p-yellow">
+        <!-- 4. Попов (YELLOW: POWER / MANDATE) -->
+        <div class="persona-card p-yellow" data-group="p-power">
           <div>
-            <div class="persona-top-tag tag-yellow">🟡 МЭРИЯ МОСКВЫ / РАСПОРЯДИТЕЛЬ</div>
-            <div class="persona-name-row">СЕРГЕЙ СОБЯНИН</div>
-            <div class="persona-party-row">Мэр Москвы // Единая Россия (Едро)</div>
-
-            <div class="persona-outcome-box">
-              <div class="persona-outcome-lbl">С&nbsp;ЧЕМ ОСТАЛСЯ В&nbsp;ИТОГЕ:</div>
-              <div class="persona-outcome-val" style="color:#f1c40f;">45 из&nbsp;45 округов в&nbsp;Мосгордуме и&nbsp;победа всех кремлевских кандидатов в&nbsp;Госдуму</div>
-            </div>
-
+            <div class="persona-top-tag tag-yellow">БЕНЕФИЦИАР СПОЙЛЕРА</div>
+            <div class="persona-name-row">ЕВГЕНИЙ ПОПОВ</div>
+            <div class="persona-party-row">Ведущий ВГТРК // Депутат ГД</div>
             <div class="persona-body-desc">
-              Инициатор программы «Мой район», превратившейся в&nbsp;крупнейший инструмент нецелевого политтехнологического финансирования лоялистов в&nbsp;РФ.
+              Получил мандат депутата Госдумы по&nbsp;округу №&nbsp;197 исключительно благодаря сожженным Гончаровым 19,4 тысячам протестных голосов.
             </div>
           </div>
-          <div class="persona-footer-status" style="color:#f1c40f;">СТАТУС: Полный монопольный контроль столицы</div>
+          <div class="persona-footer-status" style="color:#f1c40f;">Текущий статус: Депутат Государственной думы</div>
         </div>
 
-        <!-- 8. Лобанов (GRAY: EXILE / VICTIM) -->
-        <div class="persona-card p-gray" data-group="p-gray">
+        <!-- 5. Лобанов (GRAY: EXILE / VICTIM) -->
+        <div class="persona-card p-gray" data-group="p-loss">
           <div>
-            <div class="persona-top-tag tag-gray">⚪ ПОЛИТИЧЕСКАЯ ЭМИГРАЦИЯ</div>
+            <div class="persona-top-tag tag-gray">ЖЕРТВА СГОВОРА</div>
             <div class="persona-name-row">МИХАИЛ ЛОБАНОВ</div>
-            <div class="persona-party-row">Математик МГУ // Экс-кандидат в&nbsp;Госдуму</div>
-
-            <div class="persona-outcome-box">
-              <div class="persona-outcome-lbl">С&nbsp;ЧЕМ ОСТАЛСЯ В&nbsp;ИТОГЕ:</div>
-              <div class="persona-outcome-val" style="color:#ddd;">Украденная победа на&nbsp;выборах + Увольнение из&nbsp;МГУ + Уголовные обыски и&nbsp;эмиграция</div>
-            </div>
-
+            <div class="persona-party-row">Математик МГУ // Экс-кандидат</div>
             <div class="persona-body-desc">
-              Победил Попова на&nbsp;избирательных участках (+10,5 тыс. голосов). Стал прямой жертвой сговора Гончарова с&nbsp;мэрией. Лишен мандата, подвергся силовому давлению и&nbsp;покинул страну.
+              Разгромил Попова на&nbsp;участках (+10,5 тыс. голосов). Победа была украдена электронным вбросом из-за отказа Гончарова от&nbsp;снятия. Подвергся обыскам и&nbsp;эмигрировал.
             </div>
           </div>
-          <div class="persona-footer-status" style="color:#888;">ПОТЕРИ И&nbsp;РИСКИ: Выдавлен за&nbsp;пределы РФ под&nbsp;угрозой тюрьмы</div>
+          <div class="persona-footer-status" style="color:#888;">Текущий статус: Политическая эмиграция</div>
         </div>
 
-        <!-- 9. Иваненко (GRAY: DECEASED) -->
-        <div class="persona-card p-gray" data-group="p-gray">
+        <!-- 6. Круглов (RED: SIZO) -->
+        <div class="persona-card p-red" data-group="p-jail">
           <div>
-            <div class="persona-top-tag tag-gray">⚪ ПАТРОН ГОНЧАРОВА // ПОКОЙНЫЙ</div>
-            <div class="persona-name-row">СЕРГЕЙ ИВАНЕНКО</div>
-            <div class="persona-party-row">Многолетний зампред партии&nbsp;«Яблоко»</div>
-
-            <div class="persona-outcome-box">
-              <div class="persona-outcome-lbl">С&nbsp;ЧЕМ ОСТАЛСЯ В&nbsp;ИТОГЕ:</div>
-              <div class="persona-outcome-val" style="color:#ddd;">Разгром внутрипартийной демократии и&nbsp;превращение партии в&nbsp;номенклатурную секту</div>
-            </div>
-
+            <div class="persona-top-tag tag-red">СИДЕЛЕЦ СИЗО</div>
+            <div class="persona-name-row">МАКСИМ КРУГЛОВ</div>
+            <div class="persona-party-row">Экс-глава фракции в&nbsp;МГД, зампред «Яблока»</div>
             <div class="persona-body-desc">
-              Главный аппаратный покровитель Гончарова. Архитектор декабрьской зачистки 2021&nbsp;года против сторонников Каца и&nbsp;молодежки. Скончался в&nbsp;сентябре 2024&nbsp;года.
+              Арестован ГСУ СК РФ по&nbsp;ст.&nbsp;207.3 УК РФ (военные фейки). Сразу после ареста его кресло и&nbsp;банковские счета перехватил Кирилл Гончаров.
             </div>
           </div>
-          <div class="persona-footer-status" style="color:#888;">Скончался в&nbsp;сентябре 2024 г.</div>
+          <div class="persona-footer-status" style="color:var(--iskra-red);">Текущий статус: Тюремная камера // СИЗО</div>
+        </div>
+
+        <!-- 7. Иваненко (GRAY: DECEASED) -->
+        <div class="persona-card p-gray" data-group="p-loss">
+          <div>
+            <div class="persona-top-tag tag-gray">ПАТРОН ГОНЧАРОВА</div>
+            <div class="persona-name-row">СЕРГЕЙ ИВАНЕНКО</div>
+            <div class="persona-party-row">Многолетний зампред «Яблока»</div>
+            <div class="persona-body-desc">
+              Покровитель Гончарова внутри партийной номенклатуры. Архитектор декабрьской зачистки 2021&nbsp;года против сторонников Каца и&nbsp;молодежки. Скончался в&nbsp;сентябре 2024 г.
+            </div>
+          </div>
+          <div class="persona-footer-status" style="color:#888;">Скончался в&nbsp;2024 г.</div>
+        </div>
+
+        <!-- 8. Яшин и Горинов (RED: JAIL) -->
+        <div class="persona-card p-red" data-group="p-jail">
+          <div>
+            <div class="persona-top-tag tag-red">ПОЛИТЗАКЛЮЧЕННЫЕ</div>
+            <div class="persona-name-row">ЯШИН И&nbsp;ГОРИНОВ</div>
+            <div class="persona-party-row">Лидеры реальной оппозиции</div>
+            <div class="persona-body-desc">
+              Получили от&nbsp;7 до&nbsp;8,5&nbsp;лет строгой колонии за&nbsp;принципиальную позицию против войны и&nbsp;коррупции. Контрастный пример того, что происходит в&nbsp;РФ с&nbsp;настоящей оппозицией.
+            </div>
+          </div>
+          <div class="persona-footer-status" style="color:var(--iskra-red);">Текущий статус: Колония / Обмен</div>
         </div>
       </div>
     </div>
@@ -2812,7 +2624,7 @@
       <div class="section-head">
         <div>
           <h2><span class="badge-red">РАЗДЕЛ 08</span> РЕПОЗИТОРИЙ УЛИК: ЧИТАЛЬНЫЙ ЗАЛ ДОКУМЕНТОВ</h2>
-          <div class="desc">Полные официальные тексты выписок ЕГРЮЛ, актов Росприроднадзора, ЕИС, судов и&nbsp;финансовой матрицы с&nbsp;интерактивным просмотром</div>
+          <div class="desc">Официальные сводки документов и&nbsp;аккуратный просмотр оригинальных .TXT текстов в&nbsp;новой вкладке без&nbsp;мусора и&nbsp;искажений</div>
         </div>
         <div>
           <input type="text" class="search-box" id="matrixSearch" placeholder="Поиск по уликам и тексту..." oninput="filterMatrix()">
@@ -2897,7 +2709,7 @@
               <tr>
                 <td><b style="color:var(--iskra-red);">EV-08</b></td>
                 <td>Выборы ГД-2021</td>
-                <td>Гончаров сжег 19&nbsp;425&nbsp;голосов в&nbsp;197-м округе, превысив разрыв Попова и&nbsp;Лобанова в&nbsp;2,4 раза.</td>
+                <td>Гончаров забрал 11&nbsp;648&nbsp;голосов в&nbsp;197-м округе, превысив разрыв Попова и&nbsp;Лобанова в&nbsp;1,44 раза.</td>
                 <td>Сводный протокол Мосгоризбиркома / ЦИК РФ</td>
                 <td><span class="badge-red">ЦИК РФ</span></td>
                 <td>Политическая коррупция и&nbsp;спойлерство</td>
@@ -2905,7 +2717,7 @@
               <tr>
                 <td><b style="color:var(--iskra-red);">EV-09</b></td>
                 <td>Чистка партии</td>
-                <td>Исключение 500+ партийцев после потери 250&nbsp;млн руб. госфинансирования для&nbsp;блокировки аудита.</td>
+                <td>Массовые партийные чистки (более 200 членов) после потери госфинансирования для&nbsp;блокировки аудита.</td>
                 <td>Постановления Федерального Бюро от&nbsp;28-29.12.2021</td>
                 <td><span class="badge-white">Партия</span></td>
                 <td>Узурпация партийных органов</td>
@@ -2923,16 +2735,140 @@
         </div>
       </div>
 
+      <!-- Direct Downloadable Files Table / Quick Downloads Hub -->
+      <div class="card" style="margin-top:25px; border-left: 4px solid var(--iskra-red);">
+        <div class="card-title">
+          <span>СКАЧИВАЕМЫЕ МАТЕРИАЛЫ ДЕЛА: ОРИГИНАЛЫ PDF, DOC И&nbsp;TXT</span>
+          <span class="badge-red">ПРЯМЫЕ ССЫЛКИ НА&nbsp;ФАЙЛЫ</span>
+        </div>
+        <div style="font-size:13px; color:#aaa; margin-bottom:15px;">
+          Все материальные доказательства расследования доступны для&nbsp;прямого скачивания в&nbsp;оригинальных форматах официальных реестров (подлинные выписки ФНС с&nbsp;усиленной квалифицированной электронной подписью, процессуальные судебные акты .DOC и&nbsp;текстовые протоколы .TXT).
+        </div>
+        <div class="data-table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th style="width:90px;">Код</th>
+                <th>Наименование документа и&nbsp;орган</th>
+                <th>Оригинал PDF</th>
+                <th>Формат TXT</th>
+                <th>Судебный DOC</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b style="color:var(--iskra-red);">ФНС-02</b></td>
+                <td><b>Справка ФНС: 19 блокировок счетов фонда в&nbsp;Точке и&nbsp;РСХБ</b> (ИФНС №&nbsp;36, УКЭП .sig)</td>
+                <td><a class="btn-file" href="ДОКУМЕНТЫ_PDF/ФНС_Справка_Приостановление_Счетов_БАНК_ТОЧКА_РСХБ.pdf" download target="_blank" style="padding:4px 10px; font-size:10px;">СКАЧАТЬ .PDF (62 КБ)</a></td>
+                <td><a class="btn-file" href="ДОКУМЕНТЫ_TXT/ФНС-02_doc_fns_freeze.txt" download target="_blank" style="padding:4px 10px; font-size:10px;">СКАЧАТЬ .TXT</a></td>
+                <td><a class="btn-file" href="ДОКУМЕНТЫ_PDF/ФНС_Справка_Приостановление_Счетов_БАНК_ТОЧКА_РСХБ.sig" download target="_blank" style="padding:4px 10px; font-size:10px; color:#40d080; border-color:#2a503a;">ЭЦП (.SIG)</a></td>
+              </tr>
+              <tr>
+                <td><b style="color:var(--iskra-red);">ЦИК-01</b></td>
+                <td><b>Официальная декларация: Mercedes за&nbsp;3,13&nbsp;млн ₽</b> (Мосгоризбирком / ЦИК РФ, ОИК №&nbsp;197)</td>
+                <td><a class="btn-file" href="ДОКУМЕНТЫ_PDF/ДЕКЛАРАЦИЯ_ГОНЧАРОВ_ЦИК_ОКРУГ_197.pdf" download target="_blank" style="padding:4px 10px; font-size:10px;">СКАЧАТЬ .PDF (288 КБ)</a></td>
+                <td><a class="btn-file" href="ДОКУМЕНТЫ_TXT/ДЕКЛАРАЦИЯ-01_doc_decl.txt" download target="_blank" style="padding:4px 10px; font-size:10px;">СКАЧАТЬ .TXT</a></td>
+                <td><span style="color:#555;">—</span></td>
+              </tr>
+              <tr>
+                <td><b style="color:var(--iskra-red);">ЕГРЮЛ-01</b></td>
+                <td><b>Выписка ЕГРЮЛ: Фонд защиты природы «Среда»</b> (ФНС России, ИНН 7736324409)</td>
+                <td><a class="btn-file" href="ДОКУМЕНТЫ_PDF/ЕГРЮЛ-01_Выписка_Фонд_Среда_ИНН7736324409.pdf" download target="_blank" style="padding:4px 10px; font-size:10px;">СКАЧАТЬ .PDF (169 КБ)</a></td>
+                <td><a class="btn-file" href="ДОКУМЕНТЫ_TXT/ЕГРЮЛ-01_doc_sreda.txt" download target="_blank" style="padding:4px 10px; font-size:10px;">СКАЧАТЬ .TXT</a></td>
+                <td><span style="color:#555;">—</span></td>
+              </tr>
+              <tr>
+                <td><b style="color:var(--iskra-red);">ЕГРЮЛ-02</b></td>
+                <td><b>Выписка ЕГРЮЛ: ООО&nbsp;«АПРА» (Крапухин&nbsp;А.&nbsp;И.)</b> (ИФНС №&nbsp;31, ИНН 9728000997)</td>
+                <td><a class="btn-file" href="ДОКУМЕНТЫ_PDF/ЕГРЮЛ-02_Выписка_ООО_АПРА_ИНН9728000997.pdf" download target="_blank" style="padding:4px 10px; font-size:10px;">СКАЧАТЬ .PDF (182 КБ)</a></td>
+                <td><a class="btn-file" href="ДОКУМЕНТЫ_TXT/ЕГРЮЛ-02_doc_apra.txt" download target="_blank" style="padding:4px 10px; font-size:10px;">СКАЧАТЬ .TXT</a></td>
+                <td><span style="color:#555;">—</span></td>
+              </tr>
+              <tr>
+                <td><b style="color:var(--iskra-red);">ЕГРИП-01</b></td>
+                <td><b>Выписка ЕГРИП: ИП Крапухин&nbsp;А.&nbsp;И.</b> (МИФНС №&nbsp;46, ОГРНИП 326774600581359)</td>
+                <td><a class="btn-file" href="ДОКУМЕНТЫ_PDF/ЕГРИП-01_Выписка_ИП_Крапухин_ИНН773175961325.pdf" download target="_blank" style="padding:4px 10px; font-size:10px;">СКАЧАТЬ .PDF (167 КБ)</a></td>
+                <td><a class="btn-file" href="ДОКУМЕНТЫ_TXT/ЕГРИП-01_doc_fl.txt" download target="_blank" style="padding:4px 10px; font-size:10px;">СКАЧАТЬ .TXT</a></td>
+                <td><span style="color:#555;">—</span></td>
+              </tr>
+              <tr>
+                <td><b style="color:var(--iskra-red);">СУД-01</b></td>
+                <td><b>Решение Басманного суда по&nbsp;авто Elegance</b> (Дело №&nbsp;12-586/26, Судья Васин&nbsp;А.&nbsp;А.)</td>
+                <td><a class="btn-file" href="ДОКУМЕНТЫ_PDF/СУД-01_Решение_Басманного_суда_Дело_12-586_26.pdf" download target="_blank" style="padding:4px 10px; font-size:10px;">СКАЧАТЬ .PDF</a></td>
+                <td><a class="btn-file" href="ДОКУМЕНТЫ_TXT/СУД-01_doc_basmanny.txt" download target="_blank" style="padding:4px 10px; font-size:10px;">СКАЧАТЬ .TXT</a></td>
+                <td><a class="btn-file" href="ДОКУМЕНТЫ_PDF/СУД-01_Решение_Басманного_суда_Дело_12-586_26.doc" download target="_blank" style="padding:4px 10px; font-size:10px; color:#70a5ff; border-color:#2e4466;">СКАЧАТЬ .DOC</a></td>
+              </tr>
+              <tr>
+                <td><b style="color:var(--iskra-red);">СУД-02</b></td>
+                <td><b>Определение Хорошевского районного суда</b> (Дело №&nbsp;12-2876/25)</td>
+                <td><a class="btn-file" href="ДОКУМЕНТЫ_PDF/СУД-02_Определение_Хорошевского_суда_Дело_12-2876_25.pdf" download target="_blank" style="padding:4px 10px; font-size:10px;">СКАЧАТЬ .PDF</a></td>
+                <td><a class="btn-file" href="ДОКУМЕНТЫ_TXT/СУД-02_doc_khoroshevsky.txt" download target="_blank" style="padding:4px 10px; font-size:10px;">СКАЧАТЬ .TXT</a></td>
+                <td><a class="btn-file" href="ДОКУМЕНТЫ_PDF/СУД-02_Определение_Хорошевского_суда_Дело_12-2876_25.doc" download target="_blank" style="padding:4px 10px; font-size:10px; color:#70a5ff; border-color:#2e4466;">СКАЧАТЬ .DOC</a></td>
+              </tr>
+              <tr>
+                <td><b style="color:var(--iskra-red);">АКТ-ФНС</b></td>
+                <td><b>Форензик-акт: Фиктивный профиль фонда&nbsp;«Среда»</b> (ГИР БО ФНС РФ)</td>
+                <td><a class="btn-file" href="ДОКУМЕНТЫ_PDF/АКТ-ФНС_Форензик_Анализ_Фонд_Среда.pdf" download target="_blank" style="padding:4px 10px; font-size:10px;">СКАЧАТЬ .PDF</a></td>
+                <td><a class="btn-file" href="ДОКУМЕНТЫ_TXT/АКТ-ФНС_doc_p01.txt" download target="_blank" style="padding:4px 10px; font-size:10px;">СКАЧАТЬ .TXT</a></td>
+                <td><span style="color:#555;">—</span></td>
+              </tr>
+              <tr>
+                <td><b style="color:var(--iskra-red);">АКТ-РПН</b></td>
+                <td><b>Акт проверки Росприроднадзора: Батарейки II-III класса</b> (Реестр РПН)</td>
+                <td><a class="btn-file" href="ДОКУМЕНТЫ_PDF/АКТ-РПН_Протокол_Росприроднадзора_Батарейки.pdf" download target="_blank" style="padding:4px 10px; font-size:10px;">СКАЧАТЬ .PDF</a></td>
+                <td><a class="btn-file" href="ДОКУМЕНТЫ_TXT/АКТ-РПН_doc_p02.txt" download target="_blank" style="padding:4px 10px; font-size:10px;">СКАЧАТЬ .TXT</a></td>
+                <td><span style="color:#555;">—</span></td>
+              </tr>
+              <tr>
+                <td><b style="color:var(--iskra-red);">АКТ-ЕИС</b></td>
+                <td><b>Акт аудита госзакупок по&nbsp;44-ФЗ и&nbsp;223-ФЗ</b> (ЕИС Закупки РФ)</td>
+                <td><a class="btn-file" href="ДОКУМЕНТЫ_PDF/АКТ-ЕИС_Аудит_Госзакупок_44ФЗ_223ФЗ.pdf" download target="_blank" style="padding:4px 10px; font-size:10px;">СКАЧАТЬ .PDF</a></td>
+                <td><a class="btn-file" href="ДОКУМЕНТЫ_TXT/АКТ-ЕИС_doc_p03.txt" download target="_blank" style="padding:4px 10px; font-size:10px;">СКАЧАТЬ .TXT</a></td>
+                <td><span style="color:#555;">—</span></td>
+              </tr>
+              <tr>
+                <td><b style="color:var(--iskra-red);">АКТ-ФИН</b></td>
+                <td><b>Реестр траншей АНО&nbsp;«Мой район» на&nbsp;24,2&nbsp;млн ₽</b> (Бюджет Москвы)</td>
+                <td><a class="btn-file" href="ДОКУМЕНТЫ_PDF/АКТ-ФИН_Реестр_Траншей_АНО_Мой_Район_24_2млн.pdf" download target="_blank" style="padding:4px 10px; font-size:10px;">СКАЧАТЬ .PDF</a></td>
+                <td><a class="btn-file" href="ДОКУМЕНТЫ_TXT/АКТ-ФИН_doc_p04.txt" download target="_blank" style="padding:4px 10px; font-size:10px;">СКАЧАТЬ .TXT</a></td>
+                <td><span style="color:#555;">—</span></td>
+              </tr>
+              <tr>
+                <td><b style="color:var(--iskra-red);">АКТ-ЦИК</b></td>
+                <td><b>Электоральный протокол выборов ГД-2021 (Округ 197)</b> (ЦИК РФ)</td>
+                <td><a class="btn-file" href="ДОКУМЕНТЫ_PDF/АКТ-ЦИК_Электоральный_Протокол_Выборы_ГД2021_Округ197.pdf" download target="_blank" style="padding:4px 10px; font-size:10px;">СКАЧАТЬ .PDF</a></td>
+                <td><a class="btn-file" href="ДОКУМЕНТЫ_TXT/АКТ-ЦИК_doc_p05.txt" download target="_blank" style="padding:4px 10px; font-size:10px;">СКАЧАТЬ .TXT</a></td>
+                <td><span style="color:#555;">—</span></td>
+              </tr>
+              <tr>
+                <td><b style="color:var(--iskra-red);">АКТ-ПАРТИЯ</b></td>
+                <td><b>Протокол захвата кассы и&nbsp;поста Круглова</b> (Конференция МРО)</td>
+                <td><a class="btn-file" href="ДОКУМЕНТЫ_PDF/АКТ-ПАРТИЯ_Протокол_Конференции_МРО_Яблоко.pdf" download target="_blank" style="padding:4px 10px; font-size:10px;">СКАЧАТЬ .PDF</a></td>
+                <td><a class="btn-file" href="ДОКУМЕНТЫ_TXT/АКТ-ПАРТИЯ_doc_p06.txt" download target="_blank" style="padding:4px 10px; font-size:10px;">СКАЧАТЬ .TXT</a></td>
+                <td><span style="color:#555;">—</span></td>
+              </tr>
+              <tr>
+                <td><b style="color:var(--iskra-red);">МАТРИЦА</b></td>
+                <td><b>Сводная форензик-матрица доказательств EV01-EV10</b> (Проект «Искра»)</td>
+                <td><a class="btn-file" href="ДОКУМЕНТЫ_PDF/МАТРИЦА_Форензик_Матрица_Улик_EV01_EV10.pdf" download target="_blank" style="padding:4px 10px; font-size:10px;">СКАЧАТЬ .PDF</a></td>
+                <td><a class="btn-file" href="ДОКУМЕНТЫ_TXT/МАТРИЦА_doc_matrix.txt" download target="_blank" style="padding:4px 10px; font-size:10px;">СКАЧАТЬ .TXT</a></td>
+                <td><span style="color:#555;">—</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
       <!-- Document Cards Grid -->
       <div class="section-head" style="margin-top:40px;">
         <div>
           <h2><span class="badge-white">ДОКУМЕНТЫ</span> ОФИЦИАЛЬНОЕ ХРАНИЛИЩЕ ДОКАЗАТЕЛЬСТВ</h2>
-          <div class="desc">Нажмите «ОТКРЫТЬ ДОКУМЕНТ», чтобы прочитать полный аутентичный текст в&nbsp;интерактивном ридере</div>
+          <div class="desc">Нажмите «СВОДКА ДОКУМЕНТА» для&nbsp;аккуратного аналитического пересказа или «ОТКРЫТЬ ТХТ» для&nbsp;просмотра аутентичного текста в&nbsp;отдельной вкладке</div>
         </div>
       </div>
 
       <div class="grid-3" id="docCardsGrid">
-        <!-- Rendered by JS -->
+        <!-- Rendered by JS with clean 2 buttons: Сводка документа & Открыть ТХТ в новой вкладке -->
       </div>
     </div>
     
@@ -2989,12 +2925,6 @@
   <footer>
     <div class="logo">ИСКРА // АНТИКОРРУПЦИОННЫЙ И&nbsp;ПОЛИТИЧЕСКИЙ ФОРЕНЗИК</div>
     <p>Специальное журналистское расследование. Документальная база: ФНС России, Росприроднадзор, ЕИС Закупки, ГАС «Правосудие», Мосгоризбирком.</p>
-    <div style="margin: 16px 0 12px 0;">
-      <a href="https://t.me/find_iskra" target="_blank" rel="noopener noreferrer" class="top-strip-tg-btn">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block; vertical-align:middle; margin-right:4px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
-        TELEGRAM // @FIND_ISKRA
-      </a>
-    </div>
     <p style="margin-top:6px; color:#555;">2019–2026 // Все материалы верифицированы и&nbsp;готовы к&nbsp;передаче в&nbsp;следственные органы.</p>
   </footer>
 
@@ -3274,30 +3204,31 @@
 
     // Tab Switching
     function switchTab(tabId) {
-      if (!tabId) return;
-      const targetPane = document.getElementById(tabId);
-      if (!targetPane) return;
-
       document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('active'));
       document.querySelectorAll('.nav-btn').forEach(el => el.classList.remove('active'));
 
-      targetPane.classList.add('active');
+      const targetPane = document.getElementById(tabId);
+      if (targetPane) {
+        targetPane.classList.add('active');
+      }
 
+      // Find button by onclick
       document.querySelectorAll('.nav-btn').forEach(btn => {
-        const oc = btn.getAttribute('onclick');
-        if (oc && oc.includes(tabId)) {
+        if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(tabId)) {
           btn.classList.add('active');
+          // On mobile, auto-scroll active button into view in the horizontal ribbon
+          btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
         }
       });
 
-      if (window.history && window.history.replaceState) {
-        window.history.replaceState(null, null, '#' + tabId);
-      }
+      // Update URL hash without scroll
+      history.replaceState(null, null, '#' + tabId);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     // Render Vault Documents Grid
     function renderDocs(filterCat = 'all') {
-      const grid = document.getElementById('docsGrid');
+      const grid = document.getElementById('docCardsGrid') || document.getElementById('docsGrid');
       if (!grid) return;
       grid.innerHTML = '';
 
@@ -3307,17 +3238,35 @@
 
       filtered.forEach(doc => {
         const card = document.createElement('div');
-        card.className = 'doc-card';
-        card.onclick = () => openDocModal(doc.id);
+        card.className = 'card red-bar-left';
+        card.style.display = 'flex';
+        card.style.flexDirection = 'column';
+        card.style.justifyContent = 'space-between';
+        card.style.background = '#0e0e15';
+        card.style.border = '1px solid #282838';
+        card.style.padding = '18px';
+        card.style.borderRadius = '6px';
+        card.style.marginBottom = '0';
+
+        const codeBadge = doc.doc_num || doc.code || doc.badge || 'ДОКУМЕНТ';
+        const categoryBadge = doc.badge || doc.category || 'ФОРЕНЗИК';
 
         card.innerHTML = `
-          <div class="doc-card-badge">${escapeHtml(doc.badge || doc.category)}</div>
-          <div class="doc-card-num">${escapeHtml(doc.doc_num || '')}</div>
-          <div class="doc-card-title">${escapeHtml(doc.title)}</div>
-          <div class="doc-card-desc">${escapeHtml(doc.short_desc || '')}</div>
-          <div class="doc-card-footer">
-            <span class="doc-badge-pill">${escapeHtml(doc.category)}</span>
-            <span class="doc-action-link">СВОДКА &rarr;</span>
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+              <span class="badge-red" style="font-size:10px; font-weight:800; letter-spacing:0.05em;">${escapeHtml(codeBadge)}</span>
+              <span class="badge-outline" style="font-size:10px;">${escapeHtml(categoryBadge)}</span>
+            </div>
+            <div style="font-size:14.5px; font-weight:800; color:#fff; line-height:1.4; margin-bottom:8px;">
+              ${escapeHtml(doc.title)}
+            </div>
+            <div style="font-size:12.5px; color:#bbb; line-height:1.55; margin-bottom:14px;">
+              ${escapeHtml(doc.short_desc || doc.summary || '')}
+            </div>
+          </div>
+          <div style="display:flex; gap:8px; margin-top:10px; flex-wrap:wrap;">
+            <button class="btn-file red-btn" onclick="openDocModal('${doc.id}')" style="flex:1; padding:7px 10px; font-size:11px; text-align:center;">СВОДКА ДОКУМЕНТА</button>
+            <button class="btn-file" onclick="openTxtTab('${doc.id}')" style="flex:1; padding:7px 10px; font-size:11px; text-align:center;">ОТКРЫТЬ .TXT</button>
           </div>
         `;
         grid.appendChild(card);
@@ -3349,8 +3298,10 @@
       content.innerHTML = `
         ${previewHtml}
         <div class="doc-modal-summary-box">
-          <h4 style="color:#fff; margin-bottom:10px; font-size:14px; text-transform:uppercase; letter-spacing:0.05em;">Судебное и юридическое значение:</h4>
-          <p style="font-size:13.5px; line-height:1.6; color:#ddd; margin-bottom:15px;">${escapeHtml(doc.summary || doc.short_desc || '')}</p>
+          <h4 style="color:#fff; margin-bottom:12px; font-size:14px; text-transform:uppercase; letter-spacing:0.05em;">Судебное и юридическое значение:</h4>
+          <div style="font-size:13.5px; line-height:1.6; color:#ddd; margin-bottom:15px;">
+            ${doc.summary || escapeHtml(doc.short_desc || '')}
+          </div>
           
           <div style="background:#09090f; border-left:3px solid var(--iskra-red); padding:10px 14px; font-size:12.5px; color:#ccc; margin-top:10px;">
             <b>РЕКВИЗИТЫ:</b> ${escapeHtml(doc.official_record || doc.doc_num || 'Архивное дело')} | <b>СТАТУС:</b> Подтвержден официальными реестрами РФ
@@ -3398,13 +3349,15 @@
       const doc = docsCatalog.find(d => d.id === currentDocId);
       if (!doc) return;
 
-      const summaryText = (doc.clean_txt || doc.title) + 
-        `
+      const tmp = document.createElement('div');
+      tmp.innerHTML = doc.summary || doc.short_desc || '';
+      const cleanText = tmp.innerText || tmp.textContent || '';
+      const text = `${doc.title}
+${doc.doc_num || ''}
 
-— Публикация: https://findiskra.github.io/delo_goncharova/
-— Официальный Telegram-канал: https://t.me/find_iskra`;
-      navigator.clipboard.writeText(summaryText).then(() => {
-        showToast('СВОДКА И ССЫЛКА НА @find_iskra СКОПИРОВАНЫ В БУФЕР');
+${cleanText.trim()}`;
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('СВОДКА СКОПИРОВАНА В БУФЕР');
       });
     }
 
@@ -3545,35 +3498,46 @@
       }
     });
 
-    // Election Simulator
+    // Election Simulator (Кунцевский округ № 197, Госдума-2021)
     function updateSim() {
-      const slider = document.getElementById('goncharovSlider');
+      const slider = document.getElementById('simSlider') || document.getElementById('goncharovSlider');
       if (!slider) return;
-      const pct = parseFloat(slider.value);
-      document.getElementById('goncharovVal').textContent = pct.toFixed(1) + '%';
+      const pct = parseInt(slider.value, 10);
 
-      const totalVoters = 180000;
-      const basePopov = 35.1;
-      const baseLobanov = 31.6;
-      const baseGoncharov = 10.8;
+      const valEl = document.getElementById('simVal') || document.getElementById('goncharovVal');
+      if (valEl) valEl.textContent = pct + '%';
 
-      const popovVotes = Math.round(totalVoters * (basePopov / 100));
-      const transferredPct = baseGoncharov - pct;
-      const newLobanovPct = baseLobanov + (transferredPct * 0.85);
-      const lobanovVotes = Math.round(totalVoters * (newLobanovPct / 100));
+      // Официальные результаты выборов (Округ 197 с учетом ДЭГ):
+      // Попов Евгений («Единая Россия»): 80 894 голоса
+      // Лобанов Михаил (КПРФ / коалиция): 72 805 голосов
+      // Гончаров Кирилл («Яблоко»): 11 648 голосов (спойлер)
+      // Разрыв между Поповым и Лобановым: 8 089 голосов
+      const basePopov = 80894;
+      const baseLobanov = 72805;
+      const goncharovVotes = 11648;
 
-      const popovEl = document.getElementById('simPopovVotes');
-      const lobanovEl = document.getElementById('simLobanovVotes');
-      const resEl = document.getElementById('simResultText');
+      const transferredVotes = Math.round(goncharovVotes * (pct / 100));
+      const newLobanov = baseLobanov + transferredVotes;
+      const diff = newLobanov - basePopov;
 
-      if (popovEl) popovEl.textContent = popovVotes.toLocaleString('ru-RU');
-      if (lobanovEl) lobanovEl.textContent = lobanovVotes.toLocaleString('ru-RU');
+      const lobanovEl = document.getElementById('simLobanov') || document.getElementById('simLobanovVotes');
+      const resEl = document.getElementById('simResult') || document.getElementById('simResultText');
+
+      if (lobanovEl) {
+        lobanovEl.textContent = newLobanov.toLocaleString('ru-RU') + ' голосов';
+        lobanovEl.style.color = diff > 0 ? '#2ecc71' : '#ffffff';
+      }
 
       if (resEl) {
-        if (lobanovVotes > popovVotes) {
-          resEl.innerHTML = `<b style="color:var(--iskra-green);">ПОБЕДА МИХАИЛА ЛОБАНОВА</b> (отрыв +${(lobanovVotes - popovVotes).toLocaleString('ru-RU')} голосов). Кремлевский пропагандист Попов проигрывает округ.`;
+        if (diff > 0) {
+          resEl.innerHTML = `ПОБЕДА ЛОБАНОВА (+${diff.toLocaleString('ru-RU')} голосов)`;
+          resEl.style.color = '#2ecc71';
+        } else if (diff === 0) {
+          resEl.innerHTML = `НИЧЬЯ (80 894 / 80 894)`;
+          resEl.style.color = '#ffaa00';
         } else {
-          resEl.innerHTML = `<b style="color:var(--iskra-red);">ПОБЕДА ЕВГЕНИЯ ПОПОВА («ЕДИНАЯ РОССИЯ»)</b>. Голоса оппозиции расколоты Кириллом Гончаровым.`;
+          resEl.innerHTML = `ПОБЕДА ПОПОВА (Единая Россия, отрыв ${Math.abs(diff).toLocaleString('ru-RU')} голосов)`;
+          resEl.style.color = 'var(--iskra-red)';
         }
       }
     }
@@ -3602,28 +3566,6 @@
       if (window.location.hash) {
         const tab = window.location.hash.replace('#', '');
         switchTab(tab);
-      }
-    });
-
-    // =========================================================================
-    // SMART CLIPBOARD ATTRIBUTION HOOK (TELEGRAM @find_iskra & DIRECT URL)
-    // =========================================================================
-    document.addEventListener('copy', function(e) {
-      const selection = window.getSelection();
-      if (!selection || selection.rangeCount === 0) return;
-      const selectedText = selection.toString();
-
-      // Only append attribution if user copied a substantial excerpt (>= 35 characters)
-      if (selectedText && selectedText.trim().length >= 35) {
-        const attribution = `
-
-— Публикация: https://findiskra.github.io/delo_goncharova/
-— Официальный Telegram-канал: https://t.me/find_iskra`;
-
-        if (e.clipboardData) {
-          e.clipboardData.setData('text/plain', selectedText + attribution);
-          e.preventDefault();
-        }
       }
     });
   </script>
